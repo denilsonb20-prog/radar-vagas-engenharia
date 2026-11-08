@@ -6,6 +6,10 @@
   <meta name="theme-color" content="#0f172a">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Radar Vagas">
+  <link rel="manifest" href="./manifest.json">
+  <link rel="apple-touch-icon" href="./icon-192.png">
+  <link rel="icon" type="image/png" href="./icon-192.png">
   <title>Radar Engenharia (Últimos 7 Dias): Gupy • Indeed • LinkedIn</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
@@ -20,7 +24,7 @@
 </head>
 <body class="bg-[var(--background)] text-[var(--foreground)] antialiased p-3 md:p-6">
   <div class="max-w-5xl mx-auto space-y-5">
-    <!-- Cabeçalho + Botão de Varredura Ao Vivo -->
+    <!-- Cabeçalho + Botão de Varredura Ao Vivo + Botão Instalar na Tela Inicial -->
     <div class="bg-[var(--card)] border border-[var(--border)] rounded-xl p-5 shadow-sm">
       <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
         <div>
@@ -41,15 +45,41 @@
           </p>
         </div>
 
-        <!-- Botão de Ação Ao Vivo -->
+        <!-- Botões de Ação Ao Vivo + Instalar App no Celular -->
         <div class="flex flex-col items-stretch md:items-end gap-2">
-          <button id="btn-live-scan" onclick="dispararScanPainel()" class="px-5 py-3 rounded-xl font-bold text-sm bg-emerald-600 hover:bg-emerald-500 text-white shadow-lg transition-all flex items-center justify-center gap-2 cursor-pointer">
-            <span id="icon-live-scan">🔄</span>
-            <span id="txt-live-scan">Executar Varredura Ao Vivo (≤ 7 Dias)</span>
-          </button>
+          <div class="flex flex-col sm:flex-row gap-2">
+            <button id="btn-install-pwa" onclick="instalarAppCelular()" class="px-4 py-3 rounded-xl font-bold text-xs md:text-sm bg-sky-600 hover:bg-sky-500 text-white shadow-lg transition-all flex items-center justify-center gap-2 cursor-pointer">
+              <span>📲</span>
+              <span id="txt-install-pwa">Adicionar à Tela Inicial</span>
+            </button>
+            <button id="btn-live-scan" onclick="dispararScanPainel()" class="px-5 py-3 rounded-xl font-bold text-xs md:text-sm bg-emerald-600 hover:bg-emerald-500 text-white shadow-lg transition-all flex items-center justify-center gap-2 cursor-pointer">
+              <span id="icon-live-scan">🔄</span>
+              <span id="txt-live-scan">Executar Varredura Ao Vivo (≤ 7 Dias)</span>
+            </button>
+          </div>
           <span id="sub-live-scan" class="text-[11px] text-[var(--muted-foreground)] text-center md:text-right">
             Traz apenas vagas da última semana e ignora vagas que você já clicou
           </span>
+        </div>
+      </div>
+
+      <!-- Caixa Guia Visual de Instalação no Celular (Aparece ao tocar em Adicionar à Tela Inicial) -->
+      <div id="pwa-help-box" class="hidden mt-4 pt-3 border-t border-sky-500/40 bg-sky-950/40 rounded-xl p-4 text-xs space-y-2">
+        <div class="flex items-center justify-between">
+          <strong class="text-sky-300 text-sm">📲 Como fixar o ícone do aplicativo na tela do seu celular:</strong>
+          <button onclick="document.getElementById('pwa-help-box').classList.add('hidden')" class="px-2 py-0.5 rounded bg-slate-800 text-slate-300">Fechar ✕</button>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-3 pt-1">
+          <div class="bg-slate-900/90 border border-slate-700 rounded-lg p-3">
+            <div class="font-bold text-emerald-400 mb-1">🤖 No Android (Chrome / Samsung Internet):</div>
+            <p class="text-slate-200">1. Toque nos <strong>3 pontinhos (⋮)</strong> no canto superior direito do navegador.</p>
+            <p class="text-slate-200 mt-1">2. Toque em <strong>"Adicionar à tela inicial"</strong> (ou <strong>"Instalar aplicativo"</strong>) e confirme em <strong>Adicionar</strong>.</p>
+          </div>
+          <div class="bg-slate-900/90 border border-slate-700 rounded-lg p-3">
+            <div class="font-bold text-sky-400 mb-1">🍎 No iPhone / iOS (Safari ou Chrome):</div>
+            <p class="text-slate-200">1. Toque no ícone de <strong>Compartilhar (quadrado com seta para cima ⬆️)</strong> na barra do navegador.</p>
+            <p class="text-slate-200 mt-1">2. Role o menu para baixo e toque em <strong>"Adicionar à Tela de Início"</strong>.</p>
+          </div>
         </div>
       </div>
 
@@ -1246,6 +1276,32 @@
         btn.classList.remove("opacity-75");
         txt.textContent = "Executar Varredura Ao Vivo (≤ 7 Dias)";
       }
+    }
+
+    let deferredPrompt = null;
+    window.addEventListener("beforeinstallprompt", (e) => {
+      e.preventDefault();
+      deferredPrompt = e;
+    });
+
+    async function instalarAppCelular() {
+      if (deferredPrompt) {
+        deferredPrompt.prompt();
+        const choice = await deferredPrompt.userChoice;
+        if (choice.outcome === "accepted") {
+          deferredPrompt = null;
+          return;
+        }
+      }
+      const box = document.getElementById("pwa-help-box");
+      if (box) {
+        box.classList.remove("hidden");
+        box.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+
+    if ("serviceWorker" in navigator) {
+      navigator.serviceWorker.register("./sw.js").catch(() => {});
     }
 
     sincronizarLinksPdf();
