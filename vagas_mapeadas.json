@@ -1,7 +1,7 @@
 {
-  "atualizado_em": "08/11/2026 00:26",
+  "atualizado_em": "08/11/2026 09:21",
   "candidato": "Marcos Denílson Barbosa dos Santos (Denilson Barbosa)",
-  "total_vagas_qualificadas": 43,
+  "total_vagas_qualificadas": 40,
   "vagas": [
     {
       "id": "li_4485580343",
@@ -295,53 +295,6 @@
       "trilha": "Orçamentos & Planejamento (Cabeçalho Caruaru/PE)"
     },
     {
-      "id": "li_4485563911",
-      "raw_id": "4485563911",
-      "plataforma": "LinkedIn Vagas",
-      "tipo_fonte": "linkedin_vaga",
-      "titulo": "Assistente de Orçamento e Custos",
-      "empresa": "Grupo FAN",
-      "local": "Aquiraz, CE",
-      "url": "https://br.linkedin.com/jobs/view/assistente-de-or%C3%A7amento-e-custos-at-grupo-fan-4485563911",
-      "data_publicacao": "2026-11-05",
-      "dias_atras": 2,
-      "modalidade": "Presencial / Híbrido",
-      "email_direto": "",
-      "score_afinidade": 88,
-      "termos_afinidade": [
-        "Orçamentos de Obras",
-        "Engenharia de Custos"
-      ],
-      "distancia_info": "12 km de Eusébio (RMF/CE)",
-      "categoria_geografica": "Fortaleza + 60km (CE)",
-      "curriculo_recomendado": "Curriculo_Denilson_Barbosa_Orcamentos_Planejamento_Fortaleza_CE.pdf",
-      "trilha": "Orçamentos & Planejamento (Cabeçalho Eusébio/CE)"
-    },
-    {
-      "id": "post_7523750203116498944",
-      "raw_id": "7523750203116498944",
-      "plataforma": "Publicação LinkedIn (Feed)",
-      "tipo_fonte": "publicacao_feed",
-      "titulo": "[Post LinkedIn] Vaga Engenharia Civil / Obras (Agilean App)",
-      "empresa": "Publicado por: Agilean App",
-      "local": "Fortaleza, CE",
-      "url": "https://pt.linkedin.com/posts/agilean-app_vaga-aberta-em-fortalezace-estamos-%C3%A0-procura-activity-7523750203116498944-em2K",
-      "data_publicacao": "2026-11-04",
-      "dias_atras": 2,
-      "modalidade": "Presencial / Híbrido",
-      "descricao": "pt. linkedin . com › posts › agilean-app_vaga-aberta-em Vaga aberta em Fortaleza/CE! Estamos à procura de um (a ... pt.linkedin.com › posts › agilean-app_vaga-aberta-em Vaga aberta em Fortaleza /CE! Estamos à procura de um (a) Analista de Engajamento ( Engenharia Civil ) para fazer parte do nosso time. Se você é engenheiro (a) civil , tem vivência em obra e quer levar essa experiência para dentro da tecnologia, essa vaga é para você. Aqui na Agilean, você vai ser a ponte entre a engenharia e a tecnologia, ajudando construtoras de todo o Brasil a planejar ...",
-      "email_direto": "",
-      "score_afinidade": 87,
-      "termos_afinidade": [
-        "Engenharia Civil",
-        "Gestão/Execução de Obras"
-      ],
-      "distancia_info": "18 km de Eusébio (Polo Fortaleza/CE)",
-      "categoria_geografica": "Fortaleza + 60km (CE)",
-      "curriculo_recomendado": "Curriculo_Denilson_Barbosa_Gestao_Obras_Projetos_Fortaleza_CE.pdf",
-      "trilha": "Obras & Projetos (Cabeçalho Eusébio/CE)"
-    },
-    {
       "id": "li_4485532048",
       "raw_id": "4485532048",
       "plataforma": "LinkedIn Vagas",
@@ -481,6 +434,29 @@
       "trilha": "Orçamentos & Planejamento (Cabeçalho Eusébio/CE)"
     },
     {
+      "id": "post_7523750203116498944",
+      "raw_id": "7523750203116498944",
+      "plataforma": "Publicação LinkedIn (Feed)",
+      "tipo_fonte": "publicacao_feed",
+      "titulo": "[Post Feed] pt. linkedin . com › posts › agilean-app_vaga-aberta-em Vaga aberta ",
+      "empresa": "Publicado por: Agilean App",
+      "local": "Fortaleza, CE",
+      "url": "https://pt.linkedin.com/posts/agilean-app_vaga-aberta-em-fortalezace-estamos-%C3%A0-procura-activity-7523750203116498944-em2K",
+      "data_publicacao": "2026-11-04",
+      "dias_atras": 2,
+      "modalidade": "Presencial / Híbrido",
+      "descricao": "pt. linkedin . com › posts › agilean-app_vaga-aberta-em Vaga aberta em Fortaleza/CE! Estamos à procura de um (a ... pt.linkedin.com › posts › agilean-app_vaga-aberta-em Vaga aberta em Fortaleza /CE! Estamos à procura de um (a) Analista de Engajamento (Engenharia Civil) para fazer parte do nosso time. Se você é engenheiro (a) civil, tem vivência em obra e quer levar essa experiência para dentro da tecnologia, essa vaga é para você. Aqui na Agilean, você vai ser a ponte entre a engenharia e a tecnologia, ajudando construtoras de todo o Brasil a planejar ...",
+      "email_direto": "",
+      "score_afinidade": 79,
+      "termos_afinidade": [
+        "Engenharia Civil"
+      ],
+      "distancia_info": "18 km de Eusébio (Polo Fortaleza/CE)",
+      "categoria_geografica": "Fortaleza + 60km (CE)",
+      "curriculo_recomendado": "Curriculo_Denilson_Barbosa_Gestao_Obras_Projetos_Fortaleza_CE.pdf",
+      "trilha": "Obras & Projetos (Cabeçalho Eusébio/CE)"
+    },
+    {
       "id": "gupy_12810596",
       "raw_id": "12810596",
       "plataforma": "Gupy",
@@ -616,14 +592,14 @@
       "trilha": "Orçamentos & Planejamento (Cabeçalho Eusébio/CE)"
     },
     {
-      "id": "li_4486812398",
-      "raw_id": "4486812398",
+      "id": "li_4485006272",
+      "raw_id": "4485006272",
       "plataforma": "LinkedIn Vagas",
       "tipo_fonte": "linkedin_vaga",
-      "titulo": "Analista de Orçamento Sênior",
-      "empresa": "Farmácias Pague Menos",
-      "local": "Fortaleza, CE",
-      "url": "https://br.linkedin.com/jobs/view/analista-de-or%C3%A7amento-s%C3%AAnior-at-farm%C3%A1cias-pague-menos-4486812398",
+      "titulo": "Especialista em Orçamento e Precificação (Recife/PE)",
+      "empresa": "Avantia - Tecnologia e Segurança",
+      "local": "Recife, PE",
+      "url": "https://br.linkedin.com/jobs/view/especialista-em-or%C3%A7amento-e-precifica%C3%A7%C3%A3o-recife-pe-at-avantia-tecnologia-e-seguran%C3%A7a-4485006272",
       "data_publicacao": "2026-11-03",
       "dias_atras": 4,
       "modalidade": "Presencial / Híbrido",
@@ -632,54 +608,10 @@
       "termos_afinidade": [
         "Orçamentos de Obras"
       ],
-      "distancia_info": "18 km de Eusébio (Polo Fortaleza/CE)",
-      "categoria_geografica": "Fortaleza + 60km (CE)",
-      "curriculo_recomendado": "Curriculo_Denilson_Barbosa_Orcamentos_Planejamento_Fortaleza_CE.pdf",
-      "trilha": "Orçamentos & Planejamento (Cabeçalho Eusébio/CE)"
-    },
-    {
-      "id": "li_4486633484",
-      "raw_id": "4486633484",
-      "plataforma": "LinkedIn Vagas",
-      "tipo_fonte": "linkedin_vaga",
-      "titulo": "COORDENADOR DE FP&amp;A (Planejamento e Análise Financeira)",
-      "empresa": "Auto Peças Padre Cícero",
-      "local": "Fortaleza, CE",
-      "url": "https://br.linkedin.com/jobs/view/coordenador-de-fp-a-planejamento-e-an%C3%A1lise-financeira-at-auto-pe%C3%A7as-padre-c%C3%ADcero-4486633484",
-      "data_publicacao": "2026-11-07",
-      "dias_atras": 0,
-      "modalidade": "Presencial / Híbrido",
-      "email_direto": "",
-      "score_afinidade": 75,
-      "termos_afinidade": [
-        "Planejamento Físico-Financeiro"
-      ],
-      "distancia_info": "18 km de Eusébio (Polo Fortaleza/CE)",
-      "categoria_geografica": "Fortaleza + 60km (CE)",
-      "curriculo_recomendado": "Curriculo_Denilson_Barbosa_Orcamentos_Planejamento_Fortaleza_CE.pdf",
-      "trilha": "Orçamentos & Planejamento (Cabeçalho Eusébio/CE)"
-    },
-    {
-      "id": "li_4488727880",
-      "raw_id": "4488727880",
-      "plataforma": "LinkedIn Vagas",
-      "tipo_fonte": "linkedin_vaga",
-      "titulo": "Engenheiro Civil - DSEI Pernambuco",
-      "empresa": "AgSUS",
-      "local": "Recife, PE",
-      "url": "https://br.linkedin.com/jobs/view/engenheiro-civil-dsei-pernambuco-at-agsus-4488727880",
-      "data_publicacao": "2026-11-07",
-      "dias_atras": 0,
-      "modalidade": "Presencial / Híbrido",
-      "email_direto": "",
-      "score_afinidade": 75,
-      "termos_afinidade": [
-        "Engenharia Civil"
-      ],
       "distancia_info": "130 km de Caruaru (Eixo BR-232 / PE)",
       "categoria_geografica": "Eixo PE (Recife / BR-232)",
-      "curriculo_recomendado": "Curriculo_Denilson_Barbosa_Gestao_Obras_Projetos_Caruaru_PE.pdf",
-      "trilha": "Obras & Projetos (Cabeçalho Caruaru/PE)"
+      "curriculo_recomendado": "Curriculo_Denilson_Barbosa_Orcamentos_Planejamento_Caruaru_PE.pdf",
+      "trilha": "Orçamentos & Planejamento (Cabeçalho Caruaru/PE)"
     },
     {
       "id": "li_4486224905",
@@ -770,26 +702,48 @@
       "trilha": "Orçamentos & Planejamento (Cabeçalho Caruaru/PE)"
     },
     {
-      "id": "li_4485022329",
-      "raw_id": "4485022329",
+      "id": "li_4486674744",
+      "raw_id": "4486674744",
       "plataforma": "LinkedIn Vagas",
       "tipo_fonte": "linkedin_vaga",
-      "titulo": "Engenheiro de Planejamento e Gestão de Projetos - São Gonçalo do Amarante/ CE",
-      "empresa": "IDG Engenharia e Consultoria",
-      "local": "São Gonçalo do Amarante, CE",
-      "url": "https://br.linkedin.com/jobs/view/engenheiro-de-planejamento-e-gest%C3%A3o-de-projetos-s%C3%A3o-gon%C3%A7alo-do-amarante-ce-at-idg-engenharia-e-consultoria-4485022329",
-      "data_publicacao": "2026-11-03",
-      "dias_atras": 4,
+      "titulo": "Analista de Custos Sr - Petrolina - Vagas Profissionais",
+      "empresa": "Etex",
+      "local": "Petrolina, PE",
+      "url": "https://br.linkedin.com/jobs/view/analista-de-custos-sr-petrolina-vagas-profissionais-at-etex-4486674744",
+      "data_publicacao": "2026-11-08",
+      "dias_atras": 0,
       "modalidade": "Presencial / Híbrido",
       "email_direto": "",
-      "score_afinidade": 75,
+      "score_afinidade": 71,
       "termos_afinidade": [
-        "Planejamento Físico-Financeiro"
+        "Engenharia de Custos"
       ],
-      "distancia_info": "58 km de Fortaleza (Porto do Pecém/CE)",
-      "categoria_geografica": "Fortaleza + 60km (CE)",
-      "curriculo_recomendado": "Curriculo_Denilson_Barbosa_Orcamentos_Planejamento_Fortaleza_CE.pdf",
-      "trilha": "Orçamentos & Planejamento (Cabeçalho Eusébio/CE)"
+      "distancia_info": "Pernambuco (Eixo BR-232)",
+      "categoria_geografica": "Eixo PE (Recife / BR-232)",
+      "curriculo_recomendado": "Curriculo_Denilson_Barbosa_Orcamentos_Planejamento_Caruaru_PE.pdf",
+      "trilha": "Orçamentos & Planejamento (Cabeçalho Caruaru/PE)"
+    },
+    {
+      "id": "li_4487056736",
+      "raw_id": "4487056736",
+      "plataforma": "LinkedIn Vagas",
+      "tipo_fonte": "linkedin_vaga",
+      "titulo": "Analista de Custos",
+      "empresa": "Jobbol",
+      "local": "Recife, PE",
+      "url": "https://br.linkedin.com/jobs/view/analista-de-custos-at-jobbol-4487056736",
+      "data_publicacao": "2026-11-04",
+      "dias_atras": 3,
+      "modalidade": "Presencial / Híbrido",
+      "email_direto": "",
+      "score_afinidade": 71,
+      "termos_afinidade": [
+        "Engenharia de Custos"
+      ],
+      "distancia_info": "130 km de Caruaru (Eixo BR-232 / PE)",
+      "categoria_geografica": "Eixo PE (Recife / BR-232)",
+      "curriculo_recomendado": "Curriculo_Denilson_Barbosa_Orcamentos_Planejamento_Caruaru_PE.pdf",
+      "trilha": "Orçamentos & Planejamento (Cabeçalho Caruaru/PE)"
     },
     {
       "id": "li_4487716001",
@@ -912,7 +866,7 @@
       "url": "https://br.linkedin.com/jobs/view/analista-de-engenharia-de-custos-at-jobbol-4486114717",
       "data_publicacao": "2026-11-02",
       "dias_atras": 5,
-      "modalidade": "Presencial / Híbrido",
+      "modalidade": "Remoto",
       "email_direto": "",
       "score_afinidade": 67,
       "termos_afinidade": [
@@ -944,28 +898,6 @@
       "categoria_geografica": "Fortaleza + 60km (CE)",
       "curriculo_recomendado": "Curriculo_Denilson_Barbosa_Gestao_Obras_Projetos_Fortaleza_CE.pdf",
       "trilha": "Obras & Projetos (Cabeçalho Eusébio/CE)"
-    },
-    {
-      "id": "li_4485504865",
-      "raw_id": "4485504865",
-      "plataforma": "LinkedIn Vagas",
-      "tipo_fonte": "linkedin_vaga",
-      "titulo": "Assistente de Custos",
-      "empresa": "Grupo Carmehil",
-      "local": "Fortaleza, CE",
-      "url": "https://br.linkedin.com/jobs/view/assistente-de-custos-at-grupo-carmehil-4485504865",
-      "data_publicacao": "2026-11-04",
-      "dias_atras": 3,
-      "modalidade": "Presencial / Híbrido",
-      "email_direto": "",
-      "score_afinidade": 63,
-      "termos_afinidade": [
-        "Engenharia de Custos"
-      ],
-      "distancia_info": "18 km de Eusébio (Polo Fortaleza/CE)",
-      "categoria_geografica": "Fortaleza + 60km (CE)",
-      "curriculo_recomendado": "Curriculo_Denilson_Barbosa_Orcamentos_Planejamento_Fortaleza_CE.pdf",
-      "trilha": "Orçamentos & Planejamento (Cabeçalho Eusébio/CE)"
     },
     {
       "id": "li_4486259903",
