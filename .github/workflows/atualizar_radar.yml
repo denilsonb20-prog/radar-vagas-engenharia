@@ -1,0 +1,42 @@
+name: Atualizar Radar de Vagas (<= 7 Dias)
+
+on:
+  schedule:
+    - cron: '0 */6 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  varredura:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout do repositório
+        uses: actions/checkout@v4
+
+      - name: Configurar Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Instalar dependências
+        run: pip install beautifulsoup4 requests
+
+      - name: Executar varredura (vagas de no máximo 7 dias e não clicadas)
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: |
+          python scanner_vagas.py
+          if [ -n "$TELEGRAM_BOT_TOKEN" ]; then
+            python disparo_nuvem_telegram.py || true
+          fi
+
+      - name: Publicar vagas atualizadas no GitHub Pages
+        run: |
+          git config user.name "Radar Vagas Bot"
+          git config user.email "bot@radarvagas.local"
+          git add vagas_mapeadas.json
+          git diff --staged --quiet || git commit -m "Atualização automática de vagas (<= 7 dias)"
+          git push
