@@ -54,6 +54,10 @@
         <!-- Botões de Ação -->
         <div class="flex flex-col items-stretch md:items-end gap-2">
           <div class="flex flex-col sm:flex-row gap-2">
+            <button id="btn-bookmarklet" onclick="toggleBookmarkletBox()" class="px-4 py-3 rounded-xl font-bold text-xs md:text-sm bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-400 hover:to-amber-500 text-slate-950 shadow-lg transition-all flex items-center justify-center gap-2 cursor-pointer">
+              <span>⚡</span>
+              <span>Preencher Vagas (1 Toque)</span>
+            </button>
             <button id="btn-install-pwa" onclick="instalarAppCelular()" class="px-4 py-3 rounded-xl font-bold text-xs md:text-sm bg-sky-600 hover:bg-sky-500 text-white shadow-lg transition-all flex items-center justify-center gap-2 cursor-pointer">
               <span>📲</span>
               <span id="txt-install-pwa">Adicionar à Tela Inicial</span>
@@ -73,7 +77,7 @@
       <div id="pwa-help-box" class="hidden mt-4 pt-3 border-t border-sky-500/40 bg-sky-950/40 rounded-xl p-4 text-xs space-y-2">
         <div class="flex items-center justify-between">
           <strong class="text-sky-300 text-sm">📲 Como fixar o aplicativo na tela inicial do celular:</strong>
-          <button onclick="document.getElementById('pwa-help-box').classList.add('hidden')" class="px-2 py-0.5 rounded bg-slate-800 text-slate-300">Fechar ✕</button>
+          <button onclick="document.getElementById('pwa-help-box').classList.add('hidden')" class="px-2 py-0.5 rounded bg-slate-800 text-slate-300 cursor-pointer">Fechar ✕</button>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-3 pt-1">
           <div class="bg-slate-900/90 border border-slate-700 rounded-lg p-3">
@@ -85,6 +89,55 @@
             <div class="font-bold text-sky-400 mb-1">🍎 No iPhone / iOS (Safari):</div>
             <p class="text-slate-200">1. Toque no ícone de <strong>Compartilhar (quadrado com seta ⬆️)</strong>.</p>
             <p class="text-slate-200 mt-1">2. Role para baixo e selecione <strong>"Adicionar à Tela de Início"</strong>.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Caixa Guia Visual do Bookmarklet (Preenchimento 1-Toque) -->
+      <div id="bookmarklet-box" class="hidden mt-4 pt-3 border-t border-amber-500/40 bg-amber-950/40 rounded-xl p-4 text-xs space-y-3">
+        <div class="flex items-center justify-between">
+          <strong class="text-amber-300 text-sm">⚡ Preenchimento Automático em Formulários de Construtoras:</strong>
+          <button onclick="document.getElementById('bookmarklet-box').classList.add('hidden')" class="px-2 py-0.5 rounded bg-slate-800 text-slate-300 cursor-pointer">Fechar ✕</button>
+        </div>
+        <p class="text-slate-200">
+          O <strong>Bookmarklet</strong> é um favorito inteligente que você salva no navegador. Ao abrir a página de <strong>"Trabalhe Conosco"</strong> de qualquer construtora (BSPAR, Colmeia, C. Rolim, Moura Dubeux, etc.), basta tocar nesse favorito: ele preenche Nome, E-mail, Telefone/WhatsApp, LinkedIn, Cargo e Mensagem de Apresentação sozinho, destacando os campos preenchidos em verde!
+        </p>
+
+        <div class="bg-slate-900/90 border border-amber-500/30 rounded-lg p-3 flex flex-col sm:flex-row items-center justify-between gap-3">
+          <div>
+            <div class="text-slate-300 font-semibold mb-1">🖥️ No Computador (Chrome / Edge):</div>
+            <p class="text-[11px] text-slate-400">Arraste o botão amarelo abaixo direto para a sua barra de favoritos do navegador:</p>
+            <div class="mt-2">
+              <a id="bookmarklet-link" href="#" class="px-4 py-2 rounded-lg bg-amber-400 hover:bg-amber-300 text-slate-950 font-extrabold text-xs inline-flex items-center gap-1.5 shadow-md cursor-grab active:cursor-grabbing">
+                <span>⚡ Preencher Vaga (Denilson)</span>
+              </a>
+            </div>
+          </div>
+          <div class="border-t sm:border-t-0 sm:border-l border-slate-700 pt-2 sm:pt-0 sm:pl-4 w-full sm:w-auto text-center sm:text-left">
+            <div class="text-slate-300 font-semibold mb-1">📱 No Celular (Android / iPhone):</div>
+            <button onclick="copiarCodigoBookmarklet()" id="btn-copiar-bm" class="w-full px-4 py-2.5 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs shadow-md transition-all cursor-pointer flex items-center justify-center gap-2">
+              <span>📋</span> Copiar Código do Favorito
+            </button>
+            <span id="bm-copy-status" class="block text-[11px] text-emerald-400 font-semibold mt-1 hidden text-center">Código copiado! Cole no URL do favorito.</span>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-3 pt-1">
+          <div class="bg-slate-900/90 border border-slate-700 rounded-lg p-3">
+            <div class="font-bold text-emerald-400 mb-1">🤖 Como instalar no Chrome do Celular (Android):</div>
+            <p class="text-slate-300">1. Toque no botão verde acima <strong>"Copiar Código do Favorito"</strong>.</p>
+            <p class="text-slate-300 mt-1">2. Salve esta página nos favoritos tocando nos <strong>3 pontinhos (⋮) ➔ Estrela (⭐)</strong>.</p>
+            <p class="text-slate-300 mt-1">3. Toque em <strong>Editar</strong> (na barra inferior que aparece) ou vá em <strong>Favoritos</strong>.</p>
+            <p class="text-slate-300 mt-1">4. Troque o nome para <strong>⚡ Preencher Vaga</strong> e no campo <strong>URL</strong> apague tudo e cole o código copiado.</p>
+            <p class="text-emerald-300 font-semibold mt-2 pt-1 border-t border-slate-700">👉 Como usar: Ao abrir qualquer construtora, toque na barra de endereços, digite <em>Preencher</em> e selecione o favorito que aparecer!</p>
+          </div>
+          <div class="bg-slate-900/90 border border-slate-700 rounded-lg p-3">
+            <div class="font-bold text-sky-400 mb-1">🍎 Como instalar no iPhone (Safari / Chrome):</div>
+            <p class="text-slate-300">1. Toque no botão verde acima <strong>"Copiar Código do Favorito"</strong>.</p>
+            <p class="text-slate-300 mt-1">2. Favorite esta página tocando no botão <strong>Compartilhar (quadrado com seta) ➔ Adicionar aos Favoritos</strong>.</p>
+            <p class="text-slate-300 mt-1">3. Abra o painel de <strong>Favoritos</strong>, toque em <strong>Editar</strong> e selecione o favorito salvo.</p>
+            <p class="text-slate-300 mt-1">4. Altere o nome para <strong>⚡ Preencher Vaga</strong> e no campo de endereço cole o código copiado.</p>
+            <p class="text-sky-300 font-semibold mt-2 pt-1 border-t border-slate-700">👉 Como usar: No site da construtora, abra seus favoritos e toque em <em>⚡ Preencher Vaga</em>.</p>
           </div>
         </div>
       </div>
@@ -183,13 +236,26 @@
 
     <!-- Área de Carta de Apresentação -->
     <div id="carta-box" class="hidden bg-[var(--card)] border-2 border-blue-500/40 rounded-xl p-5 shadow-md">
-      <div class="flex items-center justify-between mb-2">
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-2">
         <h3 class="font-bold text-base" id="carta-titulo">Carta de Apresentação / Mensagem ao Recrutador</h3>
-        <button onclick="copiarCarta()" class="px-3 py-1.5 rounded-lg text-xs font-semibold bg-emerald-600 text-white hover:bg-emerald-500 cursor-pointer">
-          Copiar Texto
+        <button onclick="copiarCarta()" class="px-3.5 py-1.5 rounded-lg text-xs font-bold bg-emerald-600 text-white hover:bg-emerald-500 cursor-pointer flex items-center justify-center gap-1.5 shadow">
+          <span>📋</span> Copiar Carta Completa
         </button>
       </div>
       <p class="text-xs text-[var(--muted-foreground)] mb-2" id="carta-pdf-indicado"></p>
+
+      <!-- Botões de Cópia Rápida 1-Toque -->
+      <div class="flex flex-wrap items-center gap-1.5 mb-3 p-2.5 bg-slate-900/80 rounded-lg border border-[var(--border)]">
+        <span class="text-xs font-bold text-amber-300 mr-1 flex items-center gap-1">⚡ Copiar Dado:</span>
+        <button onclick="copiarDadoIndividual('nome')" class="px-2.5 py-1 rounded-md text-xs font-semibold bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 cursor-pointer">👤 Nome</button>
+        <button onclick="copiarDadoIndividual('email')" class="px-2.5 py-1 rounded-md text-xs font-semibold bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 cursor-pointer">✉️ E-mail</button>
+        <button onclick="copiarDadoIndividual('tel')" class="px-2.5 py-1 rounded-md text-xs font-semibold bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 cursor-pointer">📱 WhatsApp</button>
+        <button onclick="copiarDadoIndividual('linkedin')" class="px-2.5 py-1 rounded-md text-xs font-semibold bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 cursor-pointer">💼 LinkedIn</button>
+        <button onclick="copiarDadoIndividual('pdf')" class="px-2.5 py-1 rounded-md text-xs font-semibold bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 cursor-pointer">📄 Link do PDF</button>
+        <button onclick="copiarDadoIndividual('cargo')" class="px-2.5 py-1 rounded-md text-xs font-semibold bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 cursor-pointer">🎯 Cargo</button>
+        <span id="toast-copia-rapida" class="text-xs text-emerald-400 font-semibold ml-auto hidden">Copiado!</span>
+      </div>
+
       <textarea id="carta-texto" rows="11" class="w-full bg-[var(--background)] text-[var(--foreground)] border border-[var(--border)] rounded-lg p-3 text-xs font-mono"></textarea>
     </div>
   </div>
@@ -198,6 +264,73 @@
     const IS_GITHUB_PAGES = window.location.hostname.includes("github.io");
     const API_BASE = window.location.origin.includes("3456") ? window.location.origin : "http://" + window.location.hostname + ":3456";
     const GITHUB_PAGES_BASE = "https://denilsonb20-prog.github.io/radar-vagas-engenharia";
+    const BOOKMARKLET_CODE = "javascript:(function(){ try { var D = { nome: \"Marcos Den\\u00edlson Barbosa dos Santos\", primeiroNome: \"Marcos\", sobrenome: \"Barbosa dos Santos\", email: \"denilsonb20@gmail.com\", tel: \"(88) 99627-1246\", telLimpo: \"88996271246\", ddd: \"88\", cidade: \"Eus\\u00e9bio\", uf: \"CE\", cargo: \"Engenheiro Civil - Or\\u00e7amentos e Obras\", linkedin: \"https://linkedin.com/in/denilsonbarbosasantos\", portfolio: \"https://denilsonb20-prog.github.io/radar-vagas-engenharia/pdf/Curriculo_Denilson_Barbosa_Orcamentos_Planejamento_Fortaleza_CE.pdf\", carta: \"Engenheiro Civil graduado pela UFERSA, com p\\u00f3s-gradua\\u00e7\\u00e3o em Constru\\u00e7\\u00e3o Civil e MBA em Projetos de Instala\\u00e7\\u00f5es Prediais pelo IPOG. Nos \\u00faltimos 5 anos, atuei com engenharia de custos, or\\u00e7amentos executivos (CPUs, SINAPI/SICRO), planejamento f\\u00edsico-financeiro e gest\\u00e3o de obras p\\u00fablicas e privadas. Na SS&B Construtora, estruturei um banco pr\\u00f3prio com mais de 250 composi\\u00e7\\u00f5es de custos unit\\u00e1rios e conduzi a revis\\u00e3o de contrato de R$ 60M gerando redu\\u00e7\\u00e3o real de R$ 1,2 milh\\u00e3o. Antes disso, fui Diretor de Engenharia na Prefeitura de Mossor\\u00f3. Fico \\u00e0 disposi\\u00e7\\u00e3o para entrevista. Tel/WhatsApp: (88) 99627-1246 | E-mail: denilsonb20@gmail.com | LinkedIn: linkedin.com/in/denilsonbarbosasantos | Curr\\u00edculo: https://denilsonb20-prog.github.io/radar-vagas-engenharia/pdf/Curriculo_Denilson_Barbosa_Orcamentos_Planejamento_Fortaleza_CE.pdf\" }; function setVal(el, val) { if (!el || val === undefined || val === null) return false; try { el.focus(); var proto = el.tagName === 'TEXTAREA' ? window.HTMLTextAreaElement : (el.tagName === 'SELECT' ? window.HTMLSelectElement : window.HTMLInputElement); var descriptor = Object.getOwnPropertyDescriptor(proto.prototype, 'value'); if (descriptor && descriptor.set) { descriptor.set.call(el, val); } else { el.value = val; } el.setAttribute('value', val); ['input', 'change', 'blur'].forEach(function(evName) { el.dispatchEvent(new Event(evName, { bubbles: true })); }); el.style.setProperty('outline', '2px solid #10b981', 'important'); el.style.setProperty('background-color', '#ecfdf5', 'important'); el.style.setProperty('color', '#064e3b', 'important'); return true; } catch (err) { el.value = val; return true; } } var filled = 0; var inputs = document.querySelectorAll('input:not([type=\"hidden\"]):not([type=\"submit\"]):not([type=\"button\"]):not([type=\"radio\"]):not([type=\"checkbox\"]):not([type=\"file\"]), textarea, select'); inputs.forEach(function(el) { var tag = el.tagName.toLowerCase(); var type = (el.getAttribute('type') || 'text').toLowerCase(); var name = (el.name || '').toLowerCase(); var id = (el.id || '').toLowerCase(); var ph = (el.placeholder || '').toLowerCase(); var aria = (el.getAttribute('aria-label') || '').toLowerCase(); var auto = (el.getAttribute('autocomplete') || '').toLowerCase(); var lblText = ''; if (el.id) { var l = document.querySelector('label[for=\"' + el.id + '\"]'); if (l) lblText = l.innerText.toLowerCase(); } if (!lblText && el.closest('label')) { lblText = el.closest('label').innerText.toLowerCase(); } var full = [name, id, ph, aria, auto, lblText].join(' '); if (type === 'email' || full.indexOf('email') > -1 || full.indexOf('e-mail') > -1) { if (setVal(el, D.email)) filled++; } else if (type === 'tel' || full.indexOf('telefone') > -1 || full.indexOf('celular') > -1 || full.indexOf('whatsapp') > -1 || full.indexOf('fone') > -1 || full.indexOf('phone') > -1) { if (full.indexOf('ddd') > -1 && full.indexOf('telefone') === -1) { if (setVal(el, D.ddd)) filled++; } else { var valTel = (el.maxLength && el.maxLength < 14) ? D.telLimpo : D.tel; if (setVal(el, valTel)) filled++; } } else if (full.indexOf('linkedin') > -1) { if (setVal(el, D.linkedin)) filled++; } else if (full.indexOf('portfolio') > -1 || full.indexOf('site') > -1 || full.indexOf('curriculo') > -1 || full.indexOf('cv') > -1 || full.indexOf('url') > -1) { if (tag === 'textarea' || full.indexOf('mensagem') > -1 || full.indexOf('apresenta') > -1) { if (setVal(el, D.carta)) filled++; } else { if (setVal(el, D.portfolio)) filled++; } } else if (full.indexOf('sobrenome') > -1 || full.indexOf('last_name') > -1 || full.indexOf('lastname') > -1) { if (setVal(el, D.sobrenome)) filled++; } else if (full.indexOf('primeiro') > -1 || full.indexOf('first_name') > -1 || full.indexOf('firstname') > -1) { if (setVal(el, D.primeiroNome)) filled++; } else if (full.indexOf('nome') > -1 || full.indexOf('name') > -1 || full.indexOf('candidato') > -1) { if (setVal(el, D.nome)) filled++; } else if (full.indexOf('cargo') > -1 || full.indexOf('funcao') > -1 || full.indexOf('vaga') > -1 || full.indexOf('pretensao') > -1 || full.indexOf('area') > -1) { if (tag === 'select') { for (var i = 0; i < el.options.length; i++) { var opt = el.options[i].text.toLowerCase(); if (opt.indexOf('engenhar') > -1 || opt.indexOf('civil') > -1 || opt.indexOf('or\u00e7') > -1 || opt.indexOf('obra') > -1) { el.selectedIndex = i; setVal(el, el.options[i].value); filled++; break; } } } else { if (setVal(el, D.cargo)) filled++; } } else if (full.indexOf('cidade') > -1 || full.indexOf('city') > -1 || full.indexOf('municipio') > -1) { if (setVal(el, D.cidade)) filled++; } else if (full.indexOf('estado') > -1 || full.indexOf(' uf') > -1 || full.indexOf('state') > -1) { if (tag === 'select') { for (var j = 0; j < el.options.length; j++) { if (el.options[j].text.indexOf('CE') > -1 || el.options[j].value.indexOf('CE') > -1 || el.options[j].text.indexOf('Cear') > -1) { el.selectedIndex = j; setVal(el, el.options[j].value); filled++; break; } } } else { if (setVal(el, D.uf)) filled++; } } else if (tag === 'textarea' || full.indexOf('mensagem') > -1 || full.indexOf('carta') > -1 || full.indexOf('apresenta') > -1 || full.indexOf('sobre') > -1 || full.indexOf('obs') > -1 || full.indexOf('detalhe') > -1 || full.indexOf('fale') > -1) { if (setVal(el, D.carta)) filled++; } }); var b = document.createElement('div'); b.style.cssText = 'position:fixed;top:16px;left:50%;transform:translateX(-50%);z-index:99999999;padding:12px 22px;border-radius:12px;font-family:sans-serif;font-size:14px;font-weight:700;box-shadow:0 12px 30px rgba(0,0,0,0.35);transition:all 0.3s ease;'; if (filled > 0) { b.style.backgroundColor = '#065f46'; b.style.color = '#ffffff'; b.innerHTML = '\u26a1 <strong>Radar Vagas:</strong> ' + filled + ' campo(s) preenchido(s) com seus dados!'; } else { b.style.backgroundColor = '#991b1b'; b.style.color = '#ffffff'; b.innerHTML = '\u26a0\ufe0f <strong>Radar Vagas:</strong> Nenhum campo identificado nesta p\u00e1gina.'; } document.body.appendChild(b); setTimeout(function(){ b.style.opacity = '0'; setTimeout(function(){ b.remove(); }, 400); }, 4500); } catch(e) { alert('Erro no preenchimento: ' + e.message); } })();";
+
+    let ultimoPdfUrl = "";
+    const DADOS_CANDIDATO = {
+      nome: "Marcos Denílson Barbosa dos Santos",
+      email: "denilsonb20@gmail.com",
+      tel: "(88) 99627-1246",
+      cargo: "Engenheiro Civil - Orçamentos e Planejamento",
+      linkedin: "https://linkedin.com/in/denilsonbarbosasantos",
+      pdfUrl: "https://denilsonb20-prog.github.io/radar-vagas-engenharia/pdf/Curriculo_Denilson_Barbosa_Orcamentos_Planejamento_Fortaleza_CE.pdf"
+    };
+
+    function toggleBookmarkletBox() {
+      const box = document.getElementById("bookmarklet-box");
+      if (box) {
+        box.classList.toggle("hidden");
+        if (!box.classList.contains("hidden")) {
+          box.scrollIntoView({ behavior: "smooth" });
+        }
+      }
+    }
+
+    function copiarCodigoBookmarklet() {
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(BOOKMARKLET_CODE);
+      } else {
+        const ta = document.createElement("textarea");
+        ta.value = BOOKMARKLET_CODE;
+        document.body.appendChild(ta);
+        ta.select();
+        document.execCommand("copy");
+        document.body.removeChild(ta);
+      }
+      const st = document.getElementById("bm-copy-status");
+      if (st) {
+        st.classList.remove("hidden");
+        setTimeout(() => st.classList.add("hidden"), 3500);
+      }
+    }
+
+    function copiarDadoIndividual(tipo) {
+      let val = "";
+      if (tipo === "nome") val = DADOS_CANDIDATO.nome;
+      else if (tipo === "email") val = DADOS_CANDIDATO.email;
+      else if (tipo === "tel") val = DADOS_CANDIDATO.tel;
+      else if (tipo === "linkedin") val = DADOS_CANDIDATO.linkedin;
+      else if (tipo === "cargo") val = DADOS_CANDIDATO.cargo;
+      else if (tipo === "pdf") val = ultimoPdfUrl || DADOS_CANDIDATO.pdfUrl;
+
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(val);
+      } else {
+        const ta = document.createElement("textarea");
+        ta.value = val;
+        document.body.appendChild(ta);
+        ta.select();
+        document.execCommand("copy");
+        document.body.removeChild(ta);
+      }
+
+      const toast = document.getElementById("toast-copia-rapida");
+      if (toast) {
+        toast.textContent = `Copiado: ${val.slice(0, 18)}...`;
+        toast.classList.remove("hidden");
+        setTimeout(() => toast.classList.add("hidden"), 2500);
+      }
+    }
 
     const STORAGE_KEY_CLICADAS = "radar_vagas_clicadas_ids";
     let clicadasSet = new Set();
@@ -660,6 +793,7 @@
       }
 
       const pdfUrl = `${GITHUB_PAGES_BASE}/pdf/${encodeURIComponent(v.pdf)}`;
+      ultimoPdfUrl = pdfUrl;
       const texto = `Assunto: Candidatura: ${v.titulo} - Denilson Barbosa (Engenheiro Civil)\n\nPrezada equipe de seleção da ${v.empresa},\n\nEnvio meu currículo para avaliação na oportunidade de ${v.titulo}.\n\nSou Engenheiro Civil graduado pela UFERSA, com pós-graduação em Construção Civil e MBA em Projetos de Instalações Prediais pelo IPOG. Nos últimos cinco anos, atuei diretamente com engenharia de custos, planejamento físico-financeiro e gestão de obras públicas e privadas.\n\nAtualmente, como Engenheiro Orçamentista na SS&B Construtora, estruturei um banco próprio com mais de 250 composições de custos unitários (CPUs) e conduzi a revisão técnica e tributária de um orçamento de R$ 60 milhões, gerando uma redução real de R$ 1,2 milhão que viabilizou o fechamento do contrato. Antes disso, exerci o cargo de Diretor de Engenharia na Prefeitura de Mossoró, coordenando equipes multidisciplinares, medições e compatibilização de projetos em obras hospitalares e educacionais, onde liderei uma revisão estrutural de emergência que evitou perdas estimadas em 10% do custo da obra.\n\n${locMsg}\n\n📄 Link direto para download do currículo completo em PDF:\n${pdfUrl}\n\nO currículo detalha minha experiência com AutoCAD, Revit (BIM), MS Project, Eberick e bases referenciais de preços (SINAPI, SICRO e composições próprias). Fico à disposição para uma entrevista.\n\nAtenciosamente,\n\nMarcos Denílson Barbosa dos Santos (Denilson Barbosa)\nEngenheiro Civil | CREA Ativo\n(88) 9627-1246 | denilsonb20@gmail.com\nlinkedin.com/in/denilsonbarbosasantos`;
 
       document.getElementById("carta-texto").value = texto;
@@ -673,6 +807,11 @@
     }
 
     function sincronizarLinksPdf() {
+      const bLink = document.getElementById("bookmarklet-link");
+      if (bLink) {
+        bLink.href = BOOKMARKLET_CODE;
+      }
+
       const mapIds = {
         "dl-for-orc": "Curriculo_Denilson_Barbosa_Orcamentos_Planejamento_Fortaleza_CE.pdf",
         "dl-for-obr": "Curriculo_Denilson_Barbosa_Gestao_Obras_Projetos_Fortaleza_CE.pdf",
