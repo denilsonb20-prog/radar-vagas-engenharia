@@ -29,6 +29,7 @@ jobs:
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
         run: |
           python scanner_vagas.py
+          python gerar_painel_7dias.py
           if [ -n "$TELEGRAM_BOT_TOKEN" ]; then
             python disparo_nuvem_telegram.py || true
           fi
@@ -37,6 +38,6 @@ jobs:
         run: |
           git config user.name "Radar Vagas Bot"
           git config user.email "bot@radarvagas.local"
-          git add vagas_mapeadas.json
-          git diff --staged --quiet || git commit -m "Atualização automática de vagas (<= 7 dias)"
+          git add vagas_mapeadas.json vagas_clicadas.json index.html painel_vagas_caruaru.html
+          git diff --staged --quiet || git commit -m "Atualização automática de vagas (<= 7 dias) [skip ci]"
           git push
