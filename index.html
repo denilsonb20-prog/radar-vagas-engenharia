@@ -10,7 +10,7 @@
   <link rel="manifest" href="./manifest.json">
   <link rel="apple-touch-icon" href="./icon-192.png">
   <link rel="icon" type="image/png" href="./icon-192.png">
-  <title>Radar Engenharia (Últimos 7 Dias): Gupy • Indeed • LinkedIn</title>
+  <title>Radar de Vagas de Engenharia: Fortaleza, Caruaru & Remoto (≤ 7 Dias)</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
     :root {
@@ -24,28 +24,31 @@
 </head>
 <body class="bg-[var(--background)] text-[var(--foreground)] antialiased p-3 md:p-6">
   <div class="max-w-5xl mx-auto space-y-5">
-    <!-- Cabeçalho + Botão de Varredura Ao Vivo + Botão Instalar na Tela Inicial -->
+    <!-- Cabeçalho + Botões de Ação Ao Vivo -->
     <div class="bg-[var(--card)] border border-[var(--border)] rounded-xl p-5 shadow-sm">
       <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
         <div>
           <div class="flex flex-wrap items-center gap-2 mb-2">
             <span class="inline-block px-3 py-1 rounded-full text-xs font-semibold bg-emerald-500/15 text-emerald-400 border border-emerald-500/30">
-              ⚡ Filtro Estrito: Máximo 7 Dias (1 Semana)
+              ⚡ Vagas Recentes: Máximo 7 Dias
             </span>
             <span class="inline-block px-3 py-1 rounded-full text-xs font-semibold bg-amber-500/15 text-amber-300 border border-amber-500/30">
-              👁️ Oculta Automaticamente Vagas Já Clicadas
+              👁️ Vagas Clicadas Ocultas
             </span>
             <span id="api-badge" class="inline-block px-2.5 py-1 rounded-full text-xs font-semibold bg-blue-500/15 text-blue-300 border border-blue-500/30">
               Sincronizado
             </span>
+            <button onclick="carregarDadosServidor()" title="Sincronizar descartes entre PC e Celular" class="px-2 py-0.5 rounded text-xs bg-slate-800 border border-slate-700 text-slate-300 hover:text-white cursor-pointer">
+              🔄 Sincronizar
+            </button>
           </div>
-          <h1 class="text-xl md:text-2xl font-bold text-[var(--foreground)]">Radar de Engenharia: Gupy, Indeed & LinkedIn</h1>
+          <h1 class="text-xl md:text-2xl font-bold text-[var(--foreground)]">Radar de Vagas de Engenharia Civil</h1>
           <p class="text-xs md:text-sm text-[var(--muted-foreground)] mt-1">
             Polos: <strong>Fortaleza + 60 km (CE)</strong> • <strong>Caruaru + 80 km (PE)</strong> • <strong>Remoto Brasil</strong>
           </p>
         </div>
 
-        <!-- Botões de Ação Ao Vivo + Instalar App no Celular -->
+        <!-- Botões de Ação -->
         <div class="flex flex-col items-stretch md:items-end gap-2">
           <div class="flex flex-col sm:flex-row gap-2">
             <button id="btn-install-pwa" onclick="instalarAppCelular()" class="px-4 py-3 rounded-xl font-bold text-xs md:text-sm bg-sky-600 hover:bg-sky-500 text-white shadow-lg transition-all flex items-center justify-center gap-2 cursor-pointer">
@@ -54,36 +57,36 @@
             </button>
             <button id="btn-live-scan" onclick="dispararScanPainel()" class="px-5 py-3 rounded-xl font-bold text-xs md:text-sm bg-emerald-600 hover:bg-emerald-500 text-white shadow-lg transition-all flex items-center justify-center gap-2 cursor-pointer">
               <span id="icon-live-scan">🔄</span>
-              <span id="txt-live-scan">Executar Varredura Ao Vivo (≤ 7 Dias)</span>
+              <span id="txt-live-scan">Varredura Ao Vivo (≤ 7 Dias)</span>
             </button>
           </div>
           <span id="sub-live-scan" class="text-[11px] text-[var(--muted-foreground)] text-center md:text-right">
-            Traz apenas vagas da última semana e ignora vagas que você já clicou
+            Busca novas vagas em murais de construtoras, Indeed, Gupy e LinkedIn
           </span>
         </div>
       </div>
 
-      <!-- Caixa Guia Visual de Instalação no Celular (Aparece ao tocar em Adicionar à Tela Inicial) -->
+      <!-- Caixa Guia Visual de Instalação no Celular -->
       <div id="pwa-help-box" class="hidden mt-4 pt-3 border-t border-sky-500/40 bg-sky-950/40 rounded-xl p-4 text-xs space-y-2">
         <div class="flex items-center justify-between">
-          <strong class="text-sky-300 text-sm">📲 Como fixar o ícone do aplicativo na tela do seu celular:</strong>
+          <strong class="text-sky-300 text-sm">📲 Como fixar o aplicativo na tela inicial do celular:</strong>
           <button onclick="document.getElementById('pwa-help-box').classList.add('hidden')" class="px-2 py-0.5 rounded bg-slate-800 text-slate-300">Fechar ✕</button>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-3 pt-1">
           <div class="bg-slate-900/90 border border-slate-700 rounded-lg p-3">
             <div class="font-bold text-emerald-400 mb-1">🤖 No Android (Chrome / Samsung Internet):</div>
-            <p class="text-slate-200">1. Toque nos <strong>3 pontinhos (⋮)</strong> no canto superior direito do navegador.</p>
-            <p class="text-slate-200 mt-1">2. Toque em <strong>"Adicionar à tela inicial"</strong> (ou <strong>"Instalar aplicativo"</strong>) e confirme em <strong>Adicionar</strong>.</p>
+            <p class="text-slate-200">1. Toque nos <strong>3 pontinhos (⋮)</strong> no canto superior direito.</p>
+            <p class="text-slate-200 mt-1">2. Toque em <strong>"Adicionar à tela inicial"</strong> (ou "Instalar aplicativo") e confirme.</p>
           </div>
           <div class="bg-slate-900/90 border border-slate-700 rounded-lg p-3">
-            <div class="font-bold text-sky-400 mb-1">🍎 No iPhone / iOS (Safari ou Chrome):</div>
-            <p class="text-slate-200">1. Toque no ícone de <strong>Compartilhar (quadrado com seta para cima ⬆️)</strong> na barra do navegador.</p>
-            <p class="text-slate-200 mt-1">2. Role o menu para baixo e toque em <strong>"Adicionar à Tela de Início"</strong>.</p>
+            <div class="font-bold text-sky-400 mb-1">🍎 No iPhone / iOS (Safari):</div>
+            <p class="text-slate-200">1. Toque no ícone de <strong>Compartilhar (quadrado com seta ⬆️)</strong>.</p>
+            <p class="text-slate-200 mt-1">2. Role para baixo e selecione <strong>"Adicionar à Tela de Início"</strong>.</p>
           </div>
         </div>
       </div>
 
-      <!-- Barra de Progresso Oculta até Clicar -->
+      <!-- Barra de Progresso da Varredura -->
       <div id="scan-progress-wrap" class="hidden mt-4 pt-3 border-t border-[var(--border)]">
         <div class="flex justify-between text-xs font-semibold text-emerald-400 mb-1">
           <span id="scan-progress-msg">Iniciando varredura (≤ 7 dias)...</span>
@@ -94,57 +97,62 @@
         </div>
       </div>
 
-      <!-- Placar Rápido (Somente Não Clicadas <= 7 Dias) -->
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-2 text-center mt-4 pt-4 border-t border-[var(--border)]">
+      <!-- Placar Rápido com 5 Plataformas -->
+      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-2 text-center mt-4 pt-4 border-t border-[var(--border)]">
         <div class="bg-[var(--background)] border border-[var(--border)] rounded-lg p-2.5">
-          <div class="text-base font-bold text-cyan-400">Gupy</div>
-          <div class="text-xs text-[var(--muted-foreground)]" id="count-gupy">0 Vagas Novas</div>
+          <div class="text-xs font-bold text-emerald-400">Construtoras (RH)</div>
+          <div class="text-xs text-[var(--muted-foreground)] mt-0.5" id="count-const">0 Murais</div>
         </div>
         <div class="bg-[var(--background)] border border-[var(--border)] rounded-lg p-2.5">
-          <div class="text-base font-bold text-indigo-400">Indeed</div>
-          <div class="text-xs text-[var(--muted-foreground)]" id="count-indeed">0 Vagas Novas</div>
+          <div class="text-xs font-bold text-indigo-400">Indeed Brasil</div>
+          <div class="text-xs text-[var(--muted-foreground)] mt-0.5" id="count-indeed">0 Vagas</div>
         </div>
         <div class="bg-[var(--background)] border border-[var(--border)] rounded-lg p-2.5">
-          <div class="text-base font-bold text-blue-400">LinkedIn</div>
-          <div class="text-xs text-[var(--muted-foreground)]" id="count-linkedin">0 Vagas Novas</div>
+          <div class="text-xs font-bold text-blue-400">LinkedIn Vagas</div>
+          <div class="text-xs text-[var(--muted-foreground)] mt-0.5" id="count-linkedin">0 Vagas</div>
         </div>
         <div class="bg-[var(--background)] border border-[var(--border)] rounded-lg p-2.5">
-          <div class="text-base font-bold text-purple-400">Posts Feed</div>
-          <div class="text-xs text-[var(--muted-foreground)]" id="count-posts">0 Posts Novos</div>
+          <div class="text-xs font-bold text-cyan-400">Gupy</div>
+          <div class="text-xs text-[var(--muted-foreground)] mt-0.5" id="count-gupy">0 Vagas</div>
+        </div>
+        <div class="bg-[var(--background)] border border-[var(--border)] rounded-lg p-2.5">
+          <div class="text-xs font-bold text-purple-400">Posts Feed</div>
+          <div class="text-xs text-[var(--muted-foreground)] mt-0.5" id="count-posts">0 Posts</div>
         </div>
       </div>
     </div>
 
-    <!-- Os 4 Currículos Salvos (Com Download Direto no PC, Celular ou GitHub Pages) -->
+    <!-- Os 4 Currículos Salvos (Download Direto no Celular e PC) -->
     <div class="bg-[var(--card)] border border-[var(--border)] rounded-xl p-4 shadow-sm">
       <h3 class="text-xs font-bold uppercase tracking-wider text-[var(--muted-foreground)] mb-3">
-        📄 4 Currículos PDF Prontos (Toque para baixar no celular ou abrir no PC):
+        📄 4 Currículos PDF Estratégicos (Toque para baixar ou enviar):
       </h3>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs">
         <div class="bg-[var(--background)] border border-[var(--border)] rounded-lg p-3 space-y-1.5">
-          <div class="font-bold text-emerald-400">📍 Para Vagas em Fortaleza + 60km e Remoto (Cabeçalho: Eusébio, CE)</div>
+          <div class="font-bold text-emerald-400">📍 Fortaleza + 60km e Remoto (Cabeçalho: Eusébio, CE)</div>
           <a id="dl-for-orc" href="./pdf/Curriculo_Denilson_Barbosa_Orcamentos_Planejamento_Fortaleza_CE.pdf" target="_blank" class="block font-mono truncate text-blue-400 hover:underline">⬇ Curriculo_Denilson_Barbosa_Orcamentos_Planejamento_Fortaleza_CE.pdf</a>
           <a id="dl-for-obr" href="./pdf/Curriculo_Denilson_Barbosa_Gestao_Obras_Projetos_Fortaleza_CE.pdf" target="_blank" class="block font-mono truncate text-blue-400 hover:underline">⬇ Curriculo_Denilson_Barbosa_Gestao_Obras_Projetos_Fortaleza_CE.pdf</a>
         </div>
         <div class="bg-[var(--background)] border border-[var(--border)] rounded-lg p-3 space-y-1.5">
-          <div class="font-bold text-amber-400">📍 Para Vagas em Caruaru + 80km e PE (Cabeçalho: Caruaru, PE)</div>
+          <div class="font-bold text-amber-400">📍 Caruaru + 80km e PE (Cabeçalho: Caruaru, PE)</div>
           <a id="dl-car-orc" href="./pdf/Curriculo_Denilson_Barbosa_Orcamentos_Planejamento_Caruaru_PE.pdf" target="_blank" class="block font-mono truncate text-blue-400 hover:underline">⬇ Curriculo_Denilson_Barbosa_Orcamentos_Planejamento_Caruaru_PE.pdf</a>
           <a id="dl-car-obr" href="./pdf/Curriculo_Denilson_Barbosa_Gestao_Obras_Projetos_Caruaru_PE.pdf" target="_blank" class="block font-mono truncate text-blue-400 hover:underline">⬇ Curriculo_Denilson_Barbosa_Gestao_Obras_Projetos_Caruaru_PE.pdf</a>
         </div>
       </div>
     </div>
 
-    <!-- Filtros Duplos: Plataforma e Região + Controle de Vagas Já Clicadas -->
+    <!-- Filtros Duplos + Vagas Ocultas -->
     <div class="bg-[var(--card)] border border-[var(--border)] rounded-xl p-5 shadow-sm">
       <div class="flex flex-col gap-3 mb-4">
         <div class="flex flex-wrap items-center justify-between gap-2">
           <span class="text-xs font-bold uppercase tracking-wider text-[var(--muted-foreground)]">1. Filtrar por Plataforma:</span>
           <div class="flex flex-wrap gap-1.5">
-            <button onclick="setPlat('todas')" id="plat-todas" class="px-3 py-1 rounded-lg text-xs font-semibold bg-blue-600 text-white cursor-pointer">Todas as Plataformas</button>
-            <button onclick="setPlat('Gupy')" id="plat-Gupy" class="px-3 py-1 rounded-lg text-xs font-semibold bg-[var(--background)] border border-[var(--border)] cursor-pointer">Gupy</button>
+            <button onclick="setPlat('todas')" id="plat-todas" class="px-3 py-1 rounded-lg text-xs font-semibold bg-blue-600 text-white cursor-pointer">Todas</button>
+            <button onclick="setPlat('Mural Construtora (RH)')" id="plat-Mural Construtora (RH)" class="px-3 py-1 rounded-lg text-xs font-semibold bg-[var(--background)] border border-[var(--border)] cursor-pointer">Murais Construtoras (RH)</button>
             <button onclick="setPlat('Indeed')" id="plat-Indeed" class="px-3 py-1 rounded-lg text-xs font-semibold bg-[var(--background)] border border-[var(--border)] cursor-pointer">Indeed Brasil</button>
             <button onclick="setPlat('LinkedIn Vagas')" id="plat-LinkedIn Vagas" class="px-3 py-1 rounded-lg text-xs font-semibold bg-[var(--background)] border border-[var(--border)] cursor-pointer">LinkedIn Vagas</button>
-            <button onclick="setPlat('Publicação LinkedIn')" id="plat-Publicação LinkedIn" class="px-3 py-1 rounded-lg text-xs font-semibold bg-[var(--background)] border border-[var(--border)] cursor-pointer">Publicações (Feed)</button>
+            <button onclick="setPlat('Gupy')" id="plat-Gupy" class="px-3 py-1 rounded-lg text-xs font-semibold bg-[var(--background)] border border-[var(--border)] cursor-pointer">Gupy</button>
+            <button onclick="setPlat('Publicação LinkedIn')" id="plat-Publicação LinkedIn" class="px-3 py-1 rounded-lg text-xs font-semibold bg-[var(--background)] border border-[var(--border)] cursor-pointer">Posts Feed</button>
           </div>
         </div>
 
@@ -159,7 +167,7 @@
         </div>
 
         <div class="flex flex-wrap items-center justify-between gap-2 border-t border-[var(--border)] pt-3 text-xs text-[var(--muted-foreground)]">
-          <span>💡 <strong>Regra ativa:</strong> Ao clicar em <em>"Abrir no..."</em>, a vaga é marcada como vista e não aparece mais nas próximas buscas.</span>
+          <span>💡 Toque em <strong>"✉️ Candidatura Rápida (1 Toque)"</strong> para abrir seu e-mail já preenchido com seu currículo em anexo e texto profissional.</span>
           <div class="flex items-center gap-2">
             <span id="clicadas-info" class="font-semibold text-amber-400">0 vagas já clicadas ocultadas</span>
             <button onclick="restaurarVagasClicadas()" class="px-2 py-0.5 rounded bg-[var(--background)] border border-[var(--border)] hover:text-white cursor-pointer">Restaurar</button>
@@ -185,15 +193,11 @@
 
   <script>
     const IS_GITHUB_PAGES = window.location.hostname.includes("github.io");
-    const API_BASE = IS_GITHUB_PAGES
-      ? "."
-      : ((window.location.protocol === "http:" || window.location.protocol === "https:")
-          ? window.location.origin
-          : "http://127.0.0.1:3456");
+    const API_BASE = window.location.origin.includes("3456") ? window.location.origin : "http://" + window.location.hostname + ":3456";
+    const GITHUB_PAGES_BASE = "https://denilsonb20-prog.github.io/radar-vagas-engenharia";
 
-    const STORAGE_KEY_CLICADAS = "radar_vagas_clicadas_denilson_v1";
+    const STORAGE_KEY_CLICADAS = "radar_vagas_clicadas_ids";
     let clicadasSet = new Set();
-
     try {
       const saved = JSON.parse(localStorage.getItem(STORAGE_KEY_CLICADAS) || "[]");
       saved.forEach(x => clicadasSet.add(String(x)));
@@ -204,21 +208,123 @@
 
     let VAGAS = [
   {
-    "id": "li_4485580343",
-    "plat": "LinkedIn Vagas",
+    "id": "const_ce_bspar",
+    "plat": "Mural Construtora (RH)",
     "reg": "fortaleza",
     "regLabel": "Fortaleza + 60km (CE)",
-    "dias": 2,
-    "recencia": "Há 2 dias (05/11/2026)",
+    "dias": 1,
+    "recencia": "Há 1 dia (07/11/2026)",
     "score": 99,
-    "titulo": "Analista de Orçamento- Engenharia Civil",
-    "empresa": "Grupo FAN",
-    "local": "Aquiraz, CE",
+    "titulo": "Engenheiro de Custos & Orçamentos (Banco de Talentos / RH Direto)",
+    "empresa": "BSPAR Incorporações",
+    "local": "Fortaleza, CE (Aldeota / Meireles)",
     "pdf": "Curriculo_Denilson_Barbosa_Orcamentos_Planejamento_Fortaleza_CE.pdf",
-    "email": "",
-    "url": "https://br.linkedin.com/jobs/view/analista-de-or%C3%A7amento-engenharia-civil-at-grupo-fan-4485580343",
-    "resumo": "",
-    "motivo": "Publicada há 2 dia(s) • Afinidade com Orçamentos de Obras, Engenharia Civil."
+    "email": "contato@bspar.com.br",
+    "url": "https://bspar.com.br/trabalhe-conosco/",
+    "resumo": "Banco de talentos e seleção contínua para Engenharia de Custos, Orçamentos, Planejamento e Acompanhamento de Obras de alto padrão da BSPAR Incorporações em Fortaleza/CE. Envio direto de currículo para a equipe de RH.",
+    "motivo": "Publicada há 1 dia(s) • Afinidade com Orçamentos de Obras, Planejamento Físico-Financeiro, Gestão/Execução de Obras."
+  },
+  {
+    "id": "const_ce_crolim",
+    "plat": "Mural Construtora (RH)",
+    "reg": "fortaleza",
+    "regLabel": "Fortaleza + 60km (CE)",
+    "dias": 1,
+    "recencia": "Há 1 dia (07/11/2026)",
+    "score": 99,
+    "titulo": "Engenheiro Civil - Planejamento e Gestão de Obras (RH Direto)",
+    "empresa": "C. Rolim Engenharia",
+    "local": "Fortaleza, CE",
+    "pdf": "Curriculo_Denilson_Barbosa_Orcamentos_Planejamento_Fortaleza_CE.pdf",
+    "email": "rh@crolim.com.br",
+    "url": "https://www.crolimengenharia.com.br/trabalhe-conosco/",
+    "resumo": "Oportunidade contínua e banco de talentos para Engenheiros Civis com foco em planejamento físico-financeiro, controle de cronograma, medições e acompanhamento de obras prediais sustentáveis em Fortaleza.",
+    "motivo": "Publicada há 1 dia(s) • Afinidade com Planejamento Físico-Financeiro, Cronogramas de Obra, Engenharia Civil."
+  },
+  {
+    "id": "const_ce_colmeia",
+    "plat": "Mural Construtora (RH)",
+    "reg": "fortaleza",
+    "regLabel": "Fortaleza + 60km (CE)",
+    "dias": 1,
+    "recencia": "Há 1 dia (07/11/2026)",
+    "score": 99,
+    "titulo": "Engenheiro Orçamentista / Sala Técnica (Mural de Talentos)",
+    "empresa": "Construtora Colmeia",
+    "local": "Fortaleza, CE (Região Metropolitana)",
+    "pdf": "Curriculo_Denilson_Barbosa_Orcamentos_Planejamento_Fortaleza_CE.pdf",
+    "email": "curriculo@colmeia.com.br",
+    "url": "https://colmeia.com.br/trabalhe-conosco/",
+    "resumo": "Seleção direta de Engenheiros para elaboração de orçamentos executivos, CPUs, cotações com fornecedores, compatibilização de projetos BIM e sala técnica de obras residenciais no Ceará.",
+    "motivo": "Publicada há 1 dia(s) • Afinidade com Orçamentos de Obras, Sala Técnica / Orçamentos e Planejamento, Gestão/Execução de Obras."
+  },
+  {
+    "id": "const_pe_cpconstrucao",
+    "plat": "Mural Construtora (RH)",
+    "reg": "caruaru",
+    "regLabel": "Caruaru + 80km (PE)",
+    "dias": 1,
+    "recencia": "Há 1 dia (07/11/2026)",
+    "score": 99,
+    "titulo": "Engenheiro Civil - Obras & Orçamentos (Caruaru / Agreste)",
+    "empresa": "CP Construção",
+    "local": "Caruaru, PE (Polo Agreste)",
+    "pdf": "Curriculo_Denilson_Barbosa_Orcamentos_Planejamento_Caruaru_PE.pdf",
+    "email": "contato@cpconstrucao.com.br",
+    "url": "http://cpconstrucao.com.br/",
+    "resumo": "Construtora referência no Agreste de Pernambuco com sede em Caruaru. Canal direto para recepção de currículos de Engenharia Civil com atuação em obras residenciais, loteamentos, infraestrutura e orçamentos.",
+    "motivo": "Publicada há 1 dia(s) • Afinidade com Orçamentos de Obras, Engenharia Civil, Gestão/Execução de Obras."
+  },
+  {
+    "id": "const_pe_rioave",
+    "plat": "Mural Construtora (RH)",
+    "reg": "caruaru",
+    "regLabel": "Eixo PE (Recife / BR-232)",
+    "dias": 1,
+    "recencia": "Há 1 dia (07/11/2026)",
+    "score": 99,
+    "titulo": "Engenheiro de Planejamento & Qualidade (RH Direto)",
+    "empresa": "Construtora Rio Ave",
+    "local": "Recife / Eixo PE",
+    "pdf": "Curriculo_Denilson_Barbosa_Orcamentos_Planejamento_Caruaru_PE.pdf",
+    "email": "rh@rioave.com.br",
+    "url": "https://rioave.com.br/trabalhe-conosco/",
+    "resumo": "Mural de carreiras e banco de talentos para Engenharia Civil em obras comerciais e residenciais de alto padrão no estado de Pernambuco, com foco em planejamento, qualidade e medições.",
+    "motivo": "Publicada há 1 dia(s) • Afinidade com Planejamento Físico-Financeiro, Engenharia Civil, Gestão/Execução de Obras."
+  },
+  {
+    "id": "const_pe_conic",
+    "plat": "Mural Construtora (RH)",
+    "reg": "caruaru",
+    "regLabel": "Eixo PE (Recife / BR-232)",
+    "dias": 1,
+    "recencia": "Há 1 dia (07/11/2026)",
+    "score": 99,
+    "titulo": "Engenheiro Civil - Gestão e Acompanhamento de Obras (RH)",
+    "empresa": "Conic Construtora",
+    "local": "Pernambuco (Eixo BR-232)",
+    "pdf": "Curriculo_Denilson_Barbosa_Gestao_Obras_Projetos_Caruaru_PE.pdf",
+    "email": "rh@conic.com.br",
+    "url": "https://conic.com.br/trabalhe-conosco/",
+    "resumo": "Recepção de currículos de Engenharia Civil para obras públicas e privadas em Pernambuco. Gestão de equipes em campo, controle de prazos e medições contratuais.",
+    "motivo": "Publicada há 1 dia(s) • Afinidade com Engenharia Civil, Gestão/Execução de Obras, Controle de Medições."
+  },
+  {
+    "id": "const_pe_duarte",
+    "plat": "Mural Construtora (RH)",
+    "reg": "caruaru",
+    "regLabel": "Eixo PE (Recife / BR-232)",
+    "dias": 1,
+    "recencia": "Há 1 dia (07/11/2026)",
+    "score": 99,
+    "titulo": "Engenheiro de Custos & Sala Técnica (Banco de Talentos)",
+    "empresa": "Duarte Engenharia",
+    "local": "Pernambuco (Eixo BR-232 / Recife)",
+    "pdf": "Curriculo_Denilson_Barbosa_Orcamentos_Planejamento_Caruaru_PE.pdf",
+    "email": "contato@duarteeng.com.br",
+    "url": "https://duarteeng.com.br/trabalhe-conosco/",
+    "resumo": "Oportunidades em engenharia de custos, orçamentos e contratos para obras de grande porte, infraestrutura e saúde em Pernambuco.",
+    "motivo": "Publicada há 1 dia(s) • Afinidade com Orçamentos de Obras, Sala Técnica / Orçamentos e Planejamento, Gestão/Execução de Obras."
   },
   {
     "id": "indeed_2e77e73f258a8182",
@@ -236,57 +342,6 @@
     "url": "https://br.indeed.com/viewjob?jk=2e77e73f258a8182",
     "resumo": "Vaga ativa no Indeed Brasil para Engenheiro Orçamentista em Fortaleza/CE. Exige expertise avançada em custos de obras, elaboração de orçamentos executivos, composições de preços, levantamento quantitativo e suporte às frentes operacionais.",
     "motivo": "Publicada há 3 dia(s) • Afinidade com Orçamentos de Obras, Composição de Custos (CPU), Levantamento Quantitativo."
-  },
-  {
-    "id": "gupy_12823277",
-    "plat": "Gupy",
-    "reg": "fortaleza",
-    "regLabel": "Fortaleza + 60km (CE)",
-    "dias": 4,
-    "recencia": "Há 4 dias (03/11/2026)",
-    "score": 99,
-    "titulo": "Analista de Orçamento Sênior",
-    "empresa": "Pague Menos | Vagas na Matriz Administrativa em Fortaleza - CE",
-    "local": "Fortaleza, Ceará",
-    "pdf": "Curriculo_Denilson_Barbosa_Orcamentos_Planejamento_Fortaleza_CE.pdf",
-    "email": "",
-    "url": "https://admpmenos.gupy.io/job/eyJqb2JJZCI6MTI4MjMyNzcsInNvdXJjZSI6Imd1cHlfcG9ydGFsIn0=?jobBoardSource=gupy_portal",
-    "resumo": "Estamos em busca de uma pessoa que acredita que favorecer o acesso à saúde deve ser um compromisso. Aqui na Pague Menos, o cuidado está no nosso DNA. Por isso, valorizamos quem compartilha nossos valores, quem é&nbsp;gente que faz bem, quem tem amor por servir",
-    "motivo": "Publicada há 4 dia(s) • Afinidade com Orçamentos de Obras, Planejamento Físico-Financeiro, Engenharia de Custos."
-  },
-  {
-    "id": "gupy_12744271",
-    "plat": "Gupy",
-    "reg": "fortaleza",
-    "regLabel": "Fortaleza + 60km (CE)",
-    "dias": 4,
-    "recencia": "Há 4 dias (03/11/2026)",
-    "score": 99,
-    "titulo": "Analista de Engenharia - Contratos",
-    "empresa": "Grupo Diagonal (Diagonal Engenharia)",
-    "local": "Fortaleza, Ceará",
-    "pdf": "Curriculo_Denilson_Barbosa_Orcamentos_Planejamento_Fortaleza_CE.pdf",
-    "email": "",
-    "url": "https://grupodiagonal.gupy.io/job/eyJqb2JJZCI6MTI3NDQyNzEsInNvdXJjZSI6Imd1cHlfcG9ydGFsIn0=?jobBoardSource=gupy_portal",
-    "resumo": "Muito prazer, nós somos a Diagonal!Nós somos uma empresa legitimamente cearense e já estamos no mercado há 40 anos atuando com empreendimentos de alto padrão. Hoje somos uma das maiores construtoras e incorporadoras do Ceará e somos reconhecidos por nossa cred",
-    "motivo": "Publicada há 4 dia(s) • Afinidade com Orçamentos de Obras, Sala Técnica / Orçamentos e Planejamento, Engenharia Civil."
-  },
-  {
-    "id": "gupy_12827097",
-    "plat": "Gupy",
-    "reg": "remoto",
-    "regLabel": "Remoto Brasil",
-    "dias": 4,
-    "recencia": "Há 4 dias (03/11/2026)",
-    "score": 99,
-    "titulo": "Coordenação de Projetos - Engenharia Civil (Home Office)",
-    "empresa": "Otus Engenharia",
-    "local": "Brasil (Remoto)",
-    "pdf": "Curriculo_Denilson_Barbosa_Gestao_Obras_Projetos_Fortaleza_CE.pdf",
-    "email": "",
-    "url": "https://otusengenharia.gupy.io/job/eyJqb2JJZCI6MTI4MjcwOTcsInNvdXJjZSI6Imd1cHlfcG9ydGFsIn0=?jobBoardSource=gupy_portal",
-    "resumo": "Lidere projetos que transformam o futuro da construção civil!Procuramos um&nbsp;Coordenador(a) de Projetos&nbsp;para comandar o desenvolvimento de empreendimentos inovadores. Você será o maestro que garante que escopo, prazos e qualidade se alinhem perfeitamen",
-    "motivo": "Publicada há 4 dia(s) • Afinidade com Orçamentos de Obras, Planejamento Físico-Financeiro, Cronogramas de Obra."
   },
   {
     "id": "indeed_a1068c26ef79f986",
@@ -374,565 +429,21 @@
     "motivo": "Publicada há 6 dia(s) • Afinidade com Cronogramas de Obra, Engenharia Civil, Gestão/Execução de Obras."
   },
   {
-    "id": "li_4486533615",
-    "plat": "LinkedIn Vagas",
-    "reg": "caruaru",
-    "regLabel": "Eixo PE (Recife / BR-232)",
-    "dias": 3,
-    "recencia": "Há 3 dias (04/11/2026)",
-    "score": 90,
-    "titulo": "Analista de Planejamento e Orçamento",
-    "empresa": "Amarante",
-    "local": "Recife, PE",
-    "pdf": "Curriculo_Denilson_Barbosa_Orcamentos_Planejamento_Caruaru_PE.pdf",
-    "email": "",
-    "url": "https://br.linkedin.com/jobs/view/analista-de-planejamento-e-or%C3%A7amento-at-amarante-4486533615",
-    "resumo": "",
-    "motivo": "Publicada há 3 dia(s) • Afinidade com Orçamentos de Obras, Planejamento Físico-Financeiro."
-  },
-  {
-    "id": "li_4485563911",
-    "plat": "LinkedIn Vagas",
-    "reg": "fortaleza",
-    "regLabel": "Fortaleza + 60km (CE)",
-    "dias": 2,
-    "recencia": "Há 2 dias (05/11/2026)",
-    "score": 88,
-    "titulo": "Assistente de Orçamento e Custos",
-    "empresa": "Grupo FAN",
-    "local": "Aquiraz, CE",
-    "pdf": "Curriculo_Denilson_Barbosa_Orcamentos_Planejamento_Fortaleza_CE.pdf",
-    "email": "",
-    "url": "https://br.linkedin.com/jobs/view/assistente-de-or%C3%A7amento-e-custos-at-grupo-fan-4485563911",
-    "resumo": "",
-    "motivo": "Publicada há 2 dia(s) • Afinidade com Orçamentos de Obras, Engenharia de Custos."
-  },
-  {
     "id": "post_7523750203116498944",
     "plat": "Publicação LinkedIn",
     "reg": "fortaleza",
     "regLabel": "Fortaleza + 60km (CE)",
     "dias": 2,
     "recencia": "Há 2 dias (04/11/2026)",
-    "score": 87,
-    "titulo": "[Post LinkedIn] Vaga Engenharia Civil / Obras (Agilean App)",
+    "score": 79,
+    "titulo": "[Post Feed] pt. linkedin . com › posts › agilean-app_vaga-aberta-em Vaga aberta ",
     "empresa": "Publicado por: Agilean App",
     "local": "Fortaleza, CE",
     "pdf": "Curriculo_Denilson_Barbosa_Gestao_Obras_Projetos_Fortaleza_CE.pdf",
     "email": "",
     "url": "https://pt.linkedin.com/posts/agilean-app_vaga-aberta-em-fortalezace-estamos-%C3%A0-procura-activity-7523750203116498944-em2K",
-    "resumo": "pt. linkedin . com › posts › agilean-app_vaga-aberta-em Vaga aberta em Fortaleza/CE! Estamos à procura de um (a ... pt.linkedin.com › posts › agilean-app_vaga-aberta-em Vaga aberta em Fortaleza /CE! Estamos à procura de um (a) Analista de Engajamento ( Engenha",
-    "motivo": "Publicada há 2 dia(s) • Afinidade com Engenharia Civil, Gestão/Execução de Obras."
-  },
-  {
-    "id": "li_4485532048",
-    "plat": "LinkedIn Vagas",
-    "reg": "remoto",
-    "regLabel": "Remoto Brasil",
-    "dias": 3,
-    "recencia": "Há 3 dias (04/11/2026)",
-    "score": 85,
-    "titulo": "ANALISTA DE OBRAS PLENO - ORÇAMENTO",
-    "empresa": "Grupo DPSP",
-    "local": "São Paulo, SP",
-    "pdf": "Curriculo_Denilson_Barbosa_Orcamentos_Planejamento_Fortaleza_CE.pdf",
-    "email": "",
-    "url": "https://br.linkedin.com/jobs/view/analista-de-obras-pleno-or%C3%A7amento-at-grupo-dpsp-4485532048",
-    "resumo": "",
-    "motivo": "Publicada há 3 dia(s) • Afinidade com Orçamentos de Obras, Gestão/Execução de Obras."
-  },
-  {
-    "id": "gupy_12835515",
-    "plat": "Gupy",
-    "reg": "fortaleza",
-    "regLabel": "Fortaleza + 60km (CE)",
-    "dias": 1,
-    "recencia": "Há 1 dia (06/11/2026)",
-    "score": 84,
-    "titulo": "Especialista de Suprimentos",
-    "empresa": "Casa dos Ventos",
-    "local": "Fortaleza, Ceará",
-    "pdf": "Curriculo_Denilson_Barbosa_Orcamentos_Planejamento_Fortaleza_CE.pdf",
-    "email": "",
-    "url": "https://casadosventos.gupy.io/job/eyJqb2JJZCI6MTI4MzU1MTUsInNvdXJjZSI6Imd1cHlfcG9ydGFsIn0=?jobBoardSource=gupy_portal",
-    "resumo": "Responsável por prospectar fornecedores, negociar, diligenciar e garantir contratações de serviços e fornecimento de materiais e equipamentos destinados à implantação, O&amp;M e áreas BackOffice. Atuar de forma sinérgica, visando integração, com autonomia e re",
-    "motivo": "Publicada há 1 dia(s) • Afinidade com Planejamento Físico-Financeiro, Engenharia de Custos."
-  },
-  {
-    "id": "li_4485570522",
-    "plat": "LinkedIn Vagas",
-    "reg": "remoto",
-    "regLabel": "Remoto Brasil",
-    "dias": 2,
-    "recencia": "Há 2 dias (05/11/2026)",
-    "score": 83,
-    "titulo": "Engenheiro Civil Coordenador de Obras MCMV – POA-RS",
-    "empresa": "Simon RH",
-    "local": "Porto Alegre e Região",
-    "pdf": "Curriculo_Denilson_Barbosa_Gestao_Obras_Projetos_Fortaleza_CE.pdf",
-    "email": "",
-    "url": "https://br.linkedin.com/jobs/view/engenheiro-civil-coordenador-de-obras-mcmv-%E2%80%93-poa-rs-at-simon-rh-4485570522",
-    "resumo": "",
-    "motivo": "Publicada há 2 dia(s) • Afinidade com Engenharia Civil, Gestão/Execução de Obras."
-  },
-  {
-    "id": "li_4485839163",
-    "plat": "LinkedIn Vagas",
-    "reg": "remoto",
-    "regLabel": "Remoto Brasil",
-    "dias": 2,
-    "recencia": "Há 2 dias (05/11/2026)",
-    "score": 82,
-    "titulo": "Coordenador de Propostas Técnicas e Orçamento (VAGA Extensiva para Pessoas com Deficiência) (1 vaga)",
-    "empresa": "Concremat Engenharia e Tecnologia",
-    "local": "São Paulo, SP",
-    "pdf": "Curriculo_Denilson_Barbosa_Orcamentos_Planejamento_Fortaleza_CE.pdf",
-    "email": "",
-    "url": "https://br.linkedin.com/jobs/view/coordenador-de-propostas-t%C3%A9cnicas-e-or%C3%A7amento-vaga-extensiva-para-pessoas-com-defici%C3%AAncia-%0A-1-vaga-at-concremat-engenharia-e-tecnologia-4485839163",
-    "resumo": "",
-    "motivo": "Publicada há 2 dia(s) • Afinidade com Orçamentos de Obras, Propostas Técnicas/Comerciais."
-  },
-  {
-    "id": "li_4486791874",
-    "plat": "LinkedIn Vagas",
-    "reg": "remoto",
-    "regLabel": "Remoto Brasil",
-    "dias": 2,
-    "recencia": "Há 2 dias (05/11/2026)",
-    "score": 82,
-    "titulo": "Coordenador de Propostas Técnicas e Orçamento (VAGA Extensiva para Pessoas com Deficiência)",
-    "empresa": "Concremat Engenharia e Tecnologia",
-    "local": "São Paulo, SP",
-    "pdf": "Curriculo_Denilson_Barbosa_Orcamentos_Planejamento_Fortaleza_CE.pdf",
-    "email": "",
-    "url": "https://br.linkedin.com/jobs/view/coordenador-de-propostas-t%C3%A9cnicas-e-or%C3%A7amento-vaga-extensiva-para-pessoas-com-defici%C3%AAncia-at-concremat-engenharia-e-tecnologia-4486791874",
-    "resumo": "",
-    "motivo": "Publicada há 2 dia(s) • Afinidade com Orçamentos de Obras, Propostas Técnicas/Comerciais."
-  },
-  {
-    "id": "gupy_12817244",
-    "plat": "Gupy",
-    "reg": "fortaleza",
-    "regLabel": "Fortaleza + 60km (CE)",
-    "dias": 2,
-    "recencia": "Há 2 dias (05/11/2026)",
-    "score": 79,
-    "titulo": "Assistente de Suprimentos Diagonal (EDGE)",
-    "empresa": "Grupo Diagonal (Diagonal Engenharia)",
-    "local": "Fortaleza, Ceará",
-    "pdf": "Curriculo_Denilson_Barbosa_Orcamentos_Planejamento_Fortaleza_CE.pdf",
-    "email": "",
-    "url": "https://grupodiagonal.gupy.io/job/eyJqb2JJZCI6MTI4MTcyNDQsInNvdXJjZSI6Imd1cHlfcG9ydGFsIn0=?jobBoardSource=gupy_portal",
-    "resumo": "Muito prazer, nós somos a Diagonal!Nós somos uma empresa legitimamente cearense e já estamos no mercado há 40 anos atuando com empreendimentos de alto padrão. Hoje somos uma das maiores construtoras e incorporadoras do Ceará e somos reconhecidos por nossa cred",
-    "motivo": "Publicada há 2 dia(s) • Afinidade com Orçamentos de Obras."
-  },
-  {
-    "id": "gupy_12810596",
-    "plat": "Gupy",
-    "reg": "fortaleza",
-    "regLabel": "Fortaleza + 60km (CE)",
-    "dias": 2,
-    "recencia": "Há 2 dias (05/11/2026)",
-    "score": 77,
-    "titulo": "Supervisor de Suprimentos",
-    "empresa": "Empregos Diretos",
-    "local": "Fortaleza, Ceará",
-    "pdf": "Curriculo_Denilson_Barbosa_Orcamentos_Planejamento_Fortaleza_CE.pdf",
-    "email": "",
-    "url": "https://empregosdiretos.gupy.io/job/eyJqb2JJZCI6MTI4MTA1OTYsInNvdXJjZSI6Imd1cHlfcG9ydGFsIn0=?jobBoardSource=gupy_portal",
-    "resumo": "Se você é um profissional dinâmico, gosta de aprender e tem paixão por grandes resultados, essa oportunidade é para você!Estamos em busca de um talento para assumir a missão de representar uma organização de grande porte, colocando em prática estratégias e con",
-    "motivo": "Publicada há 2 dia(s) • Afinidade com Engenharia de Custos, Gestão de Contratos."
-  },
-  {
-    "id": "li_4485569751",
-    "plat": "LinkedIn Vagas",
-    "reg": "remoto",
-    "regLabel": "Remoto Brasil",
-    "dias": 2,
-    "recencia": "Há 2 dias (05/11/2026)",
-    "score": 77,
-    "titulo": "Engenheiro(a) Orçamentista",
-    "empresa": "UNIQO Urbanismo",
-    "local": "Rio de Janeiro e Região",
-    "pdf": "Curriculo_Denilson_Barbosa_Orcamentos_Planejamento_Fortaleza_CE.pdf",
-    "email": "",
-    "url": "https://br.linkedin.com/jobs/view/engenheiro-a-or%C3%A7amentista-at-uniqo-urbanismo-4485569751",
-    "resumo": "",
-    "motivo": "Publicada há 2 dia(s) • Afinidade com Orçamentos de Obras."
-  },
-  {
-    "id": "li_4486795153",
-    "plat": "LinkedIn Vagas",
-    "reg": "remoto",
-    "regLabel": "Remoto Brasil",
-    "dias": 2,
-    "recencia": "Há 2 dias (05/11/2026)",
-    "score": 77,
-    "titulo": "Orçamentista Sênior",
-    "empresa": "SYSTRA",
-    "local": "São Paulo, SP",
-    "pdf": "Curriculo_Denilson_Barbosa_Orcamentos_Planejamento_Fortaleza_CE.pdf",
-    "email": "",
-    "url": "https://br.linkedin.com/jobs/view/or%C3%A7amentista-s%C3%AAnior-at-systra-4486795153",
-    "resumo": "",
-    "motivo": "Publicada há 2 dia(s) • Afinidade com Orçamentos de Obras."
-  },
-  {
-    "id": "li_4450727793",
-    "plat": "LinkedIn Vagas",
-    "reg": "remoto",
-    "regLabel": "Remoto Brasil",
-    "dias": 3,
-    "recencia": "Há 3 dias (04/11/2026)",
-    "score": 77,
-    "titulo": "Engenheiro Orçamentista",
-    "empresa": "Lojas Renner S.A.",
-    "local": "Porto Alegre, RS",
-    "pdf": "Curriculo_Denilson_Barbosa_Orcamentos_Planejamento_Fortaleza_CE.pdf",
-    "email": "",
-    "url": "https://br.linkedin.com/jobs/view/engenheiro-or%C3%A7amentista-at-lojas-renner-s-a-4450727793",
-    "resumo": "",
-    "motivo": "Publicada há 3 dia(s) • Afinidade com Orçamentos de Obras."
-  },
-  {
-    "id": "li_4486533019",
-    "plat": "LinkedIn Vagas",
-    "reg": "remoto",
-    "regLabel": "Remoto Brasil",
-    "dias": 3,
-    "recencia": "Há 3 dias (04/11/2026)",
-    "score": 77,
-    "titulo": "Analista de Orçamentos Sênior",
-    "empresa": "Holos Incorporadora e Construtora",
-    "local": "São Paulo, SP",
-    "pdf": "Curriculo_Denilson_Barbosa_Orcamentos_Planejamento_Fortaleza_CE.pdf",
-    "email": "",
-    "url": "https://br.linkedin.com/jobs/view/analista-de-or%C3%A7amentos-s%C3%AAnior-at-holos-incorporadora-e-construtora-4486533019",
-    "resumo": "",
-    "motivo": "Publicada há 3 dia(s) • Afinidade com Orçamentos de Obras."
-  },
-  {
-    "id": "indeed_e7ea87d3bc49d860",
-    "plat": "Indeed",
-    "reg": "remoto",
-    "regLabel": "Remoto Brasil",
-    "dias": 4,
-    "recencia": "Há 4 dias (03/11/2026)",
-    "score": 77,
-    "titulo": "Pessoa Engenheira Orçamentista (Estimador de Projetos ...",
-    "empresa": "Empresa Verificada no Indeed",
-    "local": "Brasil (Remoto)",
-    "pdf": "Curriculo_Denilson_Barbosa_Orcamentos_Planejamento_Fortaleza_CE.pdf",
-    "email": "",
-    "url": "https://br.indeed.com/viewjob?jk=e7ea87d3bc49d860",
-    "resumo": "br . indeed . com › viewjob Pessoa Engenheira Orçamentista (Estimador de Projetos ... br.indeed.com › viewjob Com mais de 30 anos de expertise em Consultoria e Gestão de Projetos, somos uma referência nacional em Engenharia Consultiva, em constante expansão gl",
-    "motivo": "Publicada há 4 dia(s) • Afinidade com Orçamentos de Obras."
-  },
-  {
-    "id": "li_4486812398",
-    "plat": "LinkedIn Vagas",
-    "reg": "fortaleza",
-    "regLabel": "Fortaleza + 60km (CE)",
-    "dias": 4,
-    "recencia": "Há 4 dias (03/11/2026)",
-    "score": 77,
-    "titulo": "Analista de Orçamento Sênior",
-    "empresa": "Farmácias Pague Menos",
-    "local": "Fortaleza, CE",
-    "pdf": "Curriculo_Denilson_Barbosa_Orcamentos_Planejamento_Fortaleza_CE.pdf",
-    "email": "",
-    "url": "https://br.linkedin.com/jobs/view/analista-de-or%C3%A7amento-s%C3%AAnior-at-farm%C3%A1cias-pague-menos-4486812398",
-    "resumo": "",
-    "motivo": "Publicada há 4 dia(s) • Afinidade com Orçamentos de Obras."
-  },
-  {
-    "id": "li_4486633484",
-    "plat": "LinkedIn Vagas",
-    "reg": "fortaleza",
-    "regLabel": "Fortaleza + 60km (CE)",
-    "dias": 0,
-    "recencia": "Hoje",
-    "score": 75,
-    "titulo": "COORDENADOR DE FP&amp;A (Planejamento e Análise Financeira)",
-    "empresa": "Auto Peças Padre Cícero",
-    "local": "Fortaleza, CE",
-    "pdf": "Curriculo_Denilson_Barbosa_Orcamentos_Planejamento_Fortaleza_CE.pdf",
-    "email": "",
-    "url": "https://br.linkedin.com/jobs/view/coordenador-de-fp-a-planejamento-e-an%C3%A1lise-financeira-at-auto-pe%C3%A7as-padre-c%C3%ADcero-4486633484",
-    "resumo": "",
-    "motivo": "Publicada há 0 dia(s) • Afinidade com Planejamento Físico-Financeiro."
-  },
-  {
-    "id": "li_4488727880",
-    "plat": "LinkedIn Vagas",
-    "reg": "caruaru",
-    "regLabel": "Eixo PE (Recife / BR-232)",
-    "dias": 0,
-    "recencia": "Hoje",
-    "score": 75,
-    "titulo": "Engenheiro Civil - DSEI Pernambuco",
-    "empresa": "AgSUS",
-    "local": "Recife, PE",
-    "pdf": "Curriculo_Denilson_Barbosa_Gestao_Obras_Projetos_Caruaru_PE.pdf",
-    "email": "",
-    "url": "https://br.linkedin.com/jobs/view/engenheiro-civil-dsei-pernambuco-at-agsus-4488727880",
-    "resumo": "",
-    "motivo": "Publicada há 0 dia(s) • Afinidade com Engenharia Civil."
-  },
-  {
-    "id": "li_4486224905",
-    "plat": "LinkedIn Vagas",
-    "reg": "remoto",
-    "regLabel": "Remoto Brasil",
-    "dias": 1,
-    "recencia": "Há 1 dia (06/11/2026)",
-    "score": 75,
-    "titulo": "ENGENHEIRO DE PLANEJAMENTO",
-    "empresa": "Opus Construtech",
-    "local": "Itagibá, BA",
-    "pdf": "Curriculo_Denilson_Barbosa_Orcamentos_Planejamento_Fortaleza_CE.pdf",
-    "email": "",
-    "url": "https://br.linkedin.com/jobs/view/engenheiro-de-planejamento-at-opus-construtech-4486224905",
-    "resumo": "",
-    "motivo": "Publicada há 1 dia(s) • Afinidade com Planejamento Físico-Financeiro."
-  },
-  {
-    "id": "li_4486937333",
-    "plat": "LinkedIn Vagas",
-    "reg": "remoto",
-    "regLabel": "Remoto Brasil",
-    "dias": 1,
-    "recencia": "Há 1 dia (06/11/2026)",
-    "score": 75,
-    "titulo": "ENGENHEIRO(A) CIVIL – Planejamento e Gestão",
-    "empresa": "People Meet",
-    "local": "Vitória, ES",
-    "pdf": "Curriculo_Denilson_Barbosa_Orcamentos_Planejamento_Fortaleza_CE.pdf",
-    "email": "",
-    "url": "https://br.linkedin.com/jobs/view/engenheiro-a-civil-%E2%80%93-planejamento-e-gest%C3%A3o-at-people-meet-4486937333",
-    "resumo": "",
-    "motivo": "Publicada há 1 dia(s) • Afinidade com Planejamento Físico-Financeiro."
-  },
-  {
-    "id": "li_4485813324",
-    "plat": "LinkedIn Vagas",
-    "reg": "fortaleza",
-    "regLabel": "Fortaleza + 60km (CE)",
-    "dias": 2,
-    "recencia": "Há 2 dias (05/11/2026)",
-    "score": 75,
-    "titulo": "ENGENHEIRO(A) DE PLANEJAMENTO SR_6502",
-    "empresa": "Arcadis",
-    "local": "Caucaia, CE",
-    "pdf": "Curriculo_Denilson_Barbosa_Orcamentos_Planejamento_Fortaleza_CE.pdf",
-    "email": "",
-    "url": "https://br.linkedin.com/jobs/view/engenheiro-a-de-planejamento-sr-6502-at-arcadis-4485813324",
-    "resumo": "",
-    "motivo": "Publicada há 2 dia(s) • Afinidade com Planejamento Físico-Financeiro."
-  },
-  {
-    "id": "li_4487581563",
-    "plat": "LinkedIn Vagas",
-    "reg": "caruaru",
-    "regLabel": "Eixo PE (Recife / BR-232)",
-    "dias": 2,
-    "recencia": "Há 2 dias (05/11/2026)",
-    "score": 75,
-    "titulo": "Analista de Planejamento Sênior - PE | MDNE",
-    "empresa": "Moura Dubeux",
-    "local": "Recife e Região",
-    "pdf": "Curriculo_Denilson_Barbosa_Orcamentos_Planejamento_Caruaru_PE.pdf",
-    "email": "",
-    "url": "https://br.linkedin.com/jobs/view/analista-de-planejamento-s%C3%AAnior-pe-mdne-at-moura-dubeux-4487581563",
-    "resumo": "",
-    "motivo": "Publicada há 2 dia(s) • Afinidade com Planejamento Físico-Financeiro."
-  },
-  {
-    "id": "li_4485022329",
-    "plat": "LinkedIn Vagas",
-    "reg": "fortaleza",
-    "regLabel": "Fortaleza + 60km (CE)",
-    "dias": 4,
-    "recencia": "Há 4 dias (03/11/2026)",
-    "score": 75,
-    "titulo": "Engenheiro de Planejamento e Gestão de Projetos - São Gonçalo do Amarante/ CE",
-    "empresa": "IDG Engenharia e Consultoria",
-    "local": "São Gonçalo do Amarante, CE",
-    "pdf": "Curriculo_Denilson_Barbosa_Orcamentos_Planejamento_Fortaleza_CE.pdf",
-    "email": "",
-    "url": "https://br.linkedin.com/jobs/view/engenheiro-de-planejamento-e-gest%C3%A3o-de-projetos-s%C3%A3o-gon%C3%A7alo-do-amarante-ce-at-idg-engenharia-e-consultoria-4485022329",
-    "resumo": "",
-    "motivo": "Publicada há 4 dia(s) • Afinidade com Planejamento Físico-Financeiro."
-  },
-  {
-    "id": "li_4487716001",
-    "plat": "LinkedIn Vagas",
-    "reg": "remoto",
-    "regLabel": "Remoto Brasil",
-    "dias": 2,
-    "recencia": "Há 2 dias (05/11/2026)",
-    "score": 70,
-    "titulo": "Planejador de Obras",
-    "empresa": "Jobbol",
-    "local": "Vitória, ES",
-    "pdf": "Curriculo_Denilson_Barbosa_Gestao_Obras_Projetos_Fortaleza_CE.pdf",
-    "email": "",
-    "url": "https://br.linkedin.com/jobs/view/planejador-de-obras-at-jobbol-4487716001",
-    "resumo": "",
-    "motivo": "Publicada há 2 dia(s) • Afinidade com Gestão/Execução de Obras."
-  },
-  {
-    "id": "li_4485000504",
-    "plat": "LinkedIn Vagas",
-    "reg": "fortaleza",
-    "regLabel": "Fortaleza + 60km (CE)",
-    "dias": 4,
-    "recencia": "Há 4 dias (03/11/2026)",
-    "score": 69,
-    "titulo": "Analista de Orçamentos Junior",
-    "empresa": "MRV&amp;CO",
-    "local": "Belo Horizonte, MG",
-    "pdf": "Curriculo_Denilson_Barbosa_Orcamentos_Planejamento_Fortaleza_CE.pdf",
-    "email": "",
-    "url": "https://br.linkedin.com/jobs/view/analista-de-or%C3%A7amentos-junior-at-mrv-co-4485000504",
-    "resumo": "",
-    "motivo": "Publicada há 4 dia(s) • Afinidade com Orçamentos de Obras."
-  },
-  {
-    "id": "li_4485011216",
-    "plat": "LinkedIn Vagas",
-    "reg": "fortaleza",
-    "regLabel": "Fortaleza + 60km (CE)",
-    "dias": 4,
-    "recencia": "Há 4 dias (03/11/2026)",
-    "score": 68,
-    "titulo": "Analista de Engenharia - Contratos",
-    "empresa": "K2018376365 (SOUTH AFRICA)",
-    "local": "Fortaleza, CE",
-    "pdf": "Curriculo_Denilson_Barbosa_Orcamentos_Planejamento_Fortaleza_CE.pdf",
-    "email": "",
-    "url": "https://br.linkedin.com/jobs/view/analista-de-engenharia-contratos-at-k2018376365-south-africa-4485011216",
-    "resumo": "",
-    "motivo": "Publicada há 4 dia(s) • Afinidade com Gestão de Contratos."
-  },
-  {
-    "id": "li_4485566229",
-    "plat": "LinkedIn Vagas",
-    "reg": "fortaleza",
-    "regLabel": "Fortaleza + 60km (CE)",
-    "dias": 3,
-    "recencia": "Há 3 dias (04/11/2026)",
-    "score": 67,
-    "titulo": "Analista de Planejamento Junior | Belo Horizonte | Exclusiva para PCD",
-    "empresa": "MRV&amp;CO",
-    "local": "Belo Horizonte, MG",
-    "pdf": "Curriculo_Denilson_Barbosa_Orcamentos_Planejamento_Fortaleza_CE.pdf",
-    "email": "",
-    "url": "https://br.linkedin.com/jobs/view/analista-de-planejamento-junior-belo-horizonte-exclusiva-para-pcd-at-mrv-co-4485566229",
-    "resumo": "",
-    "motivo": "Publicada há 3 dia(s) • Afinidade com Planejamento Físico-Financeiro."
-  },
-  {
-    "id": "li_4485502933",
-    "plat": "LinkedIn Vagas",
-    "reg": "remoto",
-    "regLabel": "Remoto Brasil",
-    "dias": 3,
-    "recencia": "Há 3 dias (04/11/2026)",
-    "score": 67,
-    "titulo": "Auxiliar de Planejamento - Campinas/SP",
-    "empresa": "BTS",
-    "local": "Campinas, SP",
-    "pdf": "Curriculo_Denilson_Barbosa_Orcamentos_Planejamento_Fortaleza_CE.pdf",
-    "email": "",
-    "url": "https://br.linkedin.com/jobs/view/auxiliar-de-planejamento-campinas-sp-at-bts-4485502933",
-    "resumo": "",
-    "motivo": "Publicada há 3 dia(s) • Afinidade com Planejamento Físico-Financeiro."
-  },
-  {
-    "id": "li_4486114717",
-    "plat": "LinkedIn Vagas",
-    "reg": "fortaleza",
-    "regLabel": "Fortaleza + 60km (CE)",
-    "dias": 5,
-    "recencia": "Há 5 dias (02/11/2026)",
-    "score": 67,
-    "titulo": "Analista de Engenharia de Custos",
-    "empresa": "Jobbol",
-    "local": "Fortaleza, CE",
-    "pdf": "Curriculo_Denilson_Barbosa_Orcamentos_Planejamento_Fortaleza_CE.pdf",
-    "email": "",
-    "url": "https://br.linkedin.com/jobs/view/analista-de-engenharia-de-custos-at-jobbol-4486114717",
-    "resumo": "",
-    "motivo": "Publicada há 5 dia(s) • Afinidade com Engenharia de Custos."
-  },
-  {
-    "id": "li_4486111730",
-    "plat": "LinkedIn Vagas",
-    "reg": "fortaleza",
-    "regLabel": "Fortaleza + 60km (CE)",
-    "dias": 5,
-    "recencia": "Há 5 dias (02/11/2026)",
-    "score": 66,
-    "titulo": "Gestor de Obras",
-    "empresa": "Jobbol",
-    "local": "Caucaia, CE",
-    "pdf": "Curriculo_Denilson_Barbosa_Gestao_Obras_Projetos_Fortaleza_CE.pdf",
-    "email": "",
-    "url": "https://br.linkedin.com/jobs/view/gestor-de-obras-at-jobbol-4486111730",
-    "resumo": "",
-    "motivo": "Publicada há 5 dia(s) • Afinidade com Gestão/Execução de Obras."
-  },
-  {
-    "id": "li_4485504865",
-    "plat": "LinkedIn Vagas",
-    "reg": "fortaleza",
-    "regLabel": "Fortaleza + 60km (CE)",
-    "dias": 3,
-    "recencia": "Há 3 dias (04/11/2026)",
-    "score": 63,
-    "titulo": "Assistente de Custos",
-    "empresa": "Grupo Carmehil",
-    "local": "Fortaleza, CE",
-    "pdf": "Curriculo_Denilson_Barbosa_Orcamentos_Planejamento_Fortaleza_CE.pdf",
-    "email": "",
-    "url": "https://br.linkedin.com/jobs/view/assistente-de-custos-at-grupo-carmehil-4485504865",
-    "resumo": "",
-    "motivo": "Publicada há 3 dia(s) • Afinidade com Engenharia de Custos."
-  },
-  {
-    "id": "li_4486259903",
-    "plat": "LinkedIn Vagas",
-    "reg": "remoto",
-    "regLabel": "Remoto Brasil",
-    "dias": 0,
-    "recencia": "Hoje",
-    "score": 62,
-    "titulo": "Planejador de projetos",
-    "empresa": "Construterra Construções",
-    "local": "Ponta Grossa, PR",
-    "pdf": "Curriculo_Denilson_Barbosa_Gestao_Obras_Projetos_Fortaleza_CE.pdf",
-    "email": "",
-    "url": "https://br.linkedin.com/jobs/view/planejador-de-projetos-at-construterra-constru%C3%A7%C3%B5es-4486259903",
-    "resumo": "",
-    "motivo": "Publicada há 0 dia(s) • Afinidade com ."
-  },
-  {
-    "id": "li_4484695802",
-    "plat": "LinkedIn Vagas",
-    "reg": "fortaleza",
-    "regLabel": "Fortaleza + 60km (CE)",
-    "dias": 4,
-    "recencia": "Há 4 dias (03/11/2026)",
-    "score": 62,
-    "titulo": "Analista de Engenharia Victa - Viver Hype",
-    "empresa": "K2018376365 (SOUTH AFRICA)",
-    "local": "Fortaleza, CE",
-    "pdf": "Curriculo_Denilson_Barbosa_Gestao_Obras_Projetos_Fortaleza_CE.pdf",
-    "email": "",
-    "url": "https://br.linkedin.com/jobs/view/analista-de-engenharia-victa-viver-hype-at-k2018376365-south-africa-4484695802",
-    "resumo": "",
-    "motivo": "Publicada há 4 dia(s) • Afinidade com ."
+    "resumo": "pt. linkedin . com › posts › agilean-app_vaga-aberta-em Vaga aberta em Fortaleza/CE! Estamos à procura de um (a ... pt.linkedin.com › posts › agilean-app_vaga-aberta-em Vaga aberta em Fortaleza /CE! Estamos à procura de um (a) Analista de Engajamento (Engenhar",
+    "motivo": "Publicada há 2 dia(s) • Afinidade com Engenharia Civil."
   }
 ];
 
@@ -977,15 +488,17 @@
 
     function atualizarPlacar() {
       const visiveis = VAGAS.filter(v => !foiClicada(v) && (v.dias === undefined || v.dias <= 7));
-      const cGupy = visiveis.filter(v => v.plat === "Gupy").length;
+      const cConst = visiveis.filter(v => v.plat === "Mural Construtora (RH)").length;
       const cInd = visiveis.filter(v => v.plat === "Indeed").length;
       const cLin = visiveis.filter(v => v.plat === "LinkedIn Vagas").length;
+      const cGupy = visiveis.filter(v => v.plat === "Gupy").length;
       const cPos = visiveis.filter(v => v.plat === "Publicação LinkedIn").length;
 
-      document.getElementById("count-gupy").textContent = `${cGupy} Vagas (≤ 7d)`;
-      document.getElementById("count-indeed").textContent = `${cInd} Vagas (≤ 7d)`;
-      document.getElementById("count-linkedin").textContent = `${cLin} Vagas (≤ 7d)`;
-      document.getElementById("count-posts").textContent = `${cPos} Posts (≤ 7d)`;
+      document.getElementById("count-const").textContent = `${cConst} Murais`;
+      document.getElementById("count-indeed").textContent = `${cInd} Vagas`;
+      document.getElementById("count-linkedin").textContent = `${cLin} Vagas`;
+      document.getElementById("count-gupy").textContent = `${cGupy} Vagas`;
+      document.getElementById("count-posts").textContent = `${cPos} Posts`;
 
       const ocultadas = VAGAS.filter(v => foiClicada(v)).length;
       const elInfo = document.getElementById("clicadas-info");
@@ -996,7 +509,7 @@
 
     function setPlat(p) {
       filtroPlat = p;
-      ["todas", "Gupy", "Indeed", "LinkedIn Vagas", "Publicação LinkedIn"].forEach(k => {
+      ["todas", "Mural Construtora (RH)", "Indeed", "LinkedIn Vagas", "Gupy", "Publicação LinkedIn"].forEach(k => {
         const b = document.getElementById("plat-" + k);
         if (b) {
           b.className = (k === p)
@@ -1020,6 +533,41 @@
       renderVagas();
     }
 
+    function obterMailtoLink(v) {
+      const tituloVaga = v.titulo.replace(/\[.*?\]/g, "").trim();
+      const assunto = encodeURIComponent(`Candidatura: ${tituloVaga} - Denilson Barbosa (Engenheiro Civil)`);
+      
+      let locMsg = "";
+      if (v.reg === "fortaleza") {
+        locMsg = "Resido atualmente em Eusébio/CE, com total disponibilidade para atuação presencial imediata em Fortaleza, Região Metropolitana e Pecém.";
+      } else if (v.reg === "caruaru") {
+        const cid = (v.local || "Caruaru").split("(")[0].trim();
+        locMsg = `Estou em processo de mudança planejada para Caruaru/PE, com disponibilidade para atuação presencial imediata em ${cid} e em todo o Agreste e eixo da BR-232.`;
+      } else {
+        locMsg = "Conto com estrutura completa para atuação 100% remota imediata e disponibilidade para viagens técnicas sempre que necessário.";
+      }
+
+      const pdfUrl = `${GITHUB_PAGES_BASE}/pdf/${encodeURIComponent(v.pdf)}`;
+
+      const corpo = encodeURIComponent(
+        `Prezada equipe de seleção e RH da ${v.empresa},\n\n` +
+        `Apresento meu currículo para avaliação na oportunidade de ${tituloVaga}.\n\n` +
+        `Sou Engenheiro Civil graduado pela UFERSA, com pós-graduação em Construção Civil e MBA em Projetos de Instalações Prediais pelo IPOG. Nos últimos 5 anos, atuei diretamente com engenharia de custos, orçamentos executivos (CPUs, SINAPI/SICRO), planejamento físico-financeiro e gestão de obras públicas e privadas.\n\n` +
+        `Na SS&B Construtora, estruturei um banco próprio com mais de 250 composições de custos unitários e conduzi a revisão técnica e tributária do orçamento de um contrato de R$ 60 milhões, viabilizando uma redução real de R$ 1,2 milhão no fechamento. Antes disso, exerci o cargo de Diretor de Engenharia na Prefeitura de Mossoró, coordenando equipes multidisciplinares e fiscalização de obras hospitalares e educacionais, onde liderei uma revisão técnica que evitou perdas estimadas em 10% do custo da obra.\n\n` +
+        `${locMsg}\n\n` +
+        `📄 Link direto para o meu currículo completo em PDF:\n${pdfUrl}\n\n` +
+        `O currículo detalha minha experiência com AutoCAD, Revit (BIM), MS Project, Eberick e bases referenciais de preços. Fico à disposição para uma entrevista.\n\n` +
+        `Atenciosamente,\n` +
+        `Marcos Denílson Barbosa dos Santos (Denilson Barbosa)\n` +
+        `Engenheiro Civil | CREA Ativo\n` +
+        `Telefone/WhatsApp: (88) 9627-1246\n` +
+        `E-mail: denilsonb20@gmail.com\n` +
+        `LinkedIn: https://linkedin.com/in/denilsonbarbosasantos`
+      );
+
+      return `mailto:${v.email}?subject=${assunto}&body=${corpo}`;
+    }
+
     function renderVagas() {
       const container = document.getElementById("jobs-container");
       container.innerHTML = "";
@@ -1032,22 +580,27 @@
       });
 
       if (lista.length === 0) {
-        container.innerHTML = `<div class="p-6 text-center text-sm text-[var(--muted-foreground)] bg-[var(--background)] border border-[var(--border)] rounded-xl">Nenhuma vaga não lida (≤ 7 dias) neste filtro. Clique em <strong>Executar Varredura Ao Vivo</strong> ou mude o filtro acima.</div>`;
+        container.innerHTML = `<div class="p-6 text-center text-sm text-[var(--muted-foreground)] bg-[var(--background)] border border-[var(--border)] rounded-xl">Nenhuma vaga não lida (≤ 7 dias) neste filtro. Clique em <strong>Varredura Ao Vivo</strong> ou altere os filtros acima.</div>`;
         return;
       }
 
       lista.forEach(v => {
-        const platColor = v.plat === "Gupy"
-          ? "bg-cyan-500/15 text-cyan-300 border-cyan-500/30"
-          : (v.plat === "Indeed"
-              ? "bg-indigo-500/15 text-indigo-300 border-indigo-500/30"
-              : (v.plat === "Publicação LinkedIn" ? "bg-purple-500/15 text-purple-300 border-purple-500/30" : "bg-blue-500/15 text-blue-300 border-blue-500/30"));
+        let platColor = "bg-blue-500/15 text-blue-300 border-blue-500/30";
+        if (v.plat === "Mural Construtora (RH)") {
+          platColor = "bg-emerald-500/15 text-emerald-300 border-emerald-500/30";
+        } else if (v.plat === "Indeed") {
+          platColor = "bg-indigo-500/15 text-indigo-300 border-indigo-500/30";
+        } else if (v.plat === "Gupy") {
+          platColor = "bg-cyan-500/15 text-cyan-300 border-cyan-500/30";
+        } else if (v.plat === "Publicação LinkedIn") {
+          platColor = "bg-purple-500/15 text-purple-300 border-purple-500/30";
+        }
 
         const safeId = String(v.id).replace(/'/g, "");
         const safeUrl = String(v.url || "").replace(/'/g, "");
 
         const emailBtn = v.email
-          ? `<a href="mailto:${v.email}?subject=${encodeURIComponent('Candidatura: ' + v.titulo + ' - Denilson Barbosa')}" onclick="registrarCliqueVaga('${safeId}', '${safeUrl}')" class="px-3 py-1.5 rounded-lg text-xs font-semibold bg-emerald-600 text-white hover:bg-emerald-500">E-mail Direto ✉</a>`
+          ? `<a href="${obterMailtoLink(v)}" onclick="registrarCliqueVaga('${safeId}', '${safeUrl}')" class="px-3.5 py-1.5 rounded-lg text-xs font-bold bg-emerald-600 hover:bg-emerald-500 text-white shadow-md flex items-center gap-1.5 transition-all"><span>✉️</span> Candidatura Rápida (1 Toque)</a>`
           : "";
 
         const card = document.createElement("div");
@@ -1070,7 +623,7 @@
                 Ver Carta
               </button>
               <a href="${v.url}" target="_blank" onclick="registrarCliqueVaga('${safeId}', '${safeUrl}')" class="px-3 py-1.5 rounded-lg text-xs font-semibold bg-blue-600 text-white hover:bg-blue-500 transition-colors">
-                Abrir no ${v.plat.split(' ')[0]} ↗
+                Abrir Portal ↗
               </a>
               <button onclick="registrarCliqueVaga('${safeId}', '${safeUrl}')" title="Marcar como já vista e ocultar" class="px-2.5 py-1.5 rounded-lg text-xs font-semibold bg-[var(--card)] border border-[var(--border)] text-[var(--muted-foreground)] hover:text-rose-400 cursor-pointer">
                 ✕ Já vi
@@ -1101,7 +654,8 @@
         locMsg = "Conto com estrutura completa para atuação remota imediata e disponibilidade para viagens técnicas sempre que necessário.";
       }
 
-      const texto = `Assunto: Candidatura: ${v.titulo} - Denilson Barbosa (Engenheiro Civil)\n\nPrezada equipe de seleção da ${v.empresa},\n\nEnvio meu currículo para avaliação na oportunidade de ${v.titulo}.\n\nSou Engenheiro Civil graduado pela UFERSA, com pós-graduação em Construção Civil e MBA em Projetos de Instalações Prediais pelo IPOG. Nos últimos cinco anos, atuei diretamente com engenharia de custos, planejamento físico-financeiro e gestão de obras públicas e privadas.\n\nAtualmente, como Engenheiro Orçamentista na SS&B Construtora, estruturei um banco próprio com mais de 250 composições de custos unitários (CPUs) e conduzi a revisão técnica e tributária de um orçamento de R$ 60 milhões, gerando uma redução real de R$ 1,2 milhão que viabilizou o fechamento do contrato. Antes disso, exerci o cargo de Diretor de Engenharia na Prefeitura de Mossoró, coordenando equipes multidisciplinares, medições e compatibilização de projetos em obras hospitalares e educacionais, onde liderei uma revisão estrutural de emergência que evitou perdas estimadas em 10% do custo da obra.\n\n${locMsg}\n\nO currículo em anexo detalha minha experiência com AutoCAD, Revit (BIM), MS Project, Eberick e bases referenciais de preços (SINAPI, SICRO e composições próprias). Fico à disposição para uma entrevista.\n\nAtenciosamente,\n\nDenilson Barbosa\nEngenheiro Civil\n(88) 9627-1246 | denilsonb20@gmail.com\nlinkedin.com/in/denilsonbarbosasantos`;
+      const pdfUrl = `${GITHUB_PAGES_BASE}/pdf/${encodeURIComponent(v.pdf)}`;
+      const texto = `Assunto: Candidatura: ${v.titulo} - Denilson Barbosa (Engenheiro Civil)\n\nPrezada equipe de seleção da ${v.empresa},\n\nEnvio meu currículo para avaliação na oportunidade de ${v.titulo}.\n\nSou Engenheiro Civil graduado pela UFERSA, com pós-graduação em Construção Civil e MBA em Projetos de Instalações Prediais pelo IPOG. Nos últimos cinco anos, atuei diretamente com engenharia de custos, planejamento físico-financeiro e gestão de obras públicas e privadas.\n\nAtualmente, como Engenheiro Orçamentista na SS&B Construtora, estruturei um banco próprio com mais de 250 composições de custos unitários (CPUs) e conduzi a revisão técnica e tributária de um orçamento de R$ 60 milhões, gerando uma redução real de R$ 1,2 milhão que viabilizou o fechamento do contrato. Antes disso, exerci o cargo de Diretor de Engenharia na Prefeitura de Mossoró, coordenando equipes multidisciplinares, medições e compatibilização de projetos em obras hospitalares e educacionais, onde liderei uma revisão estrutural de emergência que evitou perdas estimadas em 10% do custo da obra.\n\n${locMsg}\n\n📄 Link direto para download do currículo completo em PDF:\n${pdfUrl}\n\nO currículo detalha minha experiência com AutoCAD, Revit (BIM), MS Project, Eberick e bases referenciais de preços (SINAPI, SICRO e composições próprias). Fico à disposição para uma entrevista.\n\nAtenciosamente,\n\nMarcos Denílson Barbosa dos Santos (Denilson Barbosa)\nEngenheiro Civil | CREA Ativo\n(88) 9627-1246 | denilsonb20@gmail.com\nlinkedin.com/in/denilsonbarbosasantos`;
 
       document.getElementById("carta-texto").value = texto;
       box.scrollIntoView({ behavior: "smooth" });
@@ -1138,7 +692,8 @@
 
         const platRaw = item.plataforma || "LinkedIn Vagas";
         let plat = "LinkedIn Vagas";
-        if (platRaw.includes("Gupy")) plat = "Gupy";
+        if (platRaw.includes("Mural Construtora")) plat = "Mural Construtora (RH)";
+        else if (platRaw.includes("Gupy")) plat = "Gupy";
         else if (platRaw.includes("Indeed")) plat = "Indeed";
         else if (platRaw.includes("Publicação")) plat = "Publicação LinkedIn";
 
@@ -1176,15 +731,19 @@
 
     async function carregarDadosServidor() {
       try {
-        if (!IS_GITHUB_PAGES) {
-          const rClic = await fetch(`${API_BASE}/api/clicadas`);
+        // Sincronização bidirecional de vagas descartadas:
+        // No celular (GitHub Pages), busca ./vagas_clicadas.json; no PC, busca /api/clicadas
+        const clicadasUrl = IS_GITHUB_PAGES ? `./vagas_clicadas.json?t=${Date.now()}` : `${API_BASE}/api/clicadas`;
+        try {
+          const rClic = await fetch(clicadasUrl);
           if (rClic.ok) {
             const dClic = await rClic.json();
             (dClic.ids || []).forEach(x => clicadasSet.add(String(x)));
             (dClic.urls || []).forEach(x => clicadasSet.add(String(x)));
             salvarClicadasLocal();
           }
-        }
+        } catch (e) {}
+
         const endpoint = IS_GITHUB_PAGES ? `./vagas_mapeadas.json?t=${Date.now()}` : `${API_BASE}/api/vagas`;
         const res = await fetch(endpoint);
         if (!res.ok) return;
@@ -1224,17 +783,17 @@
         msg.textContent = `Lista sincronizada! ${vis} vagas não lidas (≤ 7 dias) em exibição.`;
         btn.disabled = false;
         btn.classList.remove("opacity-75");
-        txt.textContent = "Executar Varredura Ao Vivo (≤ 7 Dias)";
+        txt.textContent = "Varredura Ao Vivo (≤ 7 Dias)";
         return;
       }
 
       let p = 15;
       const etapas = [
-        "Consultando portais Gupy (vagas postadas há ≤ 7 dias)...",
-        "Buscando vagas recentes no Indeed Brasil (CE, PE e Home Office)...",
-        "Varrendo LinkedIn Vagas da última semana (f_TPR=r604800)...",
-        "Ocultando vagas que você já clicou anteriormente...",
-        "Calculando afinidade e escolhendo o PDF ideal..."
+        "Consultando murais de construtoras locais (BSPAR, Colmeia, C. Rolim, CP Construção)...",
+        "Buscando vagas recentes no Indeed Brasil (Fortaleza, Caruaru e Remoto)...",
+        "Varrendo LinkedIn Vagas e Publicações recentes (últimos 7 dias)...",
+        "Ocultando vagas já clicadas e sincronizando...",
+        "Calculando score de afinidade e currículo ideal..."
       ];
       let idx = 0;
       const timer = setInterval(() => {
@@ -1248,7 +807,7 @@
       try {
         await fetch(`${API_BASE}/api/scan`);
         let checks = 0;
-        while (checks < 30) {
+        while (checks < 35) {
           await new Promise(r => setTimeout(r, 2000));
           checks++;
           const rStatus = await fetch(`${API_BASE}/api/vagas`);
@@ -1263,18 +822,18 @@
             if (dStatus.vagas) mesclarVagasApi(dStatus.vagas);
             const dt = dStatus.atualizado_em || st.last_scan || "agora";
             const vis = VAGAS.filter(v => !foiClicada(v)).length;
-            msg.textContent = `Varredura concluída (${dt})! ${vis} vagas inéditas (≤ 7 dias) na tela.`;
+            msg.textContent = `Varredura concluída (${dt})! ${vis} vagas inéditas (≤ 7 dias) prontas.`;
             if (badge) badge.textContent = `Atualizado (${dt})`;
             break;
           }
         }
       } catch (e) {
         clearInterval(timer);
-        msg.textContent = "Servidor local offline. Recarregando cache de vagas (≤ 7 dias).";
+        msg.textContent = "Servidor local offline. Recarregando dados armazenados.";
       } finally {
         btn.disabled = false;
         btn.classList.remove("opacity-75");
-        txt.textContent = "Executar Varredura Ao Vivo (≤ 7 Dias)";
+        txt.textContent = "Varredura Ao Vivo (≤ 7 Dias)";
       }
     }
 
