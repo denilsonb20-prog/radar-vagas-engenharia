@@ -25,21 +25,23 @@ def executar_e_enviar():
         print("Varredura concluída. Configure TELEGRAM_BOT_TOKEN e TELEGRAM_CHAT_ID para envio no Telegram.")
         return
 
-    g = sum(1 for v in vagas if v.get("plataforma") == "Gupy")
+    c = sum(1 for v in vagas if "Construtora" in v.get("plataforma", "") or "Mural" in v.get("plataforma", ""))
     i = sum(1 for v in vagas if v.get("plataforma") == "Indeed")
-    l = sum(1 for v in vagas if v.get("plataforma") == "LinkedIn Vagas")
+    l = sum(1 for v in vagas if "LinkedIn Vagas" in v.get("plataforma", ""))
+    g = sum(1 for v in vagas if v.get("plataforma") == "Gupy")
     p = sum(1 for v in vagas if "Publicação" in v.get("plataforma", ""))
 
     resumo = (
         f"🚀 <b>Relatório Automático de Vagas — Engenharia Civil</b>\n\n"
-        f"Total qualificado: <b>{len(vagas)} vagas</b>\n"
-        f"• 🟦 Gupy: <b>{g}</b> | 🟪 Indeed: <b>{i}</b> | 🔵 LinkedIn: <b>{l}</b> | 🔥 Posts: <b>{p}</b>\n\n"
-        f"<b>Top 8 Vagas Mais Recentes / Maior Afinidade:</b>"
+        f"Total qualificado (≤ 7 dias): <b>{len(vagas)} vagas</b>\n"
+        f"• 🏢 Construtoras (RH): <b>{c}</b> | 🟪 Indeed: <b>{i}</b> | 🔵 LinkedIn: <b>{l}</b>\n"
+        f"• 🟦 Gupy: <b>{g}</b> | 🔥 Posts com E-mail: <b>{p}</b>\n\n"
+        f"<b>Top Vagas Recentes / Maior Afinidade:</b>"
     )
 
     for cid in chat_ids:
         bot_telegram_radar.send_msg(token, cid, resumo)
-        for idx, v in enumerate(vagas[:8]):
+        for idx, v in enumerate(vagas[:10]):
             plat = v.get("plataforma", "Vaga")
             titulo = v.get("titulo", "Engenheiro Civil")
             empresa = v.get("empresa", "Empresa")
@@ -47,11 +49,13 @@ def executar_e_enviar():
             rec = v.get("data_publicacao", "Recente")
             pdf = v.get("curriculo_recomendado", "")
             url = v.get("url", "")
+            email = v.get("email_direto", "")
+            email_info = f"\n📧 <b>RH Direto:</b> <code>{email}</code>" if email else ""
             msg = (
                 f"<b>{idx+1}. [{plat} • {rec}] {titulo}</b>\n"
-                f"🏢 {empresa} ({local})\n"
+                f"🏢 {empresa} ({local}){email_info}\n"
                 f"📎 PDF: <code>{pdf}</code>\n"
-                f"🔗 <a href=\"{url}\">Abrir Vaga Direto</a>"
+                f"🔗 <a href=\"{url}\">Abrir Oportunidade</a>"
             )
             bot_telegram_radar.send_msg(token, cid, msg)
 
