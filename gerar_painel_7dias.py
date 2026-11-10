@@ -11,10 +11,14 @@ Gera o painel_vagas_caruaru.html (e index.html para o GitHub Pages) com:
 import json
 import os
 import shutil
+from gerador_bookmarklet import gerar_bookmarklet_codigo
 
 BASE_DIR = r"c:\Users\Denil\Desktop\projeto\radar_vagas_caruaru"
 ARTIFACT_DIR = r"C:\Users\Denil\.gemini\antigravity\brain\3e1c3540-4602-4d7d-b522-77c8dae96475"
 VAGAS_JSON = os.path.join(BASE_DIR, "vagas_mapeadas.json")
+
+bookmarklet_js_code = gerar_bookmarklet_codigo()
+bookmarklet_json_inline = json.dumps(bookmarklet_js_code)
 
 if not os.path.exists(VAGAS_JSON):
     dados = {"vagas": []}
@@ -30,8 +34,8 @@ for idx, v in enumerate(vagas_raw, 1):
     if dias > 7:
         continue
     plat_raw = v.get("plataforma", "LinkedIn Vagas")
-    if "Mural Construtora" in plat_raw:
-        plat = "Mural Construtora (RH)"
+    if "Mural Construtora" in plat_raw or "Banco de Talentos" in plat_raw:
+        plat = "Banco de Talentos (Construtora)"
     elif "Gupy" in plat_raw:
         plat = "Gupy"
     elif "Indeed" in plat_raw:
@@ -112,6 +116,9 @@ HTML_CONTENT = f"""<!DOCTYPE html>
             <span class="inline-block px-3 py-1 rounded-full text-xs font-semibold bg-emerald-500/15 text-emerald-400 border border-emerald-500/30">
               ⚡ Vagas Recentes: Máximo 7 Dias
             </span>
+            <span class="inline-block px-3 py-1 rounded-full text-xs font-semibold bg-cyan-500/15 text-cyan-300 border border-cyan-500/30">
+              ⏰ Busca Automática: A cada 4 Horas
+            </span>
             <span class="inline-block px-3 py-1 rounded-full text-xs font-semibold bg-amber-500/15 text-amber-300 border border-amber-500/30">
               👁️ Vagas Clicadas Ocultas
             </span>
@@ -131,6 +138,10 @@ HTML_CONTENT = f"""<!DOCTYPE html>
         <!-- Botões de Ação -->
         <div class="flex flex-col items-stretch md:items-end gap-2">
           <div class="flex flex-col sm:flex-row gap-2">
+            <button id="btn-bookmarklet" onclick="toggleBookmarkletBox()" class="px-4 py-3 rounded-xl font-bold text-xs md:text-sm bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-400 hover:to-amber-500 text-slate-950 shadow-lg transition-all flex items-center justify-center gap-2 cursor-pointer">
+              <span>⚡</span>
+              <span>Preencher Vagas (1 Toque)</span>
+            </button>
             <button id="btn-install-pwa" onclick="instalarAppCelular()" class="px-4 py-3 rounded-xl font-bold text-xs md:text-sm bg-sky-600 hover:bg-sky-500 text-white shadow-lg transition-all flex items-center justify-center gap-2 cursor-pointer">
               <span>📲</span>
               <span id="txt-install-pwa">Adicionar à Tela Inicial</span>
@@ -141,7 +152,7 @@ HTML_CONTENT = f"""<!DOCTYPE html>
             </button>
           </div>
           <span id="sub-live-scan" class="text-[11px] text-[var(--muted-foreground)] text-center md:text-right">
-            Busca novas vagas em murais de construtoras, Indeed, Gupy e LinkedIn
+            Busca a cada 4 horas na nuvem e no servidor local
           </span>
         </div>
       </div>
@@ -150,7 +161,7 @@ HTML_CONTENT = f"""<!DOCTYPE html>
       <div id="pwa-help-box" class="hidden mt-4 pt-3 border-t border-sky-500/40 bg-sky-950/40 rounded-xl p-4 text-xs space-y-2">
         <div class="flex items-center justify-between">
           <strong class="text-sky-300 text-sm">📲 Como fixar o aplicativo na tela inicial do celular:</strong>
-          <button onclick="document.getElementById('pwa-help-box').classList.add('hidden')" class="px-2 py-0.5 rounded bg-slate-800 text-slate-300">Fechar ✕</button>
+          <button onclick="document.getElementById('pwa-help-box').classList.add('hidden')" class="px-2 py-0.5 rounded bg-slate-800 text-slate-300 cursor-pointer">Fechar ✕</button>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-3 pt-1">
           <div class="bg-slate-900/90 border border-slate-700 rounded-lg p-3">
@@ -162,6 +173,55 @@ HTML_CONTENT = f"""<!DOCTYPE html>
             <div class="font-bold text-sky-400 mb-1">🍎 No iPhone / iOS (Safari):</div>
             <p class="text-slate-200">1. Toque no ícone de <strong>Compartilhar (quadrado com seta ⬆️)</strong>.</p>
             <p class="text-slate-200 mt-1">2. Role para baixo e selecione <strong>"Adicionar à Tela de Início"</strong>.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Caixa Guia Visual do Bookmarklet (Preenchimento 1-Toque) -->
+      <div id="bookmarklet-box" class="hidden mt-4 pt-3 border-t border-amber-500/40 bg-amber-950/40 rounded-xl p-4 text-xs space-y-3">
+        <div class="flex items-center justify-between">
+          <strong class="text-amber-300 text-sm">⚡ Preenchimento Automático em Formulários de Construtoras:</strong>
+          <button onclick="document.getElementById('bookmarklet-box').classList.add('hidden')" class="px-2 py-0.5 rounded bg-slate-800 text-slate-300 cursor-pointer">Fechar ✕</button>
+        </div>
+        <p class="text-slate-200">
+          O <strong>Bookmarklet</strong> é um favorito inteligente que você salva no navegador. Ao abrir a página de <strong>"Trabalhe Conosco"</strong> de qualquer construtora (BSPAR, Colmeia, C. Rolim, Moura Dubeux, etc.), basta tocar nesse favorito: ele preenche Nome, E-mail, Telefone/WhatsApp, LinkedIn, Cargo e Mensagem de Apresentação sozinho, destacando os campos preenchidos em verde!
+        </p>
+
+        <div class="bg-slate-900/90 border border-amber-500/30 rounded-lg p-3 flex flex-col sm:flex-row items-center justify-between gap-3">
+          <div>
+            <div class="text-slate-300 font-semibold mb-1">🖥️ No Computador (Chrome / Edge):</div>
+            <p class="text-[11px] text-slate-400">Arraste o botão amarelo abaixo direto para a sua barra de favoritos do navegador:</p>
+            <div class="mt-2">
+              <a id="bookmarklet-link" href="#" class="px-4 py-2 rounded-lg bg-amber-400 hover:bg-amber-300 text-slate-950 font-extrabold text-xs inline-flex items-center gap-1.5 shadow-md cursor-grab active:cursor-grabbing">
+                <span>⚡ Preencher Vaga (Denilson)</span>
+              </a>
+            </div>
+          </div>
+          <div class="border-t sm:border-t-0 sm:border-l border-slate-700 pt-2 sm:pt-0 sm:pl-4 w-full sm:w-auto text-center sm:text-left">
+            <div class="text-slate-300 font-semibold mb-1">📱 No Celular (Android / iPhone):</div>
+            <button onclick="copiarCodigoBookmarklet()" id="btn-copiar-bm" class="w-full px-4 py-2.5 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs shadow-md transition-all cursor-pointer flex items-center justify-center gap-2">
+              <span>📋</span> Copiar Código do Favorito
+            </button>
+            <span id="bm-copy-status" class="block text-[11px] text-emerald-400 font-semibold mt-1 hidden text-center">Código copiado! Cole no URL do favorito.</span>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-3 pt-1">
+          <div class="bg-slate-900/90 border border-slate-700 rounded-lg p-3">
+            <div class="font-bold text-emerald-400 mb-1">🤖 Como instalar no Chrome do Celular (Android):</div>
+            <p class="text-slate-300">1. Toque no botão verde acima <strong>"Copiar Código do Favorito"</strong>.</p>
+            <p class="text-slate-300 mt-1">2. Salve esta página nos favoritos tocando nos <strong>3 pontinhos (⋮) ➔ Estrela (⭐)</strong>.</p>
+            <p class="text-slate-300 mt-1">3. Toque em <strong>Editar</strong> (na barra inferior que aparece) ou vá em <strong>Favoritos</strong>.</p>
+            <p class="text-slate-300 mt-1">4. Troque o nome para <strong>⚡ Preencher Vaga</strong> e no campo <strong>URL</strong> apague tudo e cole o código copiado.</p>
+            <p class="text-emerald-300 font-semibold mt-2 pt-1 border-t border-slate-700">👉 Como usar: Ao abrir qualquer construtora, toque na barra de endereços, digite <em>Preencher</em> e selecione o favorito que aparecer!</p>
+          </div>
+          <div class="bg-slate-900/90 border border-slate-700 rounded-lg p-3">
+            <div class="font-bold text-sky-400 mb-1">🍎 Como instalar no iPhone (Safari / Chrome):</div>
+            <p class="text-slate-300">1. Toque no botão verde acima <strong>"Copiar Código do Favorito"</strong>.</p>
+            <p class="text-slate-300 mt-1">2. Favorite esta página tocando no botão <strong>Compartilhar (quadrado com seta) ➔ Adicionar aos Favoritos</strong>.</p>
+            <p class="text-slate-300 mt-1">3. Abra o painel de <strong>Favoritos</strong>, toque em <strong>Editar</strong> e selecione o favorito salvo.</p>
+            <p class="text-slate-300 mt-1">4. Altere o nome para <strong>⚡ Preencher Vaga</strong> e no campo de endereço cole o código copiado.</p>
+            <p class="text-sky-300 font-semibold mt-2 pt-1 border-t border-slate-700">👉 Como usar: No site da construtora, abra seus favoritos e toque em <em>⚡ Preencher Vaga</em>.</p>
           </div>
         </div>
       </div>
@@ -228,7 +288,7 @@ HTML_CONTENT = f"""<!DOCTYPE html>
           <span class="text-xs font-bold uppercase tracking-wider text-[var(--muted-foreground)]">1. Filtrar por Plataforma:</span>
           <div class="flex flex-wrap gap-1.5">
             <button onclick="setPlat('todas')" id="plat-todas" class="px-3 py-1 rounded-lg text-xs font-semibold bg-blue-600 text-white cursor-pointer">Todas</button>
-            <button onclick="setPlat('Mural Construtora (RH)')" id="plat-Mural Construtora (RH)" class="px-3 py-1 rounded-lg text-xs font-semibold bg-[var(--background)] border border-[var(--border)] cursor-pointer">Murais Construtoras (RH)</button>
+            <button onclick="setPlat('Banco de Talentos (Construtora)')" id="plat-Banco de Talentos (Construtora)" class="px-3 py-1 rounded-lg text-xs font-semibold bg-[var(--background)] border border-[var(--border)] cursor-pointer">Construtoras (Trabalhe Conosco)</button>
             <button onclick="setPlat('Indeed')" id="plat-Indeed" class="px-3 py-1 rounded-lg text-xs font-semibold bg-[var(--background)] border border-[var(--border)] cursor-pointer">Indeed Brasil</button>
             <button onclick="setPlat('LinkedIn Vagas')" id="plat-LinkedIn Vagas" class="px-3 py-1 rounded-lg text-xs font-semibold bg-[var(--background)] border border-[var(--border)] cursor-pointer">LinkedIn Vagas</button>
             <button onclick="setPlat('Gupy')" id="plat-Gupy" class="px-3 py-1 rounded-lg text-xs font-semibold bg-[var(--background)] border border-[var(--border)] cursor-pointer">Gupy</button>
@@ -260,13 +320,26 @@ HTML_CONTENT = f"""<!DOCTYPE html>
 
     <!-- Área de Carta de Apresentação -->
     <div id="carta-box" class="hidden bg-[var(--card)] border-2 border-blue-500/40 rounded-xl p-5 shadow-md">
-      <div class="flex items-center justify-between mb-2">
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-2">
         <h3 class="font-bold text-base" id="carta-titulo">Carta de Apresentação / Mensagem ao Recrutador</h3>
-        <button onclick="copiarCarta()" class="px-3 py-1.5 rounded-lg text-xs font-semibold bg-emerald-600 text-white hover:bg-emerald-500 cursor-pointer">
-          Copiar Texto
+        <button onclick="copiarCarta()" class="px-3.5 py-1.5 rounded-lg text-xs font-bold bg-emerald-600 text-white hover:bg-emerald-500 cursor-pointer flex items-center justify-center gap-1.5 shadow">
+          <span>📋</span> Copiar Carta Completa
         </button>
       </div>
       <p class="text-xs text-[var(--muted-foreground)] mb-2" id="carta-pdf-indicado"></p>
+
+      <!-- Botões de Cópia Rápida 1-Toque -->
+      <div class="flex flex-wrap items-center gap-1.5 mb-3 p-2.5 bg-slate-900/80 rounded-lg border border-[var(--border)]">
+        <span class="text-xs font-bold text-amber-300 mr-1 flex items-center gap-1">⚡ Copiar Dado:</span>
+        <button onclick="copiarDadoIndividual('nome')" class="px-2.5 py-1 rounded-md text-xs font-semibold bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 cursor-pointer">👤 Nome</button>
+        <button onclick="copiarDadoIndividual('email')" class="px-2.5 py-1 rounded-md text-xs font-semibold bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 cursor-pointer">✉️ E-mail</button>
+        <button onclick="copiarDadoIndividual('tel')" class="px-2.5 py-1 rounded-md text-xs font-semibold bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 cursor-pointer">📱 WhatsApp</button>
+        <button onclick="copiarDadoIndividual('linkedin')" class="px-2.5 py-1 rounded-md text-xs font-semibold bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 cursor-pointer">💼 LinkedIn</button>
+        <button onclick="copiarDadoIndividual('pdf')" class="px-2.5 py-1 rounded-md text-xs font-semibold bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 cursor-pointer">📄 Link do PDF</button>
+        <button onclick="copiarDadoIndividual('cargo')" class="px-2.5 py-1 rounded-md text-xs font-semibold bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 cursor-pointer">🎯 Cargo</button>
+        <span id="toast-copia-rapida" class="text-xs text-emerald-400 font-semibold ml-auto hidden">Copiado!</span>
+      </div>
+
       <textarea id="carta-texto" rows="11" class="w-full bg-[var(--background)] text-[var(--foreground)] border border-[var(--border)] rounded-lg p-3 text-xs font-mono"></textarea>
     </div>
   </div>
@@ -275,6 +348,73 @@ HTML_CONTENT = f"""<!DOCTYPE html>
     const IS_GITHUB_PAGES = window.location.hostname.includes("github.io");
     const API_BASE = window.location.origin.includes("3456") ? window.location.origin : "http://" + window.location.hostname + ":3456";
     const GITHUB_PAGES_BASE = "https://denilsonb20-prog.github.io/radar-vagas-engenharia";
+    const BOOKMARKLET_CODE = {bookmarklet_json_inline};
+
+    let ultimoPdfUrl = "";
+    const DADOS_CANDIDATO = {{
+      nome: "Marcos Denílson Barbosa dos Santos",
+      email: "denilsonb20@gmail.com",
+      tel: "(88) 99627-1246",
+      cargo: "Engenheiro Civil - Orçamentos e Planejamento",
+      linkedin: "https://linkedin.com/in/denilsonbarbosasantos",
+      pdfUrl: "https://denilsonb20-prog.github.io/radar-vagas-engenharia/pdf/Curriculo_Denilson_Barbosa_Orcamentos_Planejamento_Fortaleza_CE.pdf"
+    }};
+
+    function toggleBookmarkletBox() {{
+      const box = document.getElementById("bookmarklet-box");
+      if (box) {{
+        box.classList.toggle("hidden");
+        if (!box.classList.contains("hidden")) {{
+          box.scrollIntoView({{ behavior: "smooth" }});
+        }}
+      }}
+    }}
+
+    function copiarCodigoBookmarklet() {{
+      if (navigator.clipboard && navigator.clipboard.writeText) {{
+        navigator.clipboard.writeText(BOOKMARKLET_CODE);
+      }} else {{
+        const ta = document.createElement("textarea");
+        ta.value = BOOKMARKLET_CODE;
+        document.body.appendChild(ta);
+        ta.select();
+        document.execCommand("copy");
+        document.body.removeChild(ta);
+      }}
+      const st = document.getElementById("bm-copy-status");
+      if (st) {{
+        st.classList.remove("hidden");
+        setTimeout(() => st.classList.add("hidden"), 3500);
+      }}
+    }}
+
+    function copiarDadoIndividual(tipo) {{
+      let val = "";
+      if (tipo === "nome") val = DADOS_CANDIDATO.nome;
+      else if (tipo === "email") val = DADOS_CANDIDATO.email;
+      else if (tipo === "tel") val = DADOS_CANDIDATO.tel;
+      else if (tipo === "linkedin") val = DADOS_CANDIDATO.linkedin;
+      else if (tipo === "cargo") val = DADOS_CANDIDATO.cargo;
+      else if (tipo === "pdf") val = ultimoPdfUrl || DADOS_CANDIDATO.pdfUrl;
+
+      if (navigator.clipboard && navigator.clipboard.writeText) {{
+        navigator.clipboard.writeText(val);
+      }} else {{
+        const ta = document.createElement("textarea");
+        ta.value = val;
+        document.body.appendChild(ta);
+        ta.select();
+        document.execCommand("copy");
+        document.body.removeChild(ta);
+      }}
+
+      const toast = document.getElementById("toast-copia-rapida");
+      if (toast) {{
+        toast.textContent = `Copiado: ${{val.slice(0, 18)}}...`;
+        toast.classList.remove("hidden");
+        setTimeout(() => toast.classList.add("hidden"), 2500);
+      }}
+    }}
 
     const STORAGE_KEY_CLICADAS = "radar_vagas_clicadas_ids";
     let clicadasSet = new Set();
@@ -329,13 +469,13 @@ HTML_CONTENT = f"""<!DOCTYPE html>
 
     function atualizarPlacar() {{
       const visiveis = VAGAS.filter(v => !foiClicada(v) && (v.dias === undefined || v.dias <= 7));
-      const cConst = visiveis.filter(v => v.plat === "Mural Construtora (RH)").length;
+      const cConst = visiveis.filter(v => v.plat === "Banco de Talentos (Construtora)").length;
       const cInd = visiveis.filter(v => v.plat === "Indeed").length;
       const cLin = visiveis.filter(v => v.plat === "LinkedIn Vagas").length;
       const cGupy = visiveis.filter(v => v.plat === "Gupy").length;
       const cPos = visiveis.filter(v => v.plat === "Publicação LinkedIn").length;
 
-      document.getElementById("count-const").textContent = `${{cConst}} Murais`;
+      document.getElementById("count-const").textContent = `${{cConst}} Portais`;
       document.getElementById("count-indeed").textContent = `${{cInd}} Vagas`;
       document.getElementById("count-linkedin").textContent = `${{cLin}} Vagas`;
       document.getElementById("count-gupy").textContent = `${{cGupy}} Vagas`;
@@ -350,7 +490,7 @@ HTML_CONTENT = f"""<!DOCTYPE html>
 
     function setPlat(p) {{
       filtroPlat = p;
-      ["todas", "Mural Construtora (RH)", "Indeed", "LinkedIn Vagas", "Gupy", "Publicação LinkedIn"].forEach(k => {{
+      ["todas", "Banco de Talentos (Construtora)", "Indeed", "LinkedIn Vagas", "Gupy", "Publicação LinkedIn"].forEach(k => {{
         const b = document.getElementById("plat-" + k);
         if (b) {{
           b.className = (k === p)
@@ -427,7 +567,7 @@ HTML_CONTENT = f"""<!DOCTYPE html>
 
       lista.forEach(v => {{
         let platColor = "bg-blue-500/15 text-blue-300 border-blue-500/30";
-        if (v.plat === "Mural Construtora (RH)") {{
+        if (v.plat === "Banco de Talentos (Construtora)") {{
           platColor = "bg-emerald-500/15 text-emerald-300 border-emerald-500/30";
         }} else if (v.plat === "Indeed") {{
           platColor = "bg-indigo-500/15 text-indigo-300 border-indigo-500/30";
@@ -441,8 +581,12 @@ HTML_CONTENT = f"""<!DOCTYPE html>
         const safeUrl = String(v.url || "").replace(/'/g, "");
 
         const emailBtn = v.email
-          ? `<a href="${{obterMailtoLink(v)}}" onclick="registrarCliqueVaga('${{safeId}}', '${{safeUrl}}')" class="px-3.5 py-1.5 rounded-lg text-xs font-bold bg-emerald-600 hover:bg-emerald-500 text-white shadow-md flex items-center gap-1.5 transition-all"><span>✉️</span> Candidatura Rápida (1 Toque)</a>`
+          ? `<a href="${{obterMailtoLink(v)}}" onclick="registrarCliqueVaga('${{safeId}}', '${{safeUrl}}')" class="px-3.5 py-1.5 rounded-lg text-xs font-bold bg-cyan-600 hover:bg-cyan-500 text-white shadow-md flex items-center gap-1.5 transition-all"><span>✉️</span> E-mail do Recrutador (1 Toque)</a>`
           : "";
+
+        const portalBtn = v.plat === "Banco de Talentos (Construtora)"
+          ? `<a href="${{v.url}}" target="_blank" onclick="registrarCliqueVaga('${{safeId}}', '${{safeUrl}}')" class="px-3.5 py-1.5 rounded-lg text-xs font-bold bg-emerald-600 hover:bg-emerald-500 text-white shadow-md flex items-center gap-1.5 transition-all"><span>🏢</span> Trabalhe Conosco Oficial ↗</a>`
+          : `<a href="${{v.url}}" target="_blank" onclick="registrarCliqueVaga('${{safeId}}', '${{safeUrl}}')" class="px-3 py-1.5 rounded-lg text-xs font-semibold bg-blue-600 text-white hover:bg-blue-500 transition-colors">Abrir no ${{v.plat.split(' ')[0]}} ↗</a>`;
 
         const card = document.createElement("div");
         card.className = "bg-[var(--background)] border border-[var(--border)] rounded-xl p-4 hover:border-blue-500/40 transition-all";
@@ -463,9 +607,7 @@ HTML_CONTENT = f"""<!DOCTYPE html>
               <button onclick="verCarta('${{safeId}}')" class="px-3 py-1.5 rounded-lg text-xs font-semibold bg-[var(--card)] border border-[var(--border)] hover:bg-blue-600 hover:text-white transition-colors cursor-pointer">
                 Ver Carta
               </button>
-              <a href="${{v.url}}" target="_blank" onclick="registrarCliqueVaga('${{safeId}}', '${{safeUrl}}')" class="px-3 py-1.5 rounded-lg text-xs font-semibold bg-blue-600 text-white hover:bg-blue-500 transition-colors">
-                Abrir Portal ↗
-              </a>
+              ${{portalBtn}}
               <button onclick="registrarCliqueVaga('${{safeId}}', '${{safeUrl}}')" title="Marcar como já vista e ocultar" class="px-2.5 py-1.5 rounded-lg text-xs font-semibold bg-[var(--card)] border border-[var(--border)] text-[var(--muted-foreground)] hover:text-rose-400 cursor-pointer">
                 ✕ Já vi
               </button>
@@ -496,6 +638,7 @@ HTML_CONTENT = f"""<!DOCTYPE html>
       }}
 
       const pdfUrl = `${{GITHUB_PAGES_BASE}}/pdf/${{encodeURIComponent(v.pdf)}}`;
+      ultimoPdfUrl = pdfUrl;
       const texto = `Assunto: Candidatura: ${{v.titulo}} - Denilson Barbosa (Engenheiro Civil)\\n\\nPrezada equipe de seleção da ${{v.empresa}},\\n\\nEnvio meu currículo para avaliação na oportunidade de ${{v.titulo}}.\\n\\nSou Engenheiro Civil graduado pela UFERSA, com pós-graduação em Construção Civil e MBA em Projetos de Instalações Prediais pelo IPOG. Nos últimos cinco anos, atuei diretamente com engenharia de custos, planejamento físico-financeiro e gestão de obras públicas e privadas.\\n\\nAtualmente, como Engenheiro Orçamentista na SS&B Construtora, estruturei um banco próprio com mais de 250 composições de custos unitários (CPUs) e conduzi a revisão técnica e tributária de um orçamento de R$ 60 milhões, gerando uma redução real de R$ 1,2 milhão que viabilizou o fechamento do contrato. Antes disso, exerci o cargo de Diretor de Engenharia na Prefeitura de Mossoró, coordenando equipes multidisciplinares, medições e compatibilização de projetos em obras hospitalares e educacionais, onde liderei uma revisão estrutural de emergência que evitou perdas estimadas em 10% do custo da obra.\\n\\n${{locMsg}}\\n\\n📄 Link direto para download do currículo completo em PDF:\\n${{pdfUrl}}\\n\\nO currículo detalha minha experiência com AutoCAD, Revit (BIM), MS Project, Eberick e bases referenciais de preços (SINAPI, SICRO e composições próprias). Fico à disposição para uma entrevista.\\n\\nAtenciosamente,\\n\\nMarcos Denílson Barbosa dos Santos (Denilson Barbosa)\\nEngenheiro Civil | CREA Ativo\\n(88) 9627-1246 | denilsonb20@gmail.com\\nlinkedin.com/in/denilsonbarbosasantos`;
 
       document.getElementById("carta-texto").value = texto;
@@ -509,6 +652,11 @@ HTML_CONTENT = f"""<!DOCTYPE html>
     }}
 
     function sincronizarLinksPdf() {{
+      const bLink = document.getElementById("bookmarklet-link");
+      if (bLink) {{
+        bLink.href = BOOKMARKLET_CODE;
+      }}
+
       const mapIds = {{
         "dl-for-orc": "Curriculo_Denilson_Barbosa_Orcamentos_Planejamento_Fortaleza_CE.pdf",
         "dl-for-obr": "Curriculo_Denilson_Barbosa_Gestao_Obras_Projetos_Fortaleza_CE.pdf",
