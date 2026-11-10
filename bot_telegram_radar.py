@@ -71,9 +71,10 @@ def get_reply_keyboard():
     return {
         "keyboard": [
             [{"text": "🔄 Varrer Vagas Agora"}],
+            [{"text": "🏢 Construtoras Locais (RH)"}, {"text": "🔥 Posts com E-mail"}],
             [{"text": "📍 Fortaleza + 60km"}, {"text": "📍 Caruaru + 80km"}],
-            [{"text": "🏠 Remoto Brasil"}, {"text": "🔥 Posts com E-mail"}],
-            [{"text": "🟦 Só Gupy"}, {"text": "🟪 Só Indeed"}, {"text": "🔵 Só LinkedIn"}],
+            [{"text": "🏠 Remoto Brasil"}, {"text": "🟪 Só Indeed"}],
+            [{"text": "🟦 Só Gupy"}, {"text": "🔵 Só LinkedIn"}],
             [{"text": "📄 Baixar Meus 4 Currículos PDF"}],
         ],
         "resize_keyboard": True,
@@ -307,6 +308,14 @@ def processar_mensagem(token, msg):
             lambda v: "remoto" in (v.get("regiao_alvo", "") + " " + v.get("local", "") + " " + v.get("titulo", "")).lower()
                       or "home office" in (v.get("local", "") + " " + v.get("titulo", "")).lower(),
             "Vagas Remotas / Home Office (Brasil)",
+        )
+
+    elif "Construtoras Locais" in texto or texto == "/construtoras":
+        enviar_lista_vagas(
+            token,
+            chat_id,
+            lambda v: "Construtora" in v.get("plataforma", "") or "Mural" in v.get("plataforma", ""),
+            "Murais & RH de Construtoras Locais (CE & PE)",
         )
 
     elif "Posts com E-mail" in texto or texto == "/posts":
