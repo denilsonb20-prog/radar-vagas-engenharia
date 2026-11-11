@@ -2,7 +2,7 @@ name: Atualizar Radar de Vagas (<= 7 Dias)
 
 on:
   schedule:
-    - cron: '0 */4 * * *'
+    - cron: '0 10-23 * * *'
   workflow_dispatch:
 
 permissions:
@@ -38,6 +38,6 @@ jobs:
         run: |
           git config user.name "Radar Vagas Bot"
           git config user.email "bot@radarvagas.local"
-          git add vagas_mapeadas.json vagas_clicadas.json index.html painel_vagas_caruaru.html
-          git diff --staged --quiet || git commit -m "Atualização automática de vagas (<= 7 dias) [skip ci]"
+          git add vagas_mapeadas.json vagas_clicadas.json vagas_enviadas_telegram.json index.html painel_vagas_caruaru.html
+          git diff --staged --quiet || git commit -m "Atualização horária de vagas (07h às 20h) [skip ci]"
           git push
