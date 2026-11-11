@@ -863,10 +863,17 @@ HTML_CONTENT = f"""<!DOCTYPE html>
 
 p1 = os.path.join(BASE_DIR, "painel_vagas_caruaru.html")
 p2 = os.path.join(BASE_DIR, "index.html")
-p3 = os.path.join(ARTIFACT_DIR, "painel_vagas_caruaru.html")
 
-for p in (p1, p2, p3):
+for p in (p1, p2):
     with open(p, "w", encoding="utf-8") as f:
         f.write(HTML_CONTENT)
+
+if os.path.exists(ARTIFACT_DIR):
+    try:
+        p3 = os.path.join(ARTIFACT_DIR, "painel_vagas_caruaru.html")
+        with open(p3, "w", encoding="utf-8") as f:
+            f.write(HTML_CONTENT)
+    except Exception:
+        pass
 
 print(f"Painel gerado com sucesso com {len(vagas_js)} vagas de no máximo 7 dias!")
