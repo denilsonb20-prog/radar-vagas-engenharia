@@ -1,12 +1,37 @@
 {
-  "atualizado_em": "09/11/2026 22:41",
+  "atualizado_em": "10/11/2026 21:20",
   "candidato": "Marcos Denílson Barbosa dos Santos (Denilson Barbosa)",
-  "total_vagas_qualificadas": 14,
+  "total_vagas_qualificadas": 15,
   "vagas": [
+    {
+      "id": "post_7525631035309486080",
+      "raw_id": "7525631035309486080",
+      "plataforma": "Publicação LinkedIn (Feed)",
+      "tipo_fonte": "publicacao_feed",
+      "titulo": "[Post Feed] Helio Souza: Helio Souza Diretor Executivo há 1 d Vaga de Engenheiro (A) Civil 📍 Local: Fortaleza...",
+      "empresa": "Post de Helio Souza (dbconsultoria2026@hotmail.com)",
+      "local": "Fortaleza / Eusébio, CE",
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7525631035309486080/",
+      "data_publicacao": "2026-11-09",
+      "dias_atras": 0,
+      "modalidade": "Presencial / Híbrido",
+      "descricao": "Helio Souza Diretor Executivo há 1 d Vaga de Engenheiro (A) Civil 📍 Local: Fortaleza - CE 🏗️ Área: Engenharia Estamos contratando Engenheiro (a) Civil para atuar com acompanhamento e execução de obras em campo. Buscamos profissionais comprometidos com a qualidade e organização. Principais Atividades: - Acompanhamento e execução de obras; - Gestão e planejamento de atividades em campo. Requisitos: - Ensino superior completo em Engenharia Civil; - Experiência técnica em adutoras, terraplanagem, pavimentação e drenagem; - Registro ativo no CREA. 📩 Venha fazer parte do time Interessados devem envi",
+      "email_direto": "dbconsultoria2026@hotmail.com",
+      "score_afinidade": 99,
+      "termos_afinidade": [
+        "Planejamento Físico-Financeiro",
+        "Engenharia Civil",
+        "Gestão/Execução de Obras"
+      ],
+      "distancia_info": "0 km (Residência Atual - Eusébio/CE)",
+      "categoria_geografica": "Fortaleza + 60km (CE)",
+      "curriculo_recomendado": "Curriculo_Denilson_Barbosa_Gestao_Obras_Projetos_Fortaleza_CE.pdf",
+      "trilha": "Obras & Projetos (Cabeçalho Eusébio/CE)"
+    },
     {
       "id": "const_ce_bspar",
       "raw_id": "const_ce_bspar",
-      "plataforma": "Banco de Talentos (Construtora)",
+      "plataforma": "Mural Construtora (RH Direto)",
       "tipo_fonte": "construtora_mural",
       "titulo": "Engenheiro de Custos & Orçamentos (Banco de Talentos Oficial)",
       "empresa": "BSPAR Incorporações",
@@ -32,7 +57,7 @@
     {
       "id": "const_ce_colmeia",
       "raw_id": "const_ce_colmeia",
-      "plataforma": "Banco de Talentos (Construtora)",
+      "plataforma": "Mural Construtora (RH Direto)",
       "tipo_fonte": "construtora_mural",
       "titulo": "Engenheiro Orçamentista / Sala Técnica (Trabalhe Conosco Oficial)",
       "empresa": "Construtora Colmeia",
@@ -195,7 +220,7 @@
     {
       "id": "const_pe_cpconstrucao",
       "raw_id": "const_pe_cpconstrucao",
-      "plataforma": "Banco de Talentos (Construtora)",
+      "plataforma": "Mural Construtora (RH Direto)",
       "tipo_fonte": "construtora_mural",
       "titulo": "Engenheiro Civil - Obras & Orçamentos (Caruaru / Agreste Oficial)",
       "empresa": "CP Construção",
@@ -220,12 +245,12 @@
     {
       "id": "const_ce_crolim",
       "raw_id": "const_ce_crolim",
-      "plataforma": "Banco de Talentos (Construtora)",
+      "plataforma": "Mural Construtora (RH Direto)",
       "tipo_fonte": "construtora_mural",
       "titulo": "Engenheiro Civil - Planejamento e Gestão de Obras (Portal Oficial)",
       "empresa": "C. Rolim Engenharia",
       "local": "Fortaleza, CE",
-      "url": "https://www.crolimengenharia.com.br/trabalhe-conosco/",
+      "url": "https://crolimengenharia.com.br/contato/",
       "data_publicacao": "2026-11-07",
       "dias_atras": 1,
       "modalidade": "Presencial / Híbrido",
@@ -245,7 +270,7 @@
     {
       "id": "const_pe_conic",
       "raw_id": "const_pe_conic",
-      "plataforma": "Banco de Talentos (Construtora)",
+      "plataforma": "Mural Construtora (RH Direto)",
       "tipo_fonte": "construtora_mural",
       "titulo": "Engenheiro Civil - Gestão e Acompanhamento de Obras (Mural PE)",
       "empresa": "Conic Construtora",
@@ -296,7 +321,7 @@
     {
       "id": "const_pe_duarte",
       "raw_id": "const_pe_duarte",
-      "plataforma": "Banco de Talentos (Construtora)",
+      "plataforma": "Mural Construtora (RH Direto)",
       "tipo_fonte": "construtora_mural",
       "titulo": "Engenheiro de Custos & Sala Técnica (Trabalhe Conosco PE)",
       "empresa": "Duarte Engenharia",
@@ -319,9 +344,33 @@
       "trilha": "Orçamentos & Planejamento (Cabeçalho Caruaru/PE)"
     },
     {
+      "id": "post_7523750203116498944",
+      "raw_id": "7523750203116498944",
+      "plataforma": "Publicação LinkedIn (Feed)",
+      "tipo_fonte": "publicacao_feed",
+      "titulo": "[Post Feed] Agilean: Agilean há 6 d Vaga aberta em Fortaleza/CE! Estamos à procura de um(a) Analista de En...",
+      "empresa": "Post de Agilean (Feed LinkedIn)",
+      "local": "Fortaleza / Eusébio, CE",
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7523750203116498944/",
+      "data_publicacao": "2026-11-04",
+      "dias_atras": 3,
+      "modalidade": "Presencial / Híbrido",
+      "descricao": "Agilean há 6 d Vaga aberta em Fortaleza/CE! Estamos à procura de um(a) Analista de Engajamento (Engenharia Civil) para fazer parte do nosso time. Se você é engenheiro(a) civil, tem vivência em obra e quer levar essa experiência para dentro da tecnologia, essa vaga é para você. Aqui na Agilean, você vai ser a ponte entre a engenharia e a tecnologia, ajudando construtoras de todo o Brasil a planejar melhor e a tirar o máximo da nossa plataforma. ✔️ Engenharia Civil completa ✔️ Experiência com gestão de obras ✔️ Boa comunicação e perfil analítico ✔️ Presencial em Fortaleza 👉 Candidate-se: https:/",
+      "email_direto": "",
+      "score_afinidade": 87,
+      "termos_afinidade": [
+        "Engenharia Civil",
+        "Gestão/Execução de Obras"
+      ],
+      "distancia_info": "0 km (Residência Atual - Eusébio/CE)",
+      "categoria_geografica": "Fortaleza + 60km (CE)",
+      "curriculo_recomendado": "Curriculo_Denilson_Barbosa_Gestao_Obras_Projetos_Fortaleza_CE.pdf",
+      "trilha": "Obras & Projetos (Cabeçalho Eusébio/CE)"
+    },
+    {
       "id": "const_pe_rioave",
       "raw_id": "const_pe_rioave",
-      "plataforma": "Banco de Talentos (Construtora)",
+      "plataforma": "Mural Construtora (RH Direto)",
       "tipo_fonte": "construtora_mural",
       "titulo": "Engenheiro de Planejamento & Qualidade (Banco de Talentos PE)",
       "empresa": "Construtora Rio Ave",
@@ -341,29 +390,6 @@
       "categoria_geografica": "Eixo PE (Recife / BR-232)",
       "curriculo_recomendado": "Curriculo_Denilson_Barbosa_Orcamentos_Planejamento_Caruaru_PE.pdf",
       "trilha": "Orçamentos & Planejamento (Cabeçalho Caruaru/PE)"
-    },
-    {
-      "id": "post_7523750203116498944",
-      "raw_id": "7523750203116498944",
-      "plataforma": "Publicação LinkedIn (Feed)",
-      "tipo_fonte": "publicacao_feed",
-      "titulo": "[Post Feed] pt. linkedin . com › posts › agilean-app_vaga-aberta-em Vaga aberta ",
-      "empresa": "Publicado por: Agilean App",
-      "local": "Fortaleza, CE",
-      "url": "https://pt.linkedin.com/posts/agilean-app_vaga-aberta-em-fortalezace-estamos-%C3%A0-procura-activity-7523750203116498944-em2K",
-      "data_publicacao": "2026-11-04",
-      "dias_atras": 2,
-      "modalidade": "Presencial / Híbrido",
-      "descricao": "pt. linkedin . com › posts › agilean-app_vaga-aberta-em Vaga aberta em Fortaleza/CE! Estamos à procura de um (a ... pt.linkedin.com › posts › agilean-app_vaga-aberta-em Vaga aberta em Fortaleza /CE! Estamos à procura de um (a) Analista de Engajamento (Engenharia Civil) para fazer parte do nosso time. Se você é engenheiro (a) civil, tem vivência em obra e quer levar essa experiência para dentro da tecnologia, essa vaga é para você. Aqui na Agilean, você vai ser a ponte entre a engenharia e a tecnologia, ajudando construtoras de todo o Brasil a planejar ...",
-      "email_direto": "",
-      "score_afinidade": 79,
-      "termos_afinidade": [
-        "Engenharia Civil"
-      ],
-      "distancia_info": "18 km de Eusébio (Polo Fortaleza/CE)",
-      "categoria_geografica": "Fortaleza + 60km (CE)",
-      "curriculo_recomendado": "Curriculo_Denilson_Barbosa_Gestao_Obras_Projetos_Fortaleza_CE.pdf",
-      "trilha": "Obras & Projetos (Cabeçalho Eusébio/CE)"
     }
   ]
 }
