@@ -70,7 +70,7 @@ def gerar_bookmarklet_codigo():
     }}
 
     var filled = 0;
-    var inputs = document.querySelectorAll('input:not([type="hidden"]):not([type="submit"]):not([type="button"]):not([type="radio"]):not([type="checkbox"]):not([type="file"]), textarea, select');
+    var inputs = document.querySelectorAll('input:not([type="hidden"]):not([type="submit"]):not([type="button"]):not([type="radio"]):not([type="file"]), textarea, select');
 
     inputs.forEach(function(el) {{
       var tag = el.tagName.toLowerCase();
@@ -90,9 +90,16 @@ def gerar_bookmarklet_codigo():
       }}
       var full = [name, id, ph, aria, auto, lblText].join(' ');
 
-      if (type === 'email' || full.indexOf('email') > -1 || full.indexOf('e-mail') > -1) {{
+      if (type === 'checkbox') {{
+        if (full.indexOf('term') > -1 || full.indexOf('privac') > -1 || full.indexOf('aceit') > -1 || full.indexOf('concord') > -1 || full.indexOf('lgpd') > -1) {{
+          el.checked = true;
+          el.dispatchEvent(new Event('change', {{ bubbles: true }}));
+          el.style.setProperty('outline', '2px solid #10b981', 'important');
+          filled++;
+        }}
+      }} else if (type === 'email' || full.indexOf('email') > -1 || full.indexOf('e-mail') > -1) {{
         if (setVal(el, D.email)) filled++;
-      }} else if (type === 'tel' || full.indexOf('telefone') > -1 || full.indexOf('celular') > -1 || full.indexOf('whatsapp') > -1 || full.indexOf('fone') > -1 || full.indexOf('phone') > -1) {{
+      }} else if (type === 'tel' || full.indexOf('telefone') > -1 || full.indexOf('celular') > -1 || full.indexOf('whatsapp') > -1 || full.indexOf('fone') > -1 || full.indexOf('phone') > -1 || full.indexOf('wpp') > -1) {{
         if (full.indexOf('ddd') > -1 && full.indexOf('telefone') === -1) {{
           if (setVal(el, D.ddd)) filled++;
         }} else {{
@@ -113,11 +120,11 @@ def gerar_bookmarklet_codigo():
         if (setVal(el, D.primeiroNome)) filled++;
       }} else if (full.indexOf('nome') > -1 || full.indexOf('name') > -1 || full.indexOf('candidato') > -1) {{
         if (setVal(el, D.nome)) filled++;
-      }} else if (full.indexOf('cargo') > -1 || full.indexOf('funcao') > -1 || full.indexOf('vaga') > -1 || full.indexOf('pretensao') > -1 || full.indexOf('area') > -1) {{
+      }} else if (full.indexOf('cargo') > -1 || full.indexOf('funcao') > -1 || full.indexOf('vaga') > -1 || full.indexOf('pretensao') > -1 || full.indexOf('area') > -1 || full.indexOf('assunto') > -1 || full.indexOf('setor') > -1 || full.indexOf('departamento') > -1) {{
         if (tag === 'select') {{
           for (var i = 0; i < el.options.length; i++) {{
             var opt = el.options[i].text.toLowerCase();
-            if (opt.indexOf('engenhar') > -1 || opt.indexOf('civil') > -1 || opt.indexOf('orç') > -1 || opt.indexOf('obra') > -1) {{
+            if (opt.indexOf('engenhar') > -1 || opt.indexOf('civil') > -1 || opt.indexOf('orç') > -1 || opt.indexOf('obra') > -1 || opt.indexOf('projeto') > -1) {{
               el.selectedIndex = i;
               setVal(el, el.options[i].value);
               filled++;
@@ -147,22 +154,25 @@ def gerar_bookmarklet_codigo():
       }}
     }});
 
+    var temArquivo = document.querySelector('input[type="file"]');
+    var msgArquivo = temArquivo ? '<div style="font-size:12px;margin-top:6px;opacity:0.95;">📎 Lembrete: Anexe o seu currículo PDF no campo de arquivo da página.</div>' : '';
+
     var b = document.createElement('div');
-    b.style.cssText = 'position:fixed;top:16px;left:50%;transform:translateX(-50%);z-index:99999999;padding:12px 22px;border-radius:12px;font-family:sans-serif;font-size:14px;font-weight:700;box-shadow:0 12px 30px rgba(0,0,0,0.35);transition:all 0.3s ease;';
+    b.style.cssText = 'position:fixed;top:16px;left:50%;transform:translateX(-50%);z-index:99999999;padding:14px 24px;border-radius:12px;font-family:sans-serif;font-size:14px;font-weight:700;box-shadow:0 12px 30px rgba(0,0,0,0.35);transition:all 0.3s ease;text-align:center;line-height:1.4;';
     if (filled > 0) {{
       b.style.backgroundColor = '#065f46';
       b.style.color = '#ffffff';
-      b.innerHTML = '⚡ <strong>Radar Vagas:</strong> ' + filled + ' campo(s) preenchido(s) com seus dados!';
+      b.innerHTML = '⚡ <strong>Radar Vagas:</strong> ' + filled + ' campo(s) preenchido(s) com seus dados!' + msgArquivo;
     }} else {{
       b.style.backgroundColor = '#991b1b';
       b.style.color = '#ffffff';
-      b.innerHTML = '⚠️ <strong>Radar Vagas:</strong> Nenhum campo identificado nesta página.';
+      b.innerHTML = '⚠️ <strong>Radar Vagas:</strong> Nenhum campo identificado nesta página.' + msgArquivo;
     }}
     document.body.appendChild(b);
     setTimeout(function(){{
       b.style.opacity = '0';
       setTimeout(function(){{ b.remove(); }}, 400);
-    }}, 4500);
+    }}, 6000);
   }} catch(e) {{
     alert('Erro no preenchimento: ' + e.message);
   }}
