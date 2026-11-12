@@ -1,21 +1,21 @@
 {
-  "atualizado_em": "10/11/2026 21:20",
+  "atualizado_em": "11/11/2026 21:12",
   "candidato": "Marcos Denílson Barbosa dos Santos (Denilson Barbosa)",
-  "total_vagas_qualificadas": 15,
+  "total_vagas_qualificadas": 23,
   "vagas": [
     {
       "id": "post_7525631035309486080",
       "raw_id": "7525631035309486080",
       "plataforma": "Publicação LinkedIn (Feed)",
       "tipo_fonte": "publicacao_feed",
-      "titulo": "[Post Feed] Helio Souza: Helio Souza Diretor Executivo há 1 d Vaga de Engenheiro (A) Civil 📍 Local: Fortaleza...",
+      "titulo": "[Post Feed] Helio Souza: Helio Souza Diretor Executivo há 2 d Vaga de Engenheiro (A) Civil 📍 Local: Fortaleza...",
       "empresa": "Post de Helio Souza (dbconsultoria2026@hotmail.com)",
       "local": "Fortaleza / Eusébio, CE",
       "url": "https://www.linkedin.com/feed/update/urn:li:activity:7525631035309486080/",
       "data_publicacao": "2026-11-09",
       "dias_atras": 0,
       "modalidade": "Presencial / Híbrido",
-      "descricao": "Helio Souza Diretor Executivo há 1 d Vaga de Engenheiro (A) Civil 📍 Local: Fortaleza - CE 🏗️ Área: Engenharia Estamos contratando Engenheiro (a) Civil para atuar com acompanhamento e execução de obras em campo. Buscamos profissionais comprometidos com a qualidade e organização. Principais Atividades: - Acompanhamento e execução de obras; - Gestão e planejamento de atividades em campo. Requisitos: - Ensino superior completo em Engenharia Civil; - Experiência técnica em adutoras, terraplanagem, pavimentação e drenagem; - Registro ativo no CREA. 📩 Venha fazer parte do time Interessados devem envi",
+      "descricao": "Helio Souza Diretor Executivo há 2 d Vaga de Engenheiro (A) Civil 📍 Local: Fortaleza - CE 🏗️ Área: Engenharia Estamos contratando Engenheiro (a) Civil para atuar com acompanhamento e execução de obras em campo. Buscamos profissionais comprometidos com a qualidade e organização. Principais Atividades: - Acompanhamento e execução de obras; - Gestão e planejamento de atividades em campo. Requisitos: - Ensino superior completo em Engenharia Civil; - Experiência técnica em adutoras, terraplanagem, pavimentação e drenagem; - Registro ativo no CREA. 📩 Venha fazer parte do time Interessados devem envi",
       "email_direto": "dbconsultoria2026@hotmail.com",
       "score_afinidade": 99,
       "termos_afinidade": [
@@ -24,6 +24,59 @@
         "Gestão/Execução de Obras"
       ],
       "distancia_info": "0 km (Residência Atual - Eusébio/CE)",
+      "categoria_geografica": "Fortaleza + 60km (CE)",
+      "curriculo_recomendado": "Curriculo_Denilson_Barbosa_Gestao_Obras_Projetos_Fortaleza_CE.pdf",
+      "trilha": "Obras & Projetos (Cabeçalho Eusébio/CE)"
+    },
+    {
+      "id": "post_7525630570245046272",
+      "raw_id": "7525630570245046272",
+      "plataforma": "Publicação LinkedIn (Feed)",
+      "tipo_fonte": "publicacao_feed",
+      "titulo": "[Post Feed] Portal Vagas - Vagas de Emprego: Portal Vagas - Vagas de Emprego Helio Souza • 2º há 2 d Participar Vaga de Engenheiro...",
+      "empresa": "Post de Portal Vagas - Vagas de Emprego (dbconsultoria2026@hotmail.com)",
+      "local": "Fortaleza / Eusébio, CE",
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7525630570245046272/",
+      "data_publicacao": "2026-11-09",
+      "dias_atras": 0,
+      "modalidade": "Presencial / Híbrido",
+      "descricao": "Portal Vagas - Vagas de Emprego Helio Souza • 2º há 2 d Participar Vaga de Engenheiro (A) Civil 📍 Local: Fortaleza - CE 🏗️ Área: Engenharia Estamos contratando Engenheiro (a) Civil para atuar com acompanhamento e execução de obras em campo. Buscamos profissionais comprometidos com a qualidade e organização. Principais Atividades: - Acompanhamento e execução de obras; - Gestão e planejamento de atividades em campo. Requisitos: - Ensino superior completo em Engenharia Civil; - Experiência técnica em adutoras, terraplanagem, pavimentação e drenagem; - Registro ativo no CREA. 📩 Venha fazer parte d",
+      "email_direto": "dbconsultoria2026@hotmail.com",
+      "score_afinidade": 99,
+      "termos_afinidade": [
+        "Planejamento Físico-Financeiro",
+        "Engenharia Civil",
+        "Gestão/Execução de Obras"
+      ],
+      "distancia_info": "0 km (Residência Atual - Eusébio/CE)",
+      "categoria_geografica": "Fortaleza + 60km (CE)",
+      "curriculo_recomendado": "Curriculo_Denilson_Barbosa_Gestao_Obras_Projetos_Fortaleza_CE.pdf",
+      "trilha": "Obras & Projetos (Cabeçalho Eusébio/CE)"
+    },
+    {
+      "id": "const_ce_idibra",
+      "raw_id": "const_ce_idibra",
+      "plataforma": "Mural Construtora (RH Direto)",
+      "tipo_fonte": "construtora_mural",
+      "titulo": "Engenheiro Civil - Ambientação Áreas Comuns de Alto Padrão (Obra Ivens Monumental)",
+      "empresa": "Idibra Participações",
+      "local": "Fortaleza, CE (Av. Beira Mar, 2000 - Meireles)",
+      "url": "https://idibra.com.br/",
+      "data_publicacao": "2026-11-07",
+      "dias_atras": 1,
+      "modalidade": "Presencial",
+      "descricao": "Oportunidade de Engenharia Civil para coordenação e execução de ambientação de áreas comuns no arranha-céu Ivens Monumental (Beira-Mar). Acompanhamento de obras de luxo, cronogramas, medições, cumprimento de orçamento, controle de custos e ferramentas BIM. Currículos até 16/11/2026 para vanderli.santiago@idibra.com.br.",
+      "email_direto": "vanderli.santiago@idibra.com.br",
+      "score_afinidade": 99,
+      "termos_afinidade": [
+        "Orçamentos de Obras",
+        "Cronogramas de Obra",
+        "Engenharia Civil",
+        "Gestão/Execução de Obras",
+        "Engenharia de Custos",
+        "BIM"
+      ],
+      "distancia_info": "18 km de Eusébio (Polo Fortaleza/CE)",
       "categoria_geografica": "Fortaleza + 60km (CE)",
       "curriculo_recomendado": "Curriculo_Denilson_Barbosa_Gestao_Obras_Projetos_Fortaleza_CE.pdf",
       "trilha": "Obras & Projetos (Cabeçalho Eusébio/CE)"
@@ -78,6 +131,33 @@
       "categoria_geografica": "Fortaleza + 60km (CE)",
       "curriculo_recomendado": "Curriculo_Denilson_Barbosa_Orcamentos_Planejamento_Fortaleza_CE.pdf",
       "trilha": "Orçamentos & Planejamento (Cabeçalho Eusébio/CE)"
+    },
+    {
+      "id": "const_pe_vianaemoura",
+      "raw_id": "const_pe_vianaemoura",
+      "plataforma": "Mural Construtora (RH Direto)",
+      "tipo_fonte": "construtora_mural",
+      "titulo": "Engenheiro Civil - Custos, Orçamentos e Infraestrutura (Caruaru / Agreste)",
+      "empresa": "Viana & Moura Construções",
+      "local": "Caruaru, PE (Polo Agreste)",
+      "url": "https://vianaemoura.com.br/trabalhe-conosco",
+      "data_publicacao": "2026-11-07",
+      "dias_atras": 1,
+      "modalidade": "Presencial / Híbrido",
+      "descricao": "Canal oficial de Carreiras e Banco de Talentos da Viana & Moura Construções, maior construtora do Agreste pernambucano com obras em Caruaru, Belo Jardim, Santa Cruz e Garanhuns. Vagas e banco de talentos para Engenharia de Custos, Orçamentos, Planejamento e Obras.",
+      "email_direto": "",
+      "score_afinidade": 99,
+      "termos_afinidade": [
+        "Orçamentos de Obras",
+        "Planejamento Físico-Financeiro",
+        "Engenharia Civil",
+        "Gestão/Execução de Obras",
+        "Engenharia de Custos"
+      ],
+      "distancia_info": "0 km (Polo Alvo Caruaru/PE)",
+      "categoria_geografica": "Caruaru + 80km (PE)",
+      "curriculo_recomendado": "Curriculo_Denilson_Barbosa_Orcamentos_Planejamento_Caruaru_PE.pdf",
+      "trilha": "Orçamentos & Planejamento (Cabeçalho Caruaru/PE)"
     },
     {
       "id": "indeed_2e77e73f258a8182",
@@ -268,6 +348,31 @@
       "trilha": "Orçamentos & Planejamento (Cabeçalho Eusébio/CE)"
     },
     {
+      "id": "const_pe_aclf",
+      "raw_id": "const_pe_aclf",
+      "plataforma": "Mural Construtora (RH Direto)",
+      "tipo_fonte": "construtora_mural",
+      "titulo": "Engenheiro Civil - Obras, Planejamento e Loteamentos (Portal TOTVS)",
+      "empresa": "Grupo ACLF (ACLF Empreendimentos)",
+      "local": "Caruaru / Pernambuco",
+      "url": "https://atracaodetalentos.totvs.app/vagasgrupoaclf",
+      "data_publicacao": "2026-11-07",
+      "dias_atras": 1,
+      "modalidade": "Presencial / Híbrido",
+      "descricao": "Portal oficial TOTVS de vagas do Grupo ACLF, com operações e loteamentos no Agreste pernambucano e Caruaru. Processos seletivos para engenharia e infraestrutura.",
+      "email_direto": "",
+      "score_afinidade": 96,
+      "termos_afinidade": [
+        "Planejamento Físico-Financeiro",
+        "Engenharia Civil",
+        "Gestão/Execução de Obras"
+      ],
+      "distancia_info": "0 km (Polo Alvo Caruaru/PE)",
+      "categoria_geografica": "Caruaru + 80km (PE)",
+      "curriculo_recomendado": "Curriculo_Denilson_Barbosa_Orcamentos_Planejamento_Caruaru_PE.pdf",
+      "trilha": "Orçamentos & Planejamento (Cabeçalho Caruaru/PE)"
+    },
+    {
       "id": "const_pe_conic",
       "raw_id": "const_pe_conic",
       "plataforma": "Mural Construtora (RH Direto)",
@@ -289,6 +394,30 @@
       ],
       "distancia_info": "Pernambuco (Eixo BR-232)",
       "categoria_geografica": "Eixo PE (Recife / BR-232)",
+      "curriculo_recomendado": "Curriculo_Denilson_Barbosa_Gestao_Obras_Projetos_Caruaru_PE.pdf",
+      "trilha": "Obras & Projetos (Cabeçalho Caruaru/PE)"
+    },
+    {
+      "id": "indeed_3ce834527106f6eb",
+      "raw_id": "3ce834527106f6eb",
+      "plataforma": "Indeed",
+      "tipo_fonte": "indeed",
+      "titulo": "Supervisor de Engenharia Civil – Obras Públicas - Caruaru, PE ...",
+      "empresa": "Empresa Verificada no Indeed",
+      "local": "Caruaru, PE",
+      "url": "https://br.indeed.com/viewjob?jk=3ce834527106f6eb",
+      "data_publicacao": "2026-11-03",
+      "dias_atras": 4,
+      "modalidade": "Presencial",
+      "descricao": "br . indeed . com › viewjob Supervisor de Engenharia Civil – Obras Públicas - Caruaru, PE ... br.indeed.com › viewjob Candidatar-se no site da empresa &nbsp; Salários - Engenheiro Civil Salaries for Engenheiro Civil , Caruaru , PE &nbsp; &nbsp;",
+      "email_direto": "",
+      "score_afinidade": 95,
+      "termos_afinidade": [
+        "Engenharia Civil",
+        "Gestão/Execução de Obras"
+      ],
+      "distancia_info": "0 km (Polo Alvo Caruaru/PE)",
+      "categoria_geografica": "Caruaru + 80km (PE)",
       "curriculo_recomendado": "Curriculo_Denilson_Barbosa_Gestao_Obras_Projetos_Caruaru_PE.pdf",
       "trilha": "Obras & Projetos (Cabeçalho Caruaru/PE)"
     },
@@ -344,28 +473,77 @@
       "trilha": "Orçamentos & Planejamento (Cabeçalho Caruaru/PE)"
     },
     {
-      "id": "post_7523750203116498944",
-      "raw_id": "7523750203116498944",
-      "plataforma": "Publicação LinkedIn (Feed)",
-      "tipo_fonte": "publicacao_feed",
-      "titulo": "[Post Feed] Agilean: Agilean há 6 d Vaga aberta em Fortaleza/CE! Estamos à procura de um(a) Analista de En...",
-      "empresa": "Post de Agilean (Feed LinkedIn)",
-      "local": "Fortaleza / Eusébio, CE",
-      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7523750203116498944/",
-      "data_publicacao": "2026-11-04",
-      "dias_atras": 3,
+      "id": "const_pe_carrilho",
+      "raw_id": "const_pe_carrilho",
+      "plataforma": "Mural Construtora (RH Direto)",
+      "tipo_fonte": "construtora_mural",
+      "titulo": "Engenheiro de Custos & Obras (Carreiras PE)",
+      "empresa": "Construtora Carrilho",
+      "local": "Pernambuco (Recife e Eixo Agreste)",
+      "url": "https://carrilho.com.br",
+      "data_publicacao": "2026-11-07",
+      "dias_atras": 1,
       "modalidade": "Presencial / Híbrido",
-      "descricao": "Agilean há 6 d Vaga aberta em Fortaleza/CE! Estamos à procura de um(a) Analista de Engajamento (Engenharia Civil) para fazer parte do nosso time. Se você é engenheiro(a) civil, tem vivência em obra e quer levar essa experiência para dentro da tecnologia, essa vaga é para você. Aqui na Agilean, você vai ser a ponte entre a engenharia e a tecnologia, ajudando construtoras de todo o Brasil a planejar melhor e a tirar o máximo da nossa plataforma. ✔️ Engenharia Civil completa ✔️ Experiência com gestão de obras ✔️ Boa comunicação e perfil analítico ✔️ Presencial em Fortaleza 👉 Candidate-se: https:/",
+      "descricao": "Canal oficial da Construtora Carrilho em Pernambuco. Grande volume de obras residenciais, acompanhamento de contratos e expansão no interior e capital.",
       "email_direto": "",
-      "score_afinidade": 87,
+      "score_afinidade": 85,
+      "termos_afinidade": [
+        "Gestão/Execução de Obras",
+        "Engenharia de Custos",
+        "Gestão de Contratos"
+      ],
+      "distancia_info": "130 km de Caruaru (Eixo BR-232 / PE)",
+      "categoria_geografica": "Eixo PE (Recife / BR-232)",
+      "curriculo_recomendado": "Curriculo_Denilson_Barbosa_Orcamentos_Planejamento_Caruaru_PE.pdf",
+      "trilha": "Orçamentos & Planejamento (Cabeçalho Caruaru/PE)"
+    },
+    {
+      "id": "const_pe_awaconstrutora",
+      "raw_id": "const_pe_awaconstrutora",
+      "plataforma": "Mural Construtora (RH Direto)",
+      "tipo_fonte": "construtora_mural",
+      "titulo": "Engenheiro Civil - Gestão de Obras & Empreendimentos (Caruaru Shopping)",
+      "empresa": "AWA Construtora",
+      "local": "Caruaru, PE (Torre EPIC - Caruaru Shopping)",
+      "url": "https://awaconstrutora.com.br",
+      "data_publicacao": "2026-11-07",
+      "dias_atras": 1,
+      "modalidade": "Presencial",
+      "descricao": "Sede em Caruaru/PE (Caruaru Shopping). Construtora regional com empreendimentos residenciais e corporativos no Agreste. Canal direto de contato e envio de currículos para a equipe técnica de engenharia.",
+      "email_direto": "contato@awaconstrutora.com.br",
+      "score_afinidade": 83,
       "termos_afinidade": [
         "Engenharia Civil",
         "Gestão/Execução de Obras"
       ],
-      "distancia_info": "0 km (Residência Atual - Eusébio/CE)",
-      "categoria_geografica": "Fortaleza + 60km (CE)",
-      "curriculo_recomendado": "Curriculo_Denilson_Barbosa_Gestao_Obras_Projetos_Fortaleza_CE.pdf",
-      "trilha": "Obras & Projetos (Cabeçalho Eusébio/CE)"
+      "distancia_info": "0 km (Polo Alvo Caruaru/PE)",
+      "categoria_geografica": "Caruaru + 80km (PE)",
+      "curriculo_recomendado": "Curriculo_Denilson_Barbosa_Gestao_Obras_Projetos_Caruaru_PE.pdf",
+      "trilha": "Obras & Projetos (Cabeçalho Caruaru/PE)"
+    },
+    {
+      "id": "const_pe_caicara",
+      "raw_id": "const_pe_caicara",
+      "plataforma": "Mural Construtora (RH Direto)",
+      "tipo_fonte": "construtora_mural",
+      "titulo": "Engenheiro Civil - Obras Públicas e Privadas (Banco Sólides Caruaru)",
+      "empresa": "Caiçara Construtora",
+      "local": "Caruaru, PE",
+      "url": "https://caicaraengenharia.vagas.solides.com.br",
+      "data_publicacao": "2026-11-07",
+      "dias_atras": 1,
+      "modalidade": "Presencial",
+      "descricao": "Canal oficial de recrutamento da Caiçara Engenharia em Caruaru/PE via plataforma Sólides. Obras civis, comerciais e públicas em toda a região do Agreste.",
+      "email_direto": "",
+      "score_afinidade": 83,
+      "termos_afinidade": [
+        "Engenharia Civil",
+        "Gestão/Execução de Obras"
+      ],
+      "distancia_info": "0 km (Polo Alvo Caruaru/PE)",
+      "categoria_geografica": "Caruaru + 80km (PE)",
+      "curriculo_recomendado": "Curriculo_Denilson_Barbosa_Gestao_Obras_Projetos_Caruaru_PE.pdf",
+      "trilha": "Obras & Projetos (Cabeçalho Caruaru/PE)"
     },
     {
       "id": "const_pe_rioave",
@@ -390,6 +568,29 @@
       "categoria_geografica": "Eixo PE (Recife / BR-232)",
       "curriculo_recomendado": "Curriculo_Denilson_Barbosa_Orcamentos_Planejamento_Caruaru_PE.pdf",
       "trilha": "Orçamentos & Planejamento (Cabeçalho Caruaru/PE)"
+    },
+    {
+      "id": "const_pe_colorado",
+      "raw_id": "const_pe_colorado",
+      "plataforma": "Mural Construtora (RH Direto)",
+      "tipo_fonte": "construtora_mural",
+      "titulo": "Engenheiro Civil - Loteamentos Urbanos (Escritório Regional Caruaru)",
+      "empresa": "Construtora Colorado",
+      "local": "Caruaru, PE (Bairro Maurício de Nassau)",
+      "url": "https://coloradoempreendimentos.com",
+      "data_publicacao": "2026-11-07",
+      "dias_atras": 1,
+      "modalidade": "Presencial",
+      "descricao": "Construtora Colorado com escritório em Caruaru/PE (Maurício de Nassau). Foco em infraestrutura de loteamentos urbanos, bairros planejados e empreendimentos no Agreste pernambucano.",
+      "email_direto": "",
+      "score_afinidade": 75,
+      "termos_afinidade": [
+        "Engenharia Civil"
+      ],
+      "distancia_info": "0 km (Polo Alvo Caruaru/PE)",
+      "categoria_geografica": "Caruaru + 80km (PE)",
+      "curriculo_recomendado": "Curriculo_Denilson_Barbosa_Gestao_Obras_Projetos_Caruaru_PE.pdf",
+      "trilha": "Obras & Projetos (Cabeçalho Caruaru/PE)"
     }
   ]
 }
