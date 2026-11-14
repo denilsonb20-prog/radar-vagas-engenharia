@@ -1,58 +1,8 @@
 {
-  "atualizado_em": "11/11/2026 21:12",
+  "atualizado_em": "14/11/2026 18:30",
   "candidato": "Marcos Denílson Barbosa dos Santos (Denilson Barbosa)",
-  "total_vagas_qualificadas": 23,
+  "total_vagas_qualificadas": 21,
   "vagas": [
-    {
-      "id": "post_7525631035309486080",
-      "raw_id": "7525631035309486080",
-      "plataforma": "Publicação LinkedIn (Feed)",
-      "tipo_fonte": "publicacao_feed",
-      "titulo": "[Post Feed] Helio Souza: Helio Souza Diretor Executivo há 2 d Vaga de Engenheiro (A) Civil 📍 Local: Fortaleza...",
-      "empresa": "Post de Helio Souza (dbconsultoria2026@hotmail.com)",
-      "local": "Fortaleza / Eusébio, CE",
-      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7525631035309486080/",
-      "data_publicacao": "2026-11-09",
-      "dias_atras": 0,
-      "modalidade": "Presencial / Híbrido",
-      "descricao": "Helio Souza Diretor Executivo há 2 d Vaga de Engenheiro (A) Civil 📍 Local: Fortaleza - CE 🏗️ Área: Engenharia Estamos contratando Engenheiro (a) Civil para atuar com acompanhamento e execução de obras em campo. Buscamos profissionais comprometidos com a qualidade e organização. Principais Atividades: - Acompanhamento e execução de obras; - Gestão e planejamento de atividades em campo. Requisitos: - Ensino superior completo em Engenharia Civil; - Experiência técnica em adutoras, terraplanagem, pavimentação e drenagem; - Registro ativo no CREA. 📩 Venha fazer parte do time Interessados devem envi",
-      "email_direto": "dbconsultoria2026@hotmail.com",
-      "score_afinidade": 99,
-      "termos_afinidade": [
-        "Planejamento Físico-Financeiro",
-        "Engenharia Civil",
-        "Gestão/Execução de Obras"
-      ],
-      "distancia_info": "0 km (Residência Atual - Eusébio/CE)",
-      "categoria_geografica": "Fortaleza + 60km (CE)",
-      "curriculo_recomendado": "Curriculo_Denilson_Barbosa_Gestao_Obras_Projetos_Fortaleza_CE.pdf",
-      "trilha": "Obras & Projetos (Cabeçalho Eusébio/CE)"
-    },
-    {
-      "id": "post_7525630570245046272",
-      "raw_id": "7525630570245046272",
-      "plataforma": "Publicação LinkedIn (Feed)",
-      "tipo_fonte": "publicacao_feed",
-      "titulo": "[Post Feed] Portal Vagas - Vagas de Emprego: Portal Vagas - Vagas de Emprego Helio Souza • 2º há 2 d Participar Vaga de Engenheiro...",
-      "empresa": "Post de Portal Vagas - Vagas de Emprego (dbconsultoria2026@hotmail.com)",
-      "local": "Fortaleza / Eusébio, CE",
-      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7525630570245046272/",
-      "data_publicacao": "2026-11-09",
-      "dias_atras": 0,
-      "modalidade": "Presencial / Híbrido",
-      "descricao": "Portal Vagas - Vagas de Emprego Helio Souza • 2º há 2 d Participar Vaga de Engenheiro (A) Civil 📍 Local: Fortaleza - CE 🏗️ Área: Engenharia Estamos contratando Engenheiro (a) Civil para atuar com acompanhamento e execução de obras em campo. Buscamos profissionais comprometidos com a qualidade e organização. Principais Atividades: - Acompanhamento e execução de obras; - Gestão e planejamento de atividades em campo. Requisitos: - Ensino superior completo em Engenharia Civil; - Experiência técnica em adutoras, terraplanagem, pavimentação e drenagem; - Registro ativo no CREA. 📩 Venha fazer parte d",
-      "email_direto": "dbconsultoria2026@hotmail.com",
-      "score_afinidade": 99,
-      "termos_afinidade": [
-        "Planejamento Físico-Financeiro",
-        "Engenharia Civil",
-        "Gestão/Execução de Obras"
-      ],
-      "distancia_info": "0 km (Residência Atual - Eusébio/CE)",
-      "categoria_geografica": "Fortaleza + 60km (CE)",
-      "curriculo_recomendado": "Curriculo_Denilson_Barbosa_Gestao_Obras_Projetos_Fortaleza_CE.pdf",
-      "trilha": "Obras & Projetos (Cabeçalho Eusébio/CE)"
-    },
     {
       "id": "const_ce_idibra",
       "raw_id": "const_ce_idibra",
