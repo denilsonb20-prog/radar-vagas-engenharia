@@ -58,8 +58,6 @@ def salvar_vagas_enviadas(novos_ids, novas_urls, dados_existentes):
 
 
 def executar_e_enviar(forcar=False):
-    print("Função do Telegram desativada pelo usuário. Operação restrita exclusivamente ao Web App.")
-    return {"status": "desativado"}
     agora_br = obter_hora_brasilia()
     hora_atual = agora_br.hour
 
@@ -105,11 +103,11 @@ def executar_e_enviar(forcar=False):
     # Cenário 1: 0 vagas novas
     if not vagas_novas:
         msg_zero = (
-            f"🔍 <b>Radar de Vagas — Varredura Horária</b>\n"
+            f"🔍 <b>Radar de Vagas — Varredura Diária</b>\n"
             f"🕒 <i>{data_hora_str} (Horário de Brasília)</i>\n\n"
             f"✅ <b>0 vagas novas nesta rodada.</b>\n"
             f"Todas as <b>{len(vagas)}</b> oportunidades mapeadas no radar já foram enviadas para você anteriormente.\n\n"
-            f"O monitoramento continua ativo a cada 1 hora (das 07h às 20h) e avisará imediatamente caso surja qualquer novidade."
+            f"O monitoramento automático está ativo (2 vezes ao dia: às 09h e às 17h) e avisará imediatamente caso surja qualquer novidade."
         )
         for cid in chat_ids:
             bot_telegram_radar.send_msg(token, cid, msg_zero)
