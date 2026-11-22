@@ -1,7 +1,8 @@
 {
-  "atualizado_em": "14/11/2026 18:30",
+  "atualizado_em": "22/11/2026 19:33:38",
   "candidato": "Marcos Denílson Barbosa dos Santos (Denilson Barbosa)",
-  "total_vagas_qualificadas": 21,
+  "filtro_recencia": "Maximo 7 dias (1 semana)",
+  "total_vagas_qualificadas": 24,
   "vagas": [
     {
       "id": "const_ce_idibra",
@@ -29,7 +30,10 @@
       "distancia_info": "18 km de Eusébio (Polo Fortaleza/CE)",
       "categoria_geografica": "Fortaleza + 60km (CE)",
       "curriculo_recomendado": "Curriculo_Denilson_Barbosa_Gestao_Obras_Projetos_Fortaleza_CE.pdf",
-      "trilha": "Obras & Projetos (Cabeçalho Eusébio/CE)"
+      "trilha": "Obras & Projetos (Cabeçalho Eusébio/CE)",
+      "carta_assunto": "Candidatura: Engenheiro Civil - Ambientação Áreas Comuns de Alto Padrão (Obra Ivens Monumental) - Denilson Barbosa (Engenheiro Civil)",
+      "carta_corpo": "Prezada equipe de seleção (Idibra Participações),\n\nApresento meu currículo para avaliação na vaga de Engenheiro Civil - Ambientação Áreas Comuns de Alto Padrão (Obra Ivens Monumental).\n\nSou Engenheiro Civil pela UFERSA, com MBA em Projetos de Instalações Prediais (IPOG) e especialização em Construção Civil (Residenciais, Industriais e Especiais). Minha trajetória soma mais de cinco anos na condução de obras, projetos de infraestrutura, planejamento físico-financeiro e engenharia de custos.\n\nExerci o cargo de Diretor de Engenharia na Prefeitura de Mossoró, liderando equipes multidisciplinares e empreiteiras na execução e fiscalização de unidades hospitalares e educacionais. Nesse período, coordenei uma revisão estrutural emergencial que preservou a estabilidade do edifício e evitou perdas de 10% no orçamento global da obra. No setor privado e agroindustrial (SS&B Construtora, Grupo FAN, Diagonal Engenharia e Itaueira Agropecuária), entreguei e homologuei uma balança rodoviária industrial no prazo recorde de 35 dias e gerei uma economia de R$ 1,2 milhão em um orçamento de R$ 60 milhões por meio de alterações construtivas e recotação de suprimentos.\n\nResido atualmente em Eusébio/CE, com total disponibilidade para atuação presencial imediata em Fortaleza, Região Metropolitana e eixo industrial do Pecém.\n\nSeguem em anexo os detalhes da minha experiência com gestão de cronogramas (MS Project), compatibilização de disciplinas (AutoCAD e Revit BIM) e controle de custos. Agradeço a atenção e coloco-me à disposição para conversar.\n\nAtenciosamente,\n\nDenilson Barbosa\nEngenheiro Civil\n(88) 9627-1246 | denilsonb20@gmail.com\nlinkedin.com/in/denilsonbarbosasantos",
+      "ordem": 1
     },
     {
       "id": "const_ce_bspar",
@@ -55,7 +59,10 @@
       "distancia_info": "18 km de Eusébio (Polo Fortaleza/CE)",
       "categoria_geografica": "Fortaleza + 60km (CE)",
       "curriculo_recomendado": "Curriculo_Denilson_Barbosa_Orcamentos_Planejamento_Fortaleza_CE.pdf",
-      "trilha": "Orçamentos & Planejamento (Cabeçalho Eusébio/CE)"
+      "trilha": "Orçamentos & Planejamento (Cabeçalho Eusébio/CE)",
+      "carta_assunto": "Candidatura: Engenheiro de Custos & Orçamentos (Banco de Talentos Oficial) - Denilson Barbosa (Engenheiro Civil)",
+      "carta_corpo": "Prezada equipe de seleção (BSPAR Incorporações),\n\nEnvio meu currículo para avaliação na oportunidade de Engenheiro de Custos & Orçamentos (Banco de Talentos Oficial).\n\nSou Engenheiro Civil graduado pela UFERSA, com pós-graduação em Construção Civil e MBA em Projetos de Instalações Prediais pelo IPOG. Nos últimos cinco anos, concentrei minha atuação em engenharia de custos, planejamento físico-financeiro e viabilidade de obras públicas e privadas.\n\nAtualmente, como Engenheiro Orçamentista na SS&B Construtora, estruturei um banco próprio com mais de 250 composições de custos unitários (CPUs) e conduzi a revisão técnica e tributária de um orçamento de R$ 60 milhões, gerando uma redução real de R$ 1,2 milhão que viabilizou o fechamento do contrato. Antes disso, atuei como Diretor de Engenharia na Prefeitura de Mossoró, coordenando equipes multidisciplinares, medições e compatibilização de projetos em obras de saúde e educação, onde liderei uma revisão estrutural de emergência que evitou um prejuízo estimado em 10% do custo da obra.\n\nResido atualmente em Eusébio/CE, com total disponibilidade para atuação presencial imediata em Fortaleza, Região Metropolitana e eixo industrial do Pecém.\n\nO currículo em anexo detalha minha experiência com AutoCAD, Revit (BIM), MS Project, Eberick e bases referenciais de preços (SINAPI, SICRO e composições próprias). Fico à disposição para uma entrevista.\n\nAtenciosamente,\n\nDenilson Barbosa\nEngenheiro Civil\n(88) 9627-1246 | denilsonb20@gmail.com\nlinkedin.com/in/denilsonbarbosasantos",
+      "ordem": 2
     },
     {
       "id": "const_ce_colmeia",
@@ -80,7 +87,10 @@
       "distancia_info": "18 km de Eusébio (Polo Fortaleza/CE)",
       "categoria_geografica": "Fortaleza + 60km (CE)",
       "curriculo_recomendado": "Curriculo_Denilson_Barbosa_Orcamentos_Planejamento_Fortaleza_CE.pdf",
-      "trilha": "Orçamentos & Planejamento (Cabeçalho Eusébio/CE)"
+      "trilha": "Orçamentos & Planejamento (Cabeçalho Eusébio/CE)",
+      "carta_assunto": "Candidatura: Engenheiro Orçamentista / Sala Técnica (Trabalhe Conosco Oficial) - Denilson Barbosa (Engenheiro Civil)",
+      "carta_corpo": "Prezada equipe de seleção (Construtora Colmeia),\n\nEnvio meu currículo para avaliação na oportunidade de Engenheiro Orçamentista / Sala Técnica (Trabalhe Conosco Oficial).\n\nSou Engenheiro Civil graduado pela UFERSA, com pós-graduação em Construção Civil e MBA em Projetos de Instalações Prediais pelo IPOG. Nos últimos cinco anos, concentrei minha atuação em engenharia de custos, planejamento físico-financeiro e viabilidade de obras públicas e privadas.\n\nAtualmente, como Engenheiro Orçamentista na SS&B Construtora, estruturei um banco próprio com mais de 250 composições de custos unitários (CPUs) e conduzi a revisão técnica e tributária de um orçamento de R$ 60 milhões, gerando uma redução real de R$ 1,2 milhão que viabilizou o fechamento do contrato. Antes disso, atuei como Diretor de Engenharia na Prefeitura de Mossoró, coordenando equipes multidisciplinares, medições e compatibilização de projetos em obras de saúde e educação, onde liderei uma revisão estrutural de emergência que evitou um prejuízo estimado em 10% do custo da obra.\n\nResido atualmente em Eusébio/CE, com total disponibilidade para atuação presencial imediata em Fortaleza, Região Metropolitana e eixo industrial do Pecém.\n\nO currículo em anexo detalha minha experiência com AutoCAD, Revit (BIM), MS Project, Eberick e bases referenciais de preços (SINAPI, SICRO e composições próprias). Fico à disposição para uma entrevista.\n\nAtenciosamente,\n\nDenilson Barbosa\nEngenheiro Civil\n(88) 9627-1246 | denilsonb20@gmail.com\nlinkedin.com/in/denilsonbarbosasantos",
+      "ordem": 3
     },
     {
       "id": "const_pe_vianaemoura",
@@ -107,7 +117,10 @@
       "distancia_info": "0 km (Polo Alvo Caruaru/PE)",
       "categoria_geografica": "Caruaru + 80km (PE)",
       "curriculo_recomendado": "Curriculo_Denilson_Barbosa_Orcamentos_Planejamento_Caruaru_PE.pdf",
-      "trilha": "Orçamentos & Planejamento (Cabeçalho Caruaru/PE)"
+      "trilha": "Orçamentos & Planejamento (Cabeçalho Caruaru/PE)",
+      "carta_assunto": "Candidatura: Engenheiro Civil - Custos, Orçamentos e Infraestrutura (Caruaru / Agreste) - Denilson Barbosa (Engenheiro Civil)",
+      "carta_corpo": "Prezada equipe de seleção (Viana & Moura Construções),\n\nEnvio meu currículo para avaliação na oportunidade de Engenheiro Civil - Custos, Orçamentos e Infraestrutura (Caruaru / Agreste).\n\nSou Engenheiro Civil graduado pela UFERSA, com pós-graduação em Construção Civil e MBA em Projetos de Instalações Prediais pelo IPOG. Nos últimos cinco anos, concentrei minha atuação em engenharia de custos, planejamento físico-financeiro e viabilidade de obras públicas e privadas.\n\nAtualmente, como Engenheiro Orçamentista na SS&B Construtora, estruturei um banco próprio com mais de 250 composições de custos unitários (CPUs) e conduzi a revisão técnica e tributária de um orçamento de R$ 60 milhões, gerando uma redução real de R$ 1,2 milhão que viabilizou o fechamento do contrato. Antes disso, atuei como Diretor de Engenharia na Prefeitura de Mossoró, coordenando equipes multidisciplinares, medições e compatibilização de projetos em obras de saúde e educação, onde liderei uma revisão estrutural de emergência que evitou um prejuízo estimado em 10% do custo da obra.\n\nEstou em processo de mudança planejada para Caruaru/PE, com disponibilidade imediata para atuação presencial em Caruaru, PE (Polo Agreste) e em todo o eixo do Agreste e BR-232.\n\nO currículo em anexo detalha minha experiência com AutoCAD, Revit (BIM), MS Project, Eberick e bases referenciais de preços (SINAPI, SICRO e composições próprias). Fico à disposição para uma entrevista.\n\nAtenciosamente,\n\nDenilson Barbosa\nEngenheiro Civil\n(88) 9627-1246 | denilsonb20@gmail.com\nlinkedin.com/in/denilsonbarbosasantos",
+      "ordem": 4
     },
     {
       "id": "indeed_2e77e73f258a8182",
@@ -134,7 +147,10 @@
       "distancia_info": "18 km de Eusébio (Polo Fortaleza/CE)",
       "categoria_geografica": "Fortaleza + 60km (CE)",
       "curriculo_recomendado": "Curriculo_Denilson_Barbosa_Orcamentos_Planejamento_Fortaleza_CE.pdf",
-      "trilha": "Orçamentos & Planejamento (Cabeçalho Eusébio/CE)"
+      "trilha": "Orçamentos & Planejamento (Cabeçalho Eusébio/CE)",
+      "carta_assunto": "Candidatura: Engenheiro Orçamentista (Custos de Obras Avançado) - Denilson Barbosa (Engenheiro Civil)",
+      "carta_corpo": "Prezada equipe de seleção (Construtora / Empresa no Indeed),\n\nEnvio meu currículo para avaliação na oportunidade de Engenheiro Orçamentista (Custos de Obras Avançado).\n\nSou Engenheiro Civil graduado pela UFERSA, com pós-graduação em Construção Civil e MBA em Projetos de Instalações Prediais pelo IPOG. Nos últimos cinco anos, concentrei minha atuação em engenharia de custos, planejamento físico-financeiro e viabilidade de obras públicas e privadas.\n\nAtualmente, como Engenheiro Orçamentista na SS&B Construtora, estruturei um banco próprio com mais de 250 composições de custos unitários (CPUs) e conduzi a revisão técnica e tributária de um orçamento de R$ 60 milhões, gerando uma redução real de R$ 1,2 milhão que viabilizou o fechamento do contrato. Antes disso, atuei como Diretor de Engenharia na Prefeitura de Mossoró, coordenando equipes multidisciplinares, medições e compatibilização de projetos em obras de saúde e educação, onde liderei uma revisão estrutural de emergência que evitou um prejuízo estimado em 10% do custo da obra.\n\nResido atualmente em Eusébio/CE, com total disponibilidade para atuação presencial imediata em Fortaleza, Região Metropolitana e eixo industrial do Pecém.\n\nO currículo em anexo detalha minha experiência com AutoCAD, Revit (BIM), MS Project, Eberick e bases referenciais de preços (SINAPI, SICRO e composições próprias). Fico à disposição para uma entrevista.\n\nAtenciosamente,\n\nDenilson Barbosa\nEngenheiro Civil\n(88) 9627-1246 | denilsonb20@gmail.com\nlinkedin.com/in/denilsonbarbosasantos",
+      "ordem": 5
     },
     {
       "id": "indeed_a1068c26ef79f986",
@@ -162,7 +178,10 @@
       "distancia_info": "18 km de Eusébio (Polo Fortaleza/CE)",
       "categoria_geografica": "Fortaleza + 60km (CE)",
       "curriculo_recomendado": "Curriculo_Denilson_Barbosa_Orcamentos_Planejamento_Fortaleza_CE.pdf",
-      "trilha": "Orçamentos & Planejamento (Cabeçalho Eusébio/CE)"
+      "trilha": "Orçamentos & Planejamento (Cabeçalho Eusébio/CE)",
+      "carta_assunto": "Candidatura: Analista Orçamentista — Sala Técnica - Denilson Barbosa (Engenheiro Civil)",
+      "carta_corpo": "Prezada equipe de seleção (Construtora em Fortaleza (via Indeed)),\n\nEnvio meu currículo para avaliação na oportunidade de Analista Orçamentista — Sala Técnica.\n\nSou Engenheiro Civil graduado pela UFERSA, com pós-graduação em Construção Civil e MBA em Projetos de Instalações Prediais pelo IPOG. Nos últimos cinco anos, concentrei minha atuação em engenharia de custos, planejamento físico-financeiro e viabilidade de obras públicas e privadas.\n\nAtualmente, como Engenheiro Orçamentista na SS&B Construtora, estruturei um banco próprio com mais de 250 composições de custos unitários (CPUs) e conduzi a revisão técnica e tributária de um orçamento de R$ 60 milhões, gerando uma redução real de R$ 1,2 milhão que viabilizou o fechamento do contrato. Antes disso, atuei como Diretor de Engenharia na Prefeitura de Mossoró, coordenando equipes multidisciplinares, medições e compatibilização de projetos em obras de saúde e educação, onde liderei uma revisão estrutural de emergência que evitou um prejuízo estimado em 10% do custo da obra.\n\nResido atualmente em Eusébio/CE, com total disponibilidade para atuação presencial imediata em Fortaleza, Região Metropolitana e eixo industrial do Pecém.\n\nO currículo em anexo detalha minha experiência com AutoCAD, Revit (BIM), MS Project, Eberick e bases referenciais de preços (SINAPI, SICRO e composições próprias). Fico à disposição para uma entrevista.\n\nAtenciosamente,\n\nDenilson Barbosa\nEngenheiro Civil\n(88) 9627-1246 | denilsonb20@gmail.com\nlinkedin.com/in/denilsonbarbosasantos",
+      "ordem": 6
     },
     {
       "id": "indeed_65ff5fe44bf4ff23",
@@ -190,7 +209,10 @@
       "distancia_info": "100% Remoto (Brasil)",
       "categoria_geografica": "Remoto Brasil",
       "curriculo_recomendado": "Curriculo_Denilson_Barbosa_Orcamentos_Planejamento_Fortaleza_CE.pdf",
-      "trilha": "Orçamentos & Planejamento (Cabeçalho Eusébio/CE)"
+      "trilha": "Orçamentos & Planejamento (Cabeçalho Eusébio/CE)",
+      "carta_assunto": "Candidatura: Engenheiro Orçamentista (Ref: 16407) — Remoto - Denilson Barbosa (Engenheiro Civil)",
+      "carta_corpo": "Prezada equipe de seleção (Consultoria de Engenharia (via Indeed)),\n\nEnvio meu currículo para avaliação na oportunidade de Engenheiro Orçamentista (Ref: 16407) — Remoto.\n\nSou Engenheiro Civil graduado pela UFERSA, com pós-graduação em Construção Civil e MBA em Projetos de Instalações Prediais pelo IPOG. Nos últimos cinco anos, concentrei minha atuação em engenharia de custos, planejamento físico-financeiro e viabilidade de obras públicas e privadas.\n\nAtualmente, como Engenheiro Orçamentista na SS&B Construtora, estruturei um banco próprio com mais de 250 composições de custos unitários (CPUs) e conduzi a revisão técnica e tributária de um orçamento de R$ 60 milhões, gerando uma redução real de R$ 1,2 milhão que viabilizou o fechamento do contrato. Antes disso, atuei como Diretor de Engenharia na Prefeitura de Mossoró, coordenando equipes multidisciplinares, medições e compatibilização de projetos em obras de saúde e educação, onde liderei uma revisão estrutural de emergência que evitou um prejuízo estimado em 10% do custo da obra.\n\nResido em Eusébio/CE e conto com estrutura completa para atuação remota imediata, além de disponibilidade para viagens técnicas sempre que necessário.\n\nO currículo em anexo detalha minha experiência com AutoCAD, Revit (BIM), MS Project, Eberick e bases referenciais de preços (SINAPI, SICRO e composições próprias). Fico à disposição para uma entrevista.\n\nAtenciosamente,\n\nDenilson Barbosa\nEngenheiro Civil\n(88) 9627-1246 | denilsonb20@gmail.com\nlinkedin.com/in/denilsonbarbosasantos",
+      "ordem": 7
     },
     {
       "id": "indeed_2ab210e9bf19d2b5",
@@ -218,7 +240,10 @@
       "distancia_info": "18 km de Eusébio (Polo Fortaleza/CE)",
       "categoria_geografica": "Fortaleza + 60km (CE)",
       "curriculo_recomendado": "Curriculo_Denilson_Barbosa_Orcamentos_Planejamento_Fortaleza_CE.pdf",
-      "trilha": "Orçamentos & Planejamento (Cabeçalho Eusébio/CE)"
+      "trilha": "Orçamentos & Planejamento (Cabeçalho Eusébio/CE)",
+      "carta_assunto": "Candidatura: Engenheiro(a) Civil de Sala Técnica (Planejamento & Custos) - Denilson Barbosa (Engenheiro Civil)",
+      "carta_corpo": "Prezada equipe de seleção (Mova Recrutamento e Desenvolvimento Humano),\n\nEnvio meu currículo para avaliação na oportunidade de Engenheiro(a) Civil de Sala Técnica (Planejamento & Custos).\n\nSou Engenheiro Civil graduado pela UFERSA, com pós-graduação em Construção Civil e MBA em Projetos de Instalações Prediais pelo IPOG. Nos últimos cinco anos, concentrei minha atuação em engenharia de custos, planejamento físico-financeiro e viabilidade de obras públicas e privadas.\n\nAtualmente, como Engenheiro Orçamentista na SS&B Construtora, estruturei um banco próprio com mais de 250 composições de custos unitários (CPUs) e conduzi a revisão técnica e tributária de um orçamento de R$ 60 milhões, gerando uma redução real de R$ 1,2 milhão que viabilizou o fechamento do contrato. Antes disso, atuei como Diretor de Engenharia na Prefeitura de Mossoró, coordenando equipes multidisciplinares, medições e compatibilização de projetos em obras de saúde e educação, onde liderei uma revisão estrutural de emergência que evitou um prejuízo estimado em 10% do custo da obra.\n\nResido atualmente em Eusébio/CE, com total disponibilidade para atuação presencial imediata em Fortaleza, Região Metropolitana e eixo industrial do Pecém.\n\nO currículo em anexo detalha minha experiência com AutoCAD, Revit (BIM), MS Project, Eberick e bases referenciais de preços (SINAPI, SICRO e composições próprias). Fico à disposição para uma entrevista.\n\nAtenciosamente,\n\nDenilson Barbosa\nEngenheiro Civil\n(88) 9627-1246 | denilsonb20@gmail.com\nlinkedin.com/in/denilsonbarbosasantos",
+      "ordem": 8
     },
     {
       "id": "indeed_4111bd80797d8305",
@@ -245,7 +270,10 @@
       "distancia_info": "18 km de Eusébio (Polo Fortaleza/CE)",
       "categoria_geografica": "Fortaleza + 60km (CE)",
       "curriculo_recomendado": "Curriculo_Denilson_Barbosa_Orcamentos_Planejamento_Fortaleza_CE.pdf",
-      "trilha": "Orçamentos & Planejamento (Cabeçalho Eusébio/CE)"
+      "trilha": "Orçamentos & Planejamento (Cabeçalho Eusébio/CE)",
+      "carta_assunto": "Candidatura: Analista / Engenheiro de Planejamento de Obras - Denilson Barbosa (Engenheiro Civil)",
+      "carta_corpo": "Prezada equipe de seleção (Construtora em Fortaleza (via Indeed)),\n\nEnvio meu currículo para avaliação na oportunidade de Analista / Engenheiro de Planejamento de Obras.\n\nSou Engenheiro Civil graduado pela UFERSA, com pós-graduação em Construção Civil e MBA em Projetos de Instalações Prediais pelo IPOG. Nos últimos cinco anos, concentrei minha atuação em engenharia de custos, planejamento físico-financeiro e viabilidade de obras públicas e privadas.\n\nAtualmente, como Engenheiro Orçamentista na SS&B Construtora, estruturei um banco próprio com mais de 250 composições de custos unitários (CPUs) e conduzi a revisão técnica e tributária de um orçamento de R$ 60 milhões, gerando uma redução real de R$ 1,2 milhão que viabilizou o fechamento do contrato. Antes disso, atuei como Diretor de Engenharia na Prefeitura de Mossoró, coordenando equipes multidisciplinares, medições e compatibilização de projetos em obras de saúde e educação, onde liderei uma revisão estrutural de emergência que evitou um prejuízo estimado em 10% do custo da obra.\n\nResido atualmente em Eusébio/CE, com total disponibilidade para atuação presencial imediata em Fortaleza, Região Metropolitana e eixo industrial do Pecém.\n\nO currículo em anexo detalha minha experiência com AutoCAD, Revit (BIM), MS Project, Eberick e bases referenciais de preços (SINAPI, SICRO e composições próprias). Fico à disposição para uma entrevista.\n\nAtenciosamente,\n\nDenilson Barbosa\nEngenheiro Civil\n(88) 9627-1246 | denilsonb20@gmail.com\nlinkedin.com/in/denilsonbarbosasantos",
+      "ordem": 9
     },
     {
       "id": "const_pe_cpconstrucao",
@@ -270,7 +298,10 @@
       "distancia_info": "0 km (Polo Alvo Caruaru/PE)",
       "categoria_geografica": "Caruaru + 80km (PE)",
       "curriculo_recomendado": "Curriculo_Denilson_Barbosa_Orcamentos_Planejamento_Caruaru_PE.pdf",
-      "trilha": "Orçamentos & Planejamento (Cabeçalho Caruaru/PE)"
+      "trilha": "Orçamentos & Planejamento (Cabeçalho Caruaru/PE)",
+      "carta_assunto": "Candidatura: Engenheiro Civil - Obras & Orçamentos (Caruaru / Agreste Oficial) - Denilson Barbosa (Engenheiro Civil)",
+      "carta_corpo": "Prezada equipe de seleção (CP Construção),\n\nEnvio meu currículo para avaliação na oportunidade de Engenheiro Civil - Obras & Orçamentos (Caruaru / Agreste Oficial).\n\nSou Engenheiro Civil graduado pela UFERSA, com pós-graduação em Construção Civil e MBA em Projetos de Instalações Prediais pelo IPOG. Nos últimos cinco anos, concentrei minha atuação em engenharia de custos, planejamento físico-financeiro e viabilidade de obras públicas e privadas.\n\nAtualmente, como Engenheiro Orçamentista na SS&B Construtora, estruturei um banco próprio com mais de 250 composições de custos unitários (CPUs) e conduzi a revisão técnica e tributária de um orçamento de R$ 60 milhões, gerando uma redução real de R$ 1,2 milhão que viabilizou o fechamento do contrato. Antes disso, atuei como Diretor de Engenharia na Prefeitura de Mossoró, coordenando equipes multidisciplinares, medições e compatibilização de projetos em obras de saúde e educação, onde liderei uma revisão estrutural de emergência que evitou um prejuízo estimado em 10% do custo da obra.\n\nEstou em processo de mudança planejada para Caruaru/PE, com disponibilidade imediata para atuação presencial em Caruaru, PE (Polo Agreste) e em todo o eixo do Agreste e BR-232.\n\nO currículo em anexo detalha minha experiência com AutoCAD, Revit (BIM), MS Project, Eberick e bases referenciais de preços (SINAPI, SICRO e composições próprias). Fico à disposição para uma entrevista.\n\nAtenciosamente,\n\nDenilson Barbosa\nEngenheiro Civil\n(88) 9627-1246 | denilsonb20@gmail.com\nlinkedin.com/in/denilsonbarbosasantos",
+      "ordem": 10
     },
     {
       "id": "const_ce_crolim",
@@ -295,7 +326,10 @@
       "distancia_info": "18 km de Eusébio (Polo Fortaleza/CE)",
       "categoria_geografica": "Fortaleza + 60km (CE)",
       "curriculo_recomendado": "Curriculo_Denilson_Barbosa_Orcamentos_Planejamento_Fortaleza_CE.pdf",
-      "trilha": "Orçamentos & Planejamento (Cabeçalho Eusébio/CE)"
+      "trilha": "Orçamentos & Planejamento (Cabeçalho Eusébio/CE)",
+      "carta_assunto": "Candidatura: Engenheiro Civil - Planejamento e Gestão de Obras (Portal Oficial) - Denilson Barbosa (Engenheiro Civil)",
+      "carta_corpo": "Prezada equipe de seleção (C. Rolim Engenharia),\n\nEnvio meu currículo para avaliação na oportunidade de Engenheiro Civil - Planejamento e Gestão de Obras (Portal Oficial).\n\nSou Engenheiro Civil graduado pela UFERSA, com pós-graduação em Construção Civil e MBA em Projetos de Instalações Prediais pelo IPOG. Nos últimos cinco anos, concentrei minha atuação em engenharia de custos, planejamento físico-financeiro e viabilidade de obras públicas e privadas.\n\nAtualmente, como Engenheiro Orçamentista na SS&B Construtora, estruturei um banco próprio com mais de 250 composições de custos unitários (CPUs) e conduzi a revisão técnica e tributária de um orçamento de R$ 60 milhões, gerando uma redução real de R$ 1,2 milhão que viabilizou o fechamento do contrato. Antes disso, atuei como Diretor de Engenharia na Prefeitura de Mossoró, coordenando equipes multidisciplinares, medições e compatibilização de projetos em obras de saúde e educação, onde liderei uma revisão estrutural de emergência que evitou um prejuízo estimado em 10% do custo da obra.\n\nResido atualmente em Eusébio/CE, com total disponibilidade para atuação presencial imediata em Fortaleza, Região Metropolitana e eixo industrial do Pecém.\n\nO currículo em anexo detalha minha experiência com AutoCAD, Revit (BIM), MS Project, Eberick e bases referenciais de preços (SINAPI, SICRO e composições próprias). Fico à disposição para uma entrevista.\n\nAtenciosamente,\n\nDenilson Barbosa\nEngenheiro Civil\n(88) 9627-1246 | denilsonb20@gmail.com\nlinkedin.com/in/denilsonbarbosasantos",
+      "ordem": 11
     },
     {
       "id": "const_pe_aclf",
@@ -320,7 +354,10 @@
       "distancia_info": "0 km (Polo Alvo Caruaru/PE)",
       "categoria_geografica": "Caruaru + 80km (PE)",
       "curriculo_recomendado": "Curriculo_Denilson_Barbosa_Orcamentos_Planejamento_Caruaru_PE.pdf",
-      "trilha": "Orçamentos & Planejamento (Cabeçalho Caruaru/PE)"
+      "trilha": "Orçamentos & Planejamento (Cabeçalho Caruaru/PE)",
+      "carta_assunto": "Candidatura: Engenheiro Civil - Obras, Planejamento e Loteamentos (Portal TOTVS) - Denilson Barbosa (Engenheiro Civil)",
+      "carta_corpo": "Prezada equipe de seleção (Grupo ACLF (ACLF Empreendimentos)),\n\nEnvio meu currículo para avaliação na oportunidade de Engenheiro Civil - Obras, Planejamento e Loteamentos (Portal TOTVS).\n\nSou Engenheiro Civil graduado pela UFERSA, com pós-graduação em Construção Civil e MBA em Projetos de Instalações Prediais pelo IPOG. Nos últimos cinco anos, concentrei minha atuação em engenharia de custos, planejamento físico-financeiro e viabilidade de obras públicas e privadas.\n\nAtualmente, como Engenheiro Orçamentista na SS&B Construtora, estruturei um banco próprio com mais de 250 composições de custos unitários (CPUs) e conduzi a revisão técnica e tributária de um orçamento de R$ 60 milhões, gerando uma redução real de R$ 1,2 milhão que viabilizou o fechamento do contrato. Antes disso, atuei como Diretor de Engenharia na Prefeitura de Mossoró, coordenando equipes multidisciplinares, medições e compatibilização de projetos em obras de saúde e educação, onde liderei uma revisão estrutural de emergência que evitou um prejuízo estimado em 10% do custo da obra.\n\nEstou em processo de mudança planejada para Caruaru/PE, com disponibilidade imediata para atuação presencial em Caruaru / Pernambuco e em todo o eixo do Agreste e BR-232.\n\nO currículo em anexo detalha minha experiência com AutoCAD, Revit (BIM), MS Project, Eberick e bases referenciais de preços (SINAPI, SICRO e composições próprias). Fico à disposição para uma entrevista.\n\nAtenciosamente,\n\nDenilson Barbosa\nEngenheiro Civil\n(88) 9627-1246 | denilsonb20@gmail.com\nlinkedin.com/in/denilsonbarbosasantos",
+      "ordem": 12
     },
     {
       "id": "const_pe_conic",
@@ -345,31 +382,10 @@
       "distancia_info": "Pernambuco (Eixo BR-232)",
       "categoria_geografica": "Eixo PE (Recife / BR-232)",
       "curriculo_recomendado": "Curriculo_Denilson_Barbosa_Gestao_Obras_Projetos_Caruaru_PE.pdf",
-      "trilha": "Obras & Projetos (Cabeçalho Caruaru/PE)"
-    },
-    {
-      "id": "indeed_3ce834527106f6eb",
-      "raw_id": "3ce834527106f6eb",
-      "plataforma": "Indeed",
-      "tipo_fonte": "indeed",
-      "titulo": "Supervisor de Engenharia Civil – Obras Públicas - Caruaru, PE ...",
-      "empresa": "Empresa Verificada no Indeed",
-      "local": "Caruaru, PE",
-      "url": "https://br.indeed.com/viewjob?jk=3ce834527106f6eb",
-      "data_publicacao": "2026-11-03",
-      "dias_atras": 4,
-      "modalidade": "Presencial",
-      "descricao": "br . indeed . com › viewjob Supervisor de Engenharia Civil – Obras Públicas - Caruaru, PE ... br.indeed.com › viewjob Candidatar-se no site da empresa &nbsp; Salários - Engenheiro Civil Salaries for Engenheiro Civil , Caruaru , PE &nbsp; &nbsp;",
-      "email_direto": "",
-      "score_afinidade": 95,
-      "termos_afinidade": [
-        "Engenharia Civil",
-        "Gestão/Execução de Obras"
-      ],
-      "distancia_info": "0 km (Polo Alvo Caruaru/PE)",
-      "categoria_geografica": "Caruaru + 80km (PE)",
-      "curriculo_recomendado": "Curriculo_Denilson_Barbosa_Gestao_Obras_Projetos_Caruaru_PE.pdf",
-      "trilha": "Obras & Projetos (Cabeçalho Caruaru/PE)"
+      "trilha": "Obras & Projetos (Cabeçalho Caruaru/PE)",
+      "carta_assunto": "Candidatura: Engenheiro Civil - Gestão e Acompanhamento de Obras (Mural PE) - Denilson Barbosa (Engenheiro Civil)",
+      "carta_corpo": "Prezada equipe de seleção (Conic Construtora),\n\nApresento meu currículo para avaliação na vaga de Engenheiro Civil - Gestão e Acompanhamento de Obras (Mural PE).\n\nSou Engenheiro Civil pela UFERSA, com MBA em Projetos de Instalações Prediais (IPOG) e especialização em Construção Civil (Residenciais, Industriais e Especiais). Minha trajetória soma mais de cinco anos na condução de obras, projetos de infraestrutura, planejamento físico-financeiro e engenharia de custos.\n\nExerci o cargo de Diretor de Engenharia na Prefeitura de Mossoró, liderando equipes multidisciplinares e empreiteiras na execução e fiscalização de unidades hospitalares e educacionais. Nesse período, coordenei uma revisão estrutural emergencial que preservou a estabilidade do edifício e evitou perdas de 10% no orçamento global da obra. No setor privado e agroindustrial (SS&B Construtora, Grupo FAN, Diagonal Engenharia e Itaueira Agropecuária), entreguei e homologuei uma balança rodoviária industrial no prazo recorde de 35 dias e gerei uma economia de R$ 1,2 milhão em um orçamento de R$ 60 milhões por meio de alterações construtivas e recotação de suprimentos.\n\nEstou em processo de mudança planejada para Caruaru/PE, com disponibilidade imediata para atuação presencial em Pernambuco (Eixo BR-232) e em todo o eixo do Agreste e BR-232.\n\nSeguem em anexo os detalhes da minha experiência com gestão de cronogramas (MS Project), compatibilização de disciplinas (AutoCAD e Revit BIM) e controle de custos. Agradeço a atenção e coloco-me à disposição para conversar.\n\nAtenciosamente,\n\nDenilson Barbosa\nEngenheiro Civil\n(88) 9627-1246 | denilsonb20@gmail.com\nlinkedin.com/in/denilsonbarbosasantos",
+      "ordem": 13
     },
     {
       "id": "indeed_afba2d60a38959e1",
@@ -395,7 +411,10 @@
       "distancia_info": "0 km (Polo Alvo Caruaru/PE)",
       "categoria_geografica": "Caruaru + 80km (PE)",
       "curriculo_recomendado": "Curriculo_Denilson_Barbosa_Gestao_Obras_Projetos_Caruaru_PE.pdf",
-      "trilha": "Obras & Projetos (Cabeçalho Caruaru/PE)"
+      "trilha": "Obras & Projetos (Cabeçalho Caruaru/PE)",
+      "carta_assunto": "Candidatura: Engenheiro Civil — Gestão Integral de Obras - Denilson Barbosa (Engenheiro Civil)",
+      "carta_corpo": "Prezada equipe de seleção (Construtora em Caruaru (via Indeed)),\n\nApresento meu currículo para avaliação na vaga de Engenheiro Civil — Gestão Integral de Obras.\n\nSou Engenheiro Civil pela UFERSA, com MBA em Projetos de Instalações Prediais (IPOG) e especialização em Construção Civil (Residenciais, Industriais e Especiais). Minha trajetória soma mais de cinco anos na condução de obras, projetos de infraestrutura, planejamento físico-financeiro e engenharia de custos.\n\nExerci o cargo de Diretor de Engenharia na Prefeitura de Mossoró, liderando equipes multidisciplinares e empreiteiras na execução e fiscalização de unidades hospitalares e educacionais. Nesse período, coordenei uma revisão estrutural emergencial que preservou a estabilidade do edifício e evitou perdas de 10% no orçamento global da obra. No setor privado e agroindustrial (SS&B Construtora, Grupo FAN, Diagonal Engenharia e Itaueira Agropecuária), entreguei e homologuei uma balança rodoviária industrial no prazo recorde de 35 dias e gerei uma economia de R$ 1,2 milhão em um orçamento de R$ 60 milhões por meio de alterações construtivas e recotação de suprimentos.\n\nEstou em processo de mudança planejada para Caruaru/PE, com disponibilidade imediata para atuação presencial em Caruaru, PE e em todo o eixo do Agreste e BR-232.\n\nSeguem em anexo os detalhes da minha experiência com gestão de cronogramas (MS Project), compatibilização de disciplinas (AutoCAD e Revit BIM) e controle de custos. Agradeço a atenção e coloco-me à disposição para conversar.\n\nAtenciosamente,\n\nDenilson Barbosa\nEngenheiro Civil\n(88) 9627-1246 | denilsonb20@gmail.com\nlinkedin.com/in/denilsonbarbosasantos",
+      "ordem": 14
     },
     {
       "id": "const_pe_duarte",
@@ -420,7 +439,64 @@
       "distancia_info": "130 km de Caruaru (Eixo BR-232 / PE)",
       "categoria_geografica": "Eixo PE (Recife / BR-232)",
       "curriculo_recomendado": "Curriculo_Denilson_Barbosa_Orcamentos_Planejamento_Caruaru_PE.pdf",
-      "trilha": "Orçamentos & Planejamento (Cabeçalho Caruaru/PE)"
+      "trilha": "Orçamentos & Planejamento (Cabeçalho Caruaru/PE)",
+      "carta_assunto": "Candidatura: Engenheiro de Custos & Sala Técnica (Trabalhe Conosco PE) - Denilson Barbosa (Engenheiro Civil)",
+      "carta_corpo": "Prezada equipe de seleção (Duarte Engenharia),\n\nEnvio meu currículo para avaliação na oportunidade de Engenheiro de Custos & Sala Técnica (Trabalhe Conosco PE).\n\nSou Engenheiro Civil graduado pela UFERSA, com pós-graduação em Construção Civil e MBA em Projetos de Instalações Prediais pelo IPOG. Nos últimos cinco anos, concentrei minha atuação em engenharia de custos, planejamento físico-financeiro e viabilidade de obras públicas e privadas.\n\nAtualmente, como Engenheiro Orçamentista na SS&B Construtora, estruturei um banco próprio com mais de 250 composições de custos unitários (CPUs) e conduzi a revisão técnica e tributária de um orçamento de R$ 60 milhões, gerando uma redução real de R$ 1,2 milhão que viabilizou o fechamento do contrato. Antes disso, atuei como Diretor de Engenharia na Prefeitura de Mossoró, coordenando equipes multidisciplinares, medições e compatibilização de projetos em obras de saúde e educação, onde liderei uma revisão estrutural de emergência que evitou um prejuízo estimado em 10% do custo da obra.\n\nEstou em processo de mudança planejada para Caruaru/PE, com disponibilidade imediata para atuação presencial em Pernambuco (Eixo BR-232 / Recife) e em todo o eixo do Agreste e BR-232.\n\nO currículo em anexo detalha minha experiência com AutoCAD, Revit (BIM), MS Project, Eberick e bases referenciais de preços (SINAPI, SICRO e composições próprias). Fico à disposição para uma entrevista.\n\nAtenciosamente,\n\nDenilson Barbosa\nEngenheiro Civil\n(88) 9627-1246 | denilsonb20@gmail.com\nlinkedin.com/in/denilsonbarbosasantos",
+      "ordem": 15
+    },
+    {
+      "id": "post_7530277123383767040",
+      "raw_id": "7530277123383767040",
+      "plataforma": "Publicação LinkedIn (Feed)",
+      "tipo_fonte": "publicacao_feed",
+      "titulo": "[Post Feed] Viana e Vasconcelos Engenharia: Viana e Vasconcelos Engenharia 7 h • 🚀 ESTAMOS CONTRATANDO! A Viana & Vasconcelos Eng...",
+      "empresa": "Post de Viana e Vasconcelos Engenharia (rh.vianaevasconcelos@gmail.com)",
+      "local": "Caruaru / Recife, PE",
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7530277123383767040/",
+      "data_publicacao": "2026-11-22",
+      "dias_atras": 0,
+      "modalidade": "Presencial / Híbrido",
+      "descricao": "Viana e Vasconcelos Engenharia 7 h • 🚀 ESTAMOS CONTRATANDO! A Viana & Vasconcelos Engenharia está ampliando o time e temos novas oportunidades abertas em Recife/PE. Estamos buscando profissionais com proatividade, organização, responsabilidade, vontade de aprender e compromisso com resultado. 🏗️ Vagas abertas: • Engenheiro(a) Civil • Técnico(a) de Edificações • Auxiliar de Engenharia Civil Buscamos profissionais com interesse em rotina de obra, planejamento, qualidade, acompanhamento de serviços, organização e resolução de problemas. 💡 Um diferencial para todas as vagas: familiaridade e intere",
+      "email_direto": "rh.vianaevasconcelos@gmail.com",
+      "score_afinidade": 92,
+      "termos_afinidade": [
+        "Planejamento Físico-Financeiro",
+        "Engenharia Civil"
+      ],
+      "distancia_info": "0 km (Polo Alvo Caruaru/PE)",
+      "categoria_geografica": "Caruaru + 80km (PE)",
+      "curriculo_recomendado": "Curriculo_Denilson_Barbosa_Gestao_Obras_Projetos_Caruaru_PE.pdf",
+      "trilha": "Obras & Projetos (Cabeçalho Caruaru/PE)",
+      "carta_assunto": "Candidatura: [Post Feed] Viana e Vasconcelos Engenharia: Viana e Vasconcelos Engenharia 7 h • 🚀 ESTAMOS CONTRATANDO! A Viana & Vasconcelos Eng... - Denilson Barbosa (Engenheiro Civil)",
+      "carta_corpo": "Prezada equipe de seleção (Post de Viana e Vasconcelos Engenharia (rh.vianaevasconcelos@gmail.com)),\n\nApresento meu currículo para avaliação na vaga de [Post Feed] Viana e Vasconcelos Engenharia: Viana e Vasconcelos Engenharia 7 h • 🚀 ESTAMOS CONTRATANDO! A Viana & Vasconcelos Eng....\n\nSou Engenheiro Civil pela UFERSA, com MBA em Projetos de Instalações Prediais (IPOG) e especialização em Construção Civil (Residenciais, Industriais e Especiais). Minha trajetória soma mais de cinco anos na condução de obras, projetos de infraestrutura, planejamento físico-financeiro e engenharia de custos.\n\nExerci o cargo de Diretor de Engenharia na Prefeitura de Mossoró, liderando equipes multidisciplinares e empreiteiras na execução e fiscalização de unidades hospitalares e educacionais. Nesse período, coordenei uma revisão estrutural emergencial que preservou a estabilidade do edifício e evitou perdas de 10% no orçamento global da obra. No setor privado e agroindustrial (SS&B Construtora, Grupo FAN, Diagonal Engenharia e Itaueira Agropecuária), entreguei e homologuei uma balança rodoviária industrial no prazo recorde de 35 dias e gerei uma economia de R$ 1,2 milhão em um orçamento de R$ 60 milhões por meio de alterações construtivas e recotação de suprimentos.\n\nEstou em processo de mudança planejada para Caruaru/PE, com disponibilidade imediata para atuação presencial em Caruaru / Recife, PE e em todo o eixo do Agreste e BR-232.\n\nSeguem em anexo os detalhes da minha experiência com gestão de cronogramas (MS Project), compatibilização de disciplinas (AutoCAD e Revit BIM) e controle de custos. Agradeço a atenção e coloco-me à disposição para conversar.\n\nAtenciosamente,\n\nDenilson Barbosa\nEngenheiro Civil\n(88) 9627-1246 | denilsonb20@gmail.com\nlinkedin.com/in/denilsonbarbosasantos",
+      "ordem": 16
+    },
+    {
+      "id": "post_7528427063041683456",
+      "raw_id": "7528427063041683456",
+      "plataforma": "Publicação LinkedIn (Feed)",
+      "tipo_fonte": "publicacao_feed",
+      "titulo": "[Post Feed] Audens Group: Audens Group 5 d • Oportunidade Gerente Geral de Obras em Fortaleza/CE Sobre nosso cl...",
+      "empresa": "Post de Audens Group (Feed LinkedIn)",
+      "local": "Fortaleza / Eusébio, CE",
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7528427063041683456/",
+      "data_publicacao": "2026-11-17",
+      "dias_atras": 0,
+      "modalidade": "Presencial / Híbrido",
+      "descricao": "Audens Group 5 d • Oportunidade Gerente Geral de Obras em Fortaleza/CE Sobre nosso cliente Construtora e incorporadora de grande porte, com atuação relevante no mercado imobiliário e empreendimentos de grande escala. Requisitos da vaga Formação em Engenharia Civil e experiência anterior na gestão de várias obras ao mesmo tempo. Pós-graduação na área é um diferencial. Buscamos alguém analítico e organizado, que tome decisões, priorize demandas e atue perto da operação. Responsabilidade Gerenciar um portfólio de obras garantindo prazo, custo, qualidade e segurança, além de liderar os Gerentes de",
+      "email_direto": "",
+      "score_afinidade": 87,
+      "termos_afinidade": [
+        "Engenharia Civil",
+        "Gestão/Execução de Obras"
+      ],
+      "distancia_info": "0 km (Residência Atual - Eusébio/CE)",
+      "categoria_geografica": "Fortaleza + 60km (CE)",
+      "curriculo_recomendado": "Curriculo_Denilson_Barbosa_Gestao_Obras_Projetos_Fortaleza_CE.pdf",
+      "trilha": "Obras & Projetos (Cabeçalho Eusébio/CE)",
+      "carta_assunto": "Candidatura: [Post Feed] Audens Group: Audens Group 5 d • Oportunidade Gerente Geral de Obras em Fortaleza/CE Sobre nosso cl... - Denilson Barbosa (Engenheiro Civil)",
+      "carta_corpo": "Prezada equipe de seleção (Post de Audens Group (Feed LinkedIn)),\n\nApresento meu currículo para avaliação na vaga de [Post Feed] Audens Group: Audens Group 5 d • Oportunidade Gerente Geral de Obras em Fortaleza/CE Sobre nosso cl....\n\nSou Engenheiro Civil pela UFERSA, com MBA em Projetos de Instalações Prediais (IPOG) e especialização em Construção Civil (Residenciais, Industriais e Especiais). Minha trajetória soma mais de cinco anos na condução de obras, projetos de infraestrutura, planejamento físico-financeiro e engenharia de custos.\n\nExerci o cargo de Diretor de Engenharia na Prefeitura de Mossoró, liderando equipes multidisciplinares e empreiteiras na execução e fiscalização de unidades hospitalares e educacionais. Nesse período, coordenei uma revisão estrutural emergencial que preservou a estabilidade do edifício e evitou perdas de 10% no orçamento global da obra. No setor privado e agroindustrial (SS&B Construtora, Grupo FAN, Diagonal Engenharia e Itaueira Agropecuária), entreguei e homologuei uma balança rodoviária industrial no prazo recorde de 35 dias e gerei uma economia de R$ 1,2 milhão em um orçamento de R$ 60 milhões por meio de alterações construtivas e recotação de suprimentos.\n\nResido atualmente em Eusébio/CE, com total disponibilidade para atuação presencial imediata em Fortaleza, Região Metropolitana e eixo industrial do Pecém.\n\nSeguem em anexo os detalhes da minha experiência com gestão de cronogramas (MS Project), compatibilização de disciplinas (AutoCAD e Revit BIM) e controle de custos. Agradeço a atenção e coloco-me à disposição para conversar.\n\nAtenciosamente,\n\nDenilson Barbosa\nEngenheiro Civil\n(88) 9627-1246 | denilsonb20@gmail.com\nlinkedin.com/in/denilsonbarbosasantos",
+      "ordem": 17
     },
     {
       "id": "const_pe_carrilho",
@@ -445,7 +521,10 @@
       "distancia_info": "130 km de Caruaru (Eixo BR-232 / PE)",
       "categoria_geografica": "Eixo PE (Recife / BR-232)",
       "curriculo_recomendado": "Curriculo_Denilson_Barbosa_Orcamentos_Planejamento_Caruaru_PE.pdf",
-      "trilha": "Orçamentos & Planejamento (Cabeçalho Caruaru/PE)"
+      "trilha": "Orçamentos & Planejamento (Cabeçalho Caruaru/PE)",
+      "carta_assunto": "Candidatura: Engenheiro de Custos & Obras (Carreiras PE) - Denilson Barbosa (Engenheiro Civil)",
+      "carta_corpo": "Prezada equipe de seleção (Construtora Carrilho),\n\nEnvio meu currículo para avaliação na oportunidade de Engenheiro de Custos & Obras (Carreiras PE).\n\nSou Engenheiro Civil graduado pela UFERSA, com pós-graduação em Construção Civil e MBA em Projetos de Instalações Prediais pelo IPOG. Nos últimos cinco anos, concentrei minha atuação em engenharia de custos, planejamento físico-financeiro e viabilidade de obras públicas e privadas.\n\nAtualmente, como Engenheiro Orçamentista na SS&B Construtora, estruturei um banco próprio com mais de 250 composições de custos unitários (CPUs) e conduzi a revisão técnica e tributária de um orçamento de R$ 60 milhões, gerando uma redução real de R$ 1,2 milhão que viabilizou o fechamento do contrato. Antes disso, atuei como Diretor de Engenharia na Prefeitura de Mossoró, coordenando equipes multidisciplinares, medições e compatibilização de projetos em obras de saúde e educação, onde liderei uma revisão estrutural de emergência que evitou um prejuízo estimado em 10% do custo da obra.\n\nEstou em processo de mudança planejada para Caruaru/PE, com disponibilidade imediata para atuação presencial em Pernambuco (Recife e Eixo Agreste) e em todo o eixo do Agreste e BR-232.\n\nO currículo em anexo detalha minha experiência com AutoCAD, Revit (BIM), MS Project, Eberick e bases referenciais de preços (SINAPI, SICRO e composições próprias). Fico à disposição para uma entrevista.\n\nAtenciosamente,\n\nDenilson Barbosa\nEngenheiro Civil\n(88) 9627-1246 | denilsonb20@gmail.com\nlinkedin.com/in/denilsonbarbosasantos",
+      "ordem": 18
     },
     {
       "id": "const_pe_awaconstrutora",
@@ -469,7 +548,10 @@
       "distancia_info": "0 km (Polo Alvo Caruaru/PE)",
       "categoria_geografica": "Caruaru + 80km (PE)",
       "curriculo_recomendado": "Curriculo_Denilson_Barbosa_Gestao_Obras_Projetos_Caruaru_PE.pdf",
-      "trilha": "Obras & Projetos (Cabeçalho Caruaru/PE)"
+      "trilha": "Obras & Projetos (Cabeçalho Caruaru/PE)",
+      "carta_assunto": "Candidatura: Engenheiro Civil - Gestão de Obras & Empreendimentos (Caruaru Shopping) - Denilson Barbosa (Engenheiro Civil)",
+      "carta_corpo": "Prezada equipe de seleção (AWA Construtora),\n\nApresento meu currículo para avaliação na vaga de Engenheiro Civil - Gestão de Obras & Empreendimentos (Caruaru Shopping).\n\nSou Engenheiro Civil pela UFERSA, com MBA em Projetos de Instalações Prediais (IPOG) e especialização em Construção Civil (Residenciais, Industriais e Especiais). Minha trajetória soma mais de cinco anos na condução de obras, projetos de infraestrutura, planejamento físico-financeiro e engenharia de custos.\n\nExerci o cargo de Diretor de Engenharia na Prefeitura de Mossoró, liderando equipes multidisciplinares e empreiteiras na execução e fiscalização de unidades hospitalares e educacionais. Nesse período, coordenei uma revisão estrutural emergencial que preservou a estabilidade do edifício e evitou perdas de 10% no orçamento global da obra. No setor privado e agroindustrial (SS&B Construtora, Grupo FAN, Diagonal Engenharia e Itaueira Agropecuária), entreguei e homologuei uma balança rodoviária industrial no prazo recorde de 35 dias e gerei uma economia de R$ 1,2 milhão em um orçamento de R$ 60 milhões por meio de alterações construtivas e recotação de suprimentos.\n\nEstou em processo de mudança planejada para Caruaru/PE, com disponibilidade imediata para atuação presencial em Caruaru, PE (Torre EPIC - Caruaru Shopping) e em todo o eixo do Agreste e BR-232.\n\nSeguem em anexo os detalhes da minha experiência com gestão de cronogramas (MS Project), compatibilização de disciplinas (AutoCAD e Revit BIM) e controle de custos. Agradeço a atenção e coloco-me à disposição para conversar.\n\nAtenciosamente,\n\nDenilson Barbosa\nEngenheiro Civil\n(88) 9627-1246 | denilsonb20@gmail.com\nlinkedin.com/in/denilsonbarbosasantos",
+      "ordem": 19
     },
     {
       "id": "const_pe_caicara",
@@ -493,7 +575,10 @@
       "distancia_info": "0 km (Polo Alvo Caruaru/PE)",
       "categoria_geografica": "Caruaru + 80km (PE)",
       "curriculo_recomendado": "Curriculo_Denilson_Barbosa_Gestao_Obras_Projetos_Caruaru_PE.pdf",
-      "trilha": "Obras & Projetos (Cabeçalho Caruaru/PE)"
+      "trilha": "Obras & Projetos (Cabeçalho Caruaru/PE)",
+      "carta_assunto": "Candidatura: Engenheiro Civil - Obras Públicas e Privadas (Banco Sólides Caruaru) - Denilson Barbosa (Engenheiro Civil)",
+      "carta_corpo": "Prezada equipe de seleção (Caiçara Construtora),\n\nApresento meu currículo para avaliação na vaga de Engenheiro Civil - Obras Públicas e Privadas (Banco Sólides Caruaru).\n\nSou Engenheiro Civil pela UFERSA, com MBA em Projetos de Instalações Prediais (IPOG) e especialização em Construção Civil (Residenciais, Industriais e Especiais). Minha trajetória soma mais de cinco anos na condução de obras, projetos de infraestrutura, planejamento físico-financeiro e engenharia de custos.\n\nExerci o cargo de Diretor de Engenharia na Prefeitura de Mossoró, liderando equipes multidisciplinares e empreiteiras na execução e fiscalização de unidades hospitalares e educacionais. Nesse período, coordenei uma revisão estrutural emergencial que preservou a estabilidade do edifício e evitou perdas de 10% no orçamento global da obra. No setor privado e agroindustrial (SS&B Construtora, Grupo FAN, Diagonal Engenharia e Itaueira Agropecuária), entreguei e homologuei uma balança rodoviária industrial no prazo recorde de 35 dias e gerei uma economia de R$ 1,2 milhão em um orçamento de R$ 60 milhões por meio de alterações construtivas e recotação de suprimentos.\n\nEstou em processo de mudança planejada para Caruaru/PE, com disponibilidade imediata para atuação presencial em Caruaru, PE e em todo o eixo do Agreste e BR-232.\n\nSeguem em anexo os detalhes da minha experiência com gestão de cronogramas (MS Project), compatibilização de disciplinas (AutoCAD e Revit BIM) e controle de custos. Agradeço a atenção e coloco-me à disposição para conversar.\n\nAtenciosamente,\n\nDenilson Barbosa\nEngenheiro Civil\n(88) 9627-1246 | denilsonb20@gmail.com\nlinkedin.com/in/denilsonbarbosasantos",
+      "ordem": 20
     },
     {
       "id": "const_pe_rioave",
@@ -517,7 +602,62 @@
       "distancia_info": "130 km de Caruaru (Eixo BR-232 / PE)",
       "categoria_geografica": "Eixo PE (Recife / BR-232)",
       "curriculo_recomendado": "Curriculo_Denilson_Barbosa_Orcamentos_Planejamento_Caruaru_PE.pdf",
-      "trilha": "Orçamentos & Planejamento (Cabeçalho Caruaru/PE)"
+      "trilha": "Orçamentos & Planejamento (Cabeçalho Caruaru/PE)",
+      "carta_assunto": "Candidatura: Engenheiro de Planejamento & Qualidade (Banco de Talentos PE) - Denilson Barbosa (Engenheiro Civil)",
+      "carta_corpo": "Prezada equipe de seleção (Construtora Rio Ave),\n\nEnvio meu currículo para avaliação na oportunidade de Engenheiro de Planejamento & Qualidade (Banco de Talentos PE).\n\nSou Engenheiro Civil graduado pela UFERSA, com pós-graduação em Construção Civil e MBA em Projetos de Instalações Prediais pelo IPOG. Nos últimos cinco anos, concentrei minha atuação em engenharia de custos, planejamento físico-financeiro e viabilidade de obras públicas e privadas.\n\nAtualmente, como Engenheiro Orçamentista na SS&B Construtora, estruturei um banco próprio com mais de 250 composições de custos unitários (CPUs) e conduzi a revisão técnica e tributária de um orçamento de R$ 60 milhões, gerando uma redução real de R$ 1,2 milhão que viabilizou o fechamento do contrato. Antes disso, atuei como Diretor de Engenharia na Prefeitura de Mossoró, coordenando equipes multidisciplinares, medições e compatibilização de projetos em obras de saúde e educação, onde liderei uma revisão estrutural de emergência que evitou um prejuízo estimado em 10% do custo da obra.\n\nEstou em processo de mudança planejada para Caruaru/PE, com disponibilidade imediata para atuação presencial em Recife / Eixo PE e em todo o eixo do Agreste e BR-232.\n\nO currículo em anexo detalha minha experiência com AutoCAD, Revit (BIM), MS Project, Eberick e bases referenciais de preços (SINAPI, SICRO e composições próprias). Fico à disposição para uma entrevista.\n\nAtenciosamente,\n\nDenilson Barbosa\nEngenheiro Civil\n(88) 9627-1246 | denilsonb20@gmail.com\nlinkedin.com/in/denilsonbarbosasantos",
+      "ordem": 21
+    },
+    {
+      "id": "post_7529161227453763584",
+      "raw_id": "7529161227453763584",
+      "plataforma": "Publicação LinkedIn (Feed)",
+      "tipo_fonte": "publicacao_feed",
+      "titulo": "[Post Feed] Grupo Portfolio: Grupo Portfolio Acesse o site 3 d • Estamos #contratando para um novo cargo de Engenh...",
+      "empresa": "Post de Grupo Portfolio (Feed LinkedIn)",
+      "local": "Fortaleza / Eusébio, CE",
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7529161227453763584/",
+      "data_publicacao": "2026-11-19",
+      "dias_atras": 0,
+      "modalidade": "Presencial / Híbrido",
+      "descricao": "Grupo Portfolio Acesse o site 3 d • Estamos #contratando para um novo cargo de Engenheiro civil em Fortaleza, Ceará. Candidate-se hoje mesmo ou compartilhe este anúncio com sua rede. Engenheiro civil Grupo Portfolio Fortaleza, CE (Presencial) Ver vaga 5 ex-alunos da instituição trabalham aqui 22 2 Esses resultados são úteis? Seu feedback nos ajuda a melhorar os resultados da pesquisa",
+      "email_direto": "",
+      "score_afinidade": 80,
+      "termos_afinidade": [
+        "Engenharia Civil"
+      ],
+      "distancia_info": "0 km (Residência Atual - Eusébio/CE)",
+      "categoria_geografica": "Fortaleza + 60km (CE)",
+      "curriculo_recomendado": "Curriculo_Denilson_Barbosa_Gestao_Obras_Projetos_Fortaleza_CE.pdf",
+      "trilha": "Obras & Projetos (Cabeçalho Eusébio/CE)",
+      "carta_assunto": "Candidatura: [Post Feed] Grupo Portfolio: Grupo Portfolio Acesse o site 3 d • Estamos #contratando para um novo cargo de Engenh... - Denilson Barbosa (Engenheiro Civil)",
+      "carta_corpo": "Prezada equipe de seleção (Post de Grupo Portfolio (Feed LinkedIn)),\n\nApresento meu currículo para avaliação na vaga de [Post Feed] Grupo Portfolio: Grupo Portfolio Acesse o site 3 d • Estamos #contratando para um novo cargo de Engenh....\n\nSou Engenheiro Civil pela UFERSA, com MBA em Projetos de Instalações Prediais (IPOG) e especialização em Construção Civil (Residenciais, Industriais e Especiais). Minha trajetória soma mais de cinco anos na condução de obras, projetos de infraestrutura, planejamento físico-financeiro e engenharia de custos.\n\nExerci o cargo de Diretor de Engenharia na Prefeitura de Mossoró, liderando equipes multidisciplinares e empreiteiras na execução e fiscalização de unidades hospitalares e educacionais. Nesse período, coordenei uma revisão estrutural emergencial que preservou a estabilidade do edifício e evitou perdas de 10% no orçamento global da obra. No setor privado e agroindustrial (SS&B Construtora, Grupo FAN, Diagonal Engenharia e Itaueira Agropecuária), entreguei e homologuei uma balança rodoviária industrial no prazo recorde de 35 dias e gerei uma economia de R$ 1,2 milhão em um orçamento de R$ 60 milhões por meio de alterações construtivas e recotação de suprimentos.\n\nResido atualmente em Eusébio/CE, com total disponibilidade para atuação presencial imediata em Fortaleza, Região Metropolitana e eixo industrial do Pecém.\n\nSeguem em anexo os detalhes da minha experiência com gestão de cronogramas (MS Project), compatibilização de disciplinas (AutoCAD e Revit BIM) e controle de custos. Agradeço a atenção e coloco-me à disposição para conversar.\n\nAtenciosamente,\n\nDenilson Barbosa\nEngenheiro Civil\n(88) 9627-1246 | denilsonb20@gmail.com\nlinkedin.com/in/denilsonbarbosasantos",
+      "ordem": 22
+    },
+    {
+      "id": "post_7530356506412748800",
+      "raw_id": "7530356506412748800",
+      "plataforma": "Publicação LinkedIn (Feed)",
+      "tipo_fonte": "publicacao_feed",
+      "titulo": "[Post Feed] GetJob | Recrutamento Inteligente: GetJob | Recrutamento Inteligente 2 h • Vaga para Engenheiro Civil na Viana e Vasconc...",
+      "empresa": "Post de GetJob | Recrutamento Inteligente (Feed LinkedIn)",
+      "local": "Caruaru / Recife, PE",
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7530356506412748800/",
+      "data_publicacao": "2026-11-22",
+      "dias_atras": 0,
+      "modalidade": "Presencial / Híbrido",
+      "descricao": "GetJob | Recrutamento Inteligente 2 h • Vaga para Engenheiro Civil na Viana e Vasconcelos Engenharia em Recife PE https://lnkd.in/ejKxfXVX #vagasPE #RecifePE … mais 2 1",
+      "email_direto": "",
+      "score_afinidade": 80,
+      "termos_afinidade": [
+        "Engenharia Civil"
+      ],
+      "distancia_info": "0 km (Polo Alvo Caruaru/PE)",
+      "categoria_geografica": "Caruaru + 80km (PE)",
+      "curriculo_recomendado": "Curriculo_Denilson_Barbosa_Gestao_Obras_Projetos_Caruaru_PE.pdf",
+      "trilha": "Obras & Projetos (Cabeçalho Caruaru/PE)",
+      "carta_assunto": "Candidatura: [Post Feed] GetJob | Recrutamento Inteligente: GetJob | Recrutamento Inteligente 2 h • Vaga para Engenheiro Civil na Viana e Vasconc... - Denilson Barbosa (Engenheiro Civil)",
+      "carta_corpo": "Prezada equipe de seleção (Post de GetJob | Recrutamento Inteligente (Feed LinkedIn)),\n\nApresento meu currículo para avaliação na vaga de [Post Feed] GetJob | Recrutamento Inteligente: GetJob | Recrutamento Inteligente 2 h • Vaga para Engenheiro Civil na Viana e Vasconc....\n\nSou Engenheiro Civil pela UFERSA, com MBA em Projetos de Instalações Prediais (IPOG) e especialização em Construção Civil (Residenciais, Industriais e Especiais). Minha trajetória soma mais de cinco anos na condução de obras, projetos de infraestrutura, planejamento físico-financeiro e engenharia de custos.\n\nExerci o cargo de Diretor de Engenharia na Prefeitura de Mossoró, liderando equipes multidisciplinares e empreiteiras na execução e fiscalização de unidades hospitalares e educacionais. Nesse período, coordenei uma revisão estrutural emergencial que preservou a estabilidade do edifício e evitou perdas de 10% no orçamento global da obra. No setor privado e agroindustrial (SS&B Construtora, Grupo FAN, Diagonal Engenharia e Itaueira Agropecuária), entreguei e homologuei uma balança rodoviária industrial no prazo recorde de 35 dias e gerei uma economia de R$ 1,2 milhão em um orçamento de R$ 60 milhões por meio de alterações construtivas e recotação de suprimentos.\n\nEstou em processo de mudança planejada para Caruaru/PE, com disponibilidade imediata para atuação presencial em Caruaru / Recife, PE e em todo o eixo do Agreste e BR-232.\n\nSeguem em anexo os detalhes da minha experiência com gestão de cronogramas (MS Project), compatibilização de disciplinas (AutoCAD e Revit BIM) e controle de custos. Agradeço a atenção e coloco-me à disposição para conversar.\n\nAtenciosamente,\n\nDenilson Barbosa\nEngenheiro Civil\n(88) 9627-1246 | denilsonb20@gmail.com\nlinkedin.com/in/denilsonbarbosasantos",
+      "ordem": 23
     },
     {
       "id": "const_pe_colorado",
@@ -540,7 +680,10 @@
       "distancia_info": "0 km (Polo Alvo Caruaru/PE)",
       "categoria_geografica": "Caruaru + 80km (PE)",
       "curriculo_recomendado": "Curriculo_Denilson_Barbosa_Gestao_Obras_Projetos_Caruaru_PE.pdf",
-      "trilha": "Obras & Projetos (Cabeçalho Caruaru/PE)"
+      "trilha": "Obras & Projetos (Cabeçalho Caruaru/PE)",
+      "carta_assunto": "Candidatura: Engenheiro Civil - Loteamentos Urbanos (Escritório Regional Caruaru) - Denilson Barbosa (Engenheiro Civil)",
+      "carta_corpo": "Prezada equipe de seleção (Construtora Colorado),\n\nApresento meu currículo para avaliação na vaga de Engenheiro Civil - Loteamentos Urbanos (Escritório Regional Caruaru).\n\nSou Engenheiro Civil pela UFERSA, com MBA em Projetos de Instalações Prediais (IPOG) e especialização em Construção Civil (Residenciais, Industriais e Especiais). Minha trajetória soma mais de cinco anos na condução de obras, projetos de infraestrutura, planejamento físico-financeiro e engenharia de custos.\n\nExerci o cargo de Diretor de Engenharia na Prefeitura de Mossoró, liderando equipes multidisciplinares e empreiteiras na execução e fiscalização de unidades hospitalares e educacionais. Nesse período, coordenei uma revisão estrutural emergencial que preservou a estabilidade do edifício e evitou perdas de 10% no orçamento global da obra. No setor privado e agroindustrial (SS&B Construtora, Grupo FAN, Diagonal Engenharia e Itaueira Agropecuária), entreguei e homologuei uma balança rodoviária industrial no prazo recorde de 35 dias e gerei uma economia de R$ 1,2 milhão em um orçamento de R$ 60 milhões por meio de alterações construtivas e recotação de suprimentos.\n\nEstou em processo de mudança planejada para Caruaru/PE, com disponibilidade imediata para atuação presencial em Caruaru, PE (Bairro Maurício de Nassau) e em todo o eixo do Agreste e BR-232.\n\nSeguem em anexo os detalhes da minha experiência com gestão de cronogramas (MS Project), compatibilização de disciplinas (AutoCAD e Revit BIM) e controle de custos. Agradeço a atenção e coloco-me à disposição para conversar.\n\nAtenciosamente,\n\nDenilson Barbosa\nEngenheiro Civil\n(88) 9627-1246 | denilsonb20@gmail.com\nlinkedin.com/in/denilsonbarbosasantos",
+      "ordem": 24
     }
   ]
 }
