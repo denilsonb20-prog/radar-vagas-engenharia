@@ -1,7 +1,7 @@
 {
-  "atualizado_em": "22/11/2026 20:22",
+  "atualizado_em": "22/11/2026 20:37",
   "candidato": "Marcos Denílson Barbosa dos Santos (Denilson Barbosa)",
-  "total_vagas_qualificadas": 47,
+  "total_vagas_qualificadas": 42,
   "vagas": [
     {
       "id": "const_ce_idibra",
@@ -138,32 +138,6 @@
       "trilha": "Obras & Projetos (Cabeçalho Eusébio/CE)"
     },
     {
-      "id": "li_4492783092",
-      "raw_id": "4492783092",
-      "plataforma": "LinkedIn Vagas",
-      "tipo_fonte": "linkedin_vaga",
-      "titulo": "Analista de Planejamento e Controle",
-      "empresa": "Jobbol",
-      "local": "Fortaleza, CE",
-      "url": "https://br.linkedin.com/jobs/view/analista-de-planejamento-e-controle-at-jobbol-4492783092",
-      "data_publicacao": "2026-11-20",
-      "dias_atras": 2,
-      "modalidade": "Presencial / Híbrido",
-      "email_direto": "",
-      "descricao": "Loja de Material de Construção busca profissional Analista de Planejamento e Controle em Fortaleza.  A Normatel é uma empresa especializada na fabricação e comercialização de materiais elétricos. Com foco na qualidade e inovação, atende a diversos segmentos do mercado.   Responsabilidades   Realizar levantamento e quantificação de serviços, além da cotação e avaliação de propostas. Elaborar orçamentos de obras e acompanhar alterações. Identificar oportunidades de melhoria nos processos de acompanhamento dos empreendimentos. Realizar o acompanhamento dos orçamentos executivos, fazendo ajustes e projetando desempenho.  Atuações anteriores em Especialista em Planejamento Estratégico, Analista de Controle de Projetos, Coordenador de Planejamento ou Consultor de Planejamento e Controle podem indicar afinidade com algumas das atividades desta posição.   Requisitos Desejáveis    Escolaridade:  Ensino superior completo   Experiência:  Necessário experiência   Remuneração e Benefícios     Salário: Faixa salarial será informada na entrevista.  Auxílio Educação |Cesta Básica |Descontos para Funcionários |Gympass |Participação nos Lucros |Plano de saúde |Plano odontológico |Vale Alimentação |Vale Transporte  Programa de Apoio Psicológico.     Informações Adicionais     Contrato: Efetivo. Presencial. Candidatos de Caucaia, Maracanaú, Eusébio ou Maranguape também são considerados para esta vaga.  Período: Tempo Integral  Jornada: A combinar",
-      "score_afinidade": 99,
-      "termos_afinidade": [
-        "Orçamentos de Obras",
-        "Planejamento Físico-Financeiro",
-        "Gestão/Execução de Obras",
-        "Propostas Técnicas/Comerciais"
-      ],
-      "distancia_info": "18 km de Eusébio (Polo Fortaleza/CE)",
-      "categoria_geografica": "Fortaleza + 60km (CE)",
-      "curriculo_recomendado": "Curriculo_Denilson_Barbosa_Orcamentos_Planejamento_Fortaleza_CE.pdf",
-      "trilha": "Orçamentos & Planejamento (Cabeçalho Eusébio/CE)"
-    },
-    {
       "id": "indeed_2e77e73f258a8182",
       "raw_id": "2e77e73f258a8182",
       "plataforma": "Indeed",
@@ -274,6 +248,32 @@
       "trilha": "Orçamentos & Planejamento (Cabeçalho Eusébio/CE)"
     },
     {
+      "id": "li_4491878729",
+      "raw_id": "4491878729",
+      "plataforma": "LinkedIn Vagas",
+      "tipo_fonte": "linkedin_vaga",
+      "titulo": "Engenheiro civil",
+      "empresa": "Grupo Portfolio",
+      "local": "Fortaleza, CE",
+      "url": "https://br.linkedin.com/jobs/view/engenheiro-civil-at-grupo-portfolio-4491878729",
+      "data_publicacao": "2026-11-18",
+      "dias_atras": 4,
+      "modalidade": "Presencial / Híbrido",
+      "email_direto": "",
+      "descricao": "Responsabilidades    Gerenciar múltiplas obras simultaneamente em diferentes localidades do Brasil.  Acompanhar cronogramas, custos, qualidade e evolução física das obras.  Realizar fiscalizações técnicas presenciais nas unidades em implantação, reforma ou expansão.  Avaliar riscos de prazo e propor ações corretivas e preventivas junto às construtoras.  Elaborar relatórios executivos e indicadores de acompanhamento de obras.  Monitorar o percentual de avanço físico, identificando desvios e inconsistências.  Coordenar o fluxo de informações entre áreas internas e parceiros externos.  Participar de reuniões de alinhamento com equipes de Engenharia, PMO, Compras, Segurança, TI, CFTV e demais áreas envolvidas.  Elaborar planos de visitas e acompanhar atividades críticas para cumprimento dos cronogramas.  Garantir a aplicação de processos, padrões e metodologias de gestão de obras.  Apoiar a padronização de controles, relatórios e indicadores da operação.  Atuar na identificação e resolução de impedimentos técnicos e operacionais.  Conduzir o acompanhamento de fornecedores e construtoras, garantindo aderência aos escopos contratados.    Requisitos    Formação completa em Engenharia Civil e CREA ativo.  Disponibilidade para viagens frequentes em todo o território nacional.  Disponibilidade para atuação presencial em Fortaleza/CE.  Experiência em gerenciamento e fiscalização de obras.  Vivência na gestão de múltiplas obras.  Experiência em obras de expansão de lojas, reformas ou construção de unidades comerciais.  Conhecimento em acompanhamento de cronogramas físicos e financeiros.  Experiência na elaboração e análise de relatórios gerenciais e indicadores de obras.    Diferenciais    Experiência em implantação de processos, padronização de indicadores e governança de obras.  Conhecimento em metodologias de gerenciamento de projetos.",
+      "score_afinidade": 99,
+      "termos_afinidade": [
+        "Cronogramas de Obra",
+        "Engenharia Civil",
+        "Gestão/Execução de Obras",
+        "Engenharia de Custos"
+      ],
+      "distancia_info": "18 km de Eusébio (Polo Fortaleza/CE)",
+      "categoria_geografica": "Fortaleza + 60km (CE)",
+      "curriculo_recomendado": "Curriculo_Denilson_Barbosa_Gestao_Obras_Projetos_Fortaleza_CE.pdf",
+      "trilha": "Obras & Projetos (Cabeçalho Eusébio/CE)"
+    },
+    {
       "id": "li_4491310708",
       "raw_id": "4491310708",
       "plataforma": "LinkedIn Vagas",
@@ -380,7 +380,7 @@
         "Engenharia de Custos",
         "Controle de Medições"
       ],
-      "distancia_info": "18 km de Eusébio (Polo Fortaleza/CE)",
+      "distancia_info": "35 km de Fortaleza (Eixo Pecém/CE)",
       "categoria_geografica": "Fortaleza + 60km (CE)",
       "curriculo_recomendado": "Curriculo_Denilson_Barbosa_Orcamentos_Planejamento_Fortaleza_CE.pdf",
       "trilha": "Orçamentos & Planejamento (Cabeçalho Eusébio/CE)"
@@ -763,30 +763,6 @@
       "trilha": "Obras & Projetos (Cabeçalho Caruaru/PE)"
     },
     {
-      "id": "post_7528427063041683456",
-      "raw_id": "7528427063041683456",
-      "plataforma": "Publicação LinkedIn (Feed)",
-      "tipo_fonte": "publicacao_feed",
-      "titulo": "[Post Feed] Audens Group: Audens Group 5 d • Oportunidade Gerente Geral de Obras em Fortaleza/CE Sobre nosso cl...",
-      "empresa": "Post de Audens Group (Feed LinkedIn)",
-      "local": "Fortaleza / Eusébio, CE",
-      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7528427063041683456/",
-      "data_publicacao": "2026-11-17",
-      "dias_atras": 5,
-      "modalidade": "Presencial / Híbrido",
-      "descricao": "Audens Group 5 d • Oportunidade Gerente Geral de Obras em Fortaleza/CE Sobre nosso cliente Construtora e incorporadora de grande porte, com atuação relevante no mercado imobiliário e empreendimentos de grande escala. Requisitos da vaga Formação em Engenharia Civil e experiência anterior na gestão de várias obras ao mesmo tempo. Pós-graduação na área é um diferencial. Buscamos alguém analítico e organizado, que tome decisões, priorize demandas e atue perto da operação. Responsabilidade Gerenciar um portfólio de obras garantindo prazo, custo, qualidade e segurança, além de liderar os Gerentes de",
-      "email_direto": "",
-      "score_afinidade": 83,
-      "termos_afinidade": [
-        "Engenharia Civil",
-        "Gestão/Execução de Obras"
-      ],
-      "distancia_info": "0 km (Residência Atual - Eusébio/CE)",
-      "categoria_geografica": "Fortaleza + 60km (CE)",
-      "curriculo_recomendado": "Curriculo_Denilson_Barbosa_Gestao_Obras_Projetos_Fortaleza_CE.pdf",
-      "trilha": "Obras & Projetos (Cabeçalho Eusébio/CE)"
-    },
-    {
       "id": "const_gupy_12880058",
       "raw_id": "12880058",
       "plataforma": "Gupy (Construtora Local)",
@@ -932,29 +908,6 @@
       "trilha": "Orçamentos & Planejamento (Cabeçalho Eusébio/CE)"
     },
     {
-      "id": "post_7529161227453763584",
-      "raw_id": "7529161227453763584",
-      "plataforma": "Publicação LinkedIn (Feed)",
-      "tipo_fonte": "publicacao_feed",
-      "titulo": "[Post Feed] Grupo Portfolio: Grupo Portfolio Acesse o site 3 d • Estamos #contratando para um novo cargo de Engenh...",
-      "empresa": "Post de Grupo Portfolio (Feed LinkedIn)",
-      "local": "Fortaleza / Eusébio, CE",
-      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7529161227453763584/",
-      "data_publicacao": "2026-11-19",
-      "dias_atras": 3,
-      "modalidade": "Presencial / Híbrido",
-      "descricao": "Grupo Portfolio Acesse o site 3 d • Estamos #contratando para um novo cargo de Engenheiro civil em Fortaleza, Ceará. Candidate-se hoje mesmo ou compartilhe este anúncio com sua rede. Engenheiro civil Engenheiro civil Grupo Portfolio Fortaleza, CE (Presencial) Ver vaga 5 ex-alunos da instituição trabalham aqui 22 2 Esses resultados são úteis? Seu feedback nos ajuda a melhorar os resultados da pesquisa Sobre Acessibilidade Central de Ajuda Termos e Privacidade Preferências de anúncios Publicidade Soluções corporativas Baixe o aplicativo do LinkedIn Mais LinkedIn Corporation © 2026 Jogos Notícias",
-      "email_direto": "",
-      "score_afinidade": 80,
-      "termos_afinidade": [
-        "Engenharia Civil"
-      ],
-      "distancia_info": "0 km (Residência Atual - Eusébio/CE)",
-      "categoria_geografica": "Fortaleza + 60km (CE)",
-      "curriculo_recomendado": "Curriculo_Denilson_Barbosa_Gestao_Obras_Projetos_Fortaleza_CE.pdf",
-      "trilha": "Obras & Projetos (Cabeçalho Eusébio/CE)"
-    },
-    {
       "id": "const_pe_carrilho",
       "raw_id": "const_pe_carrilho",
       "plataforma": "Mural Construtora (RH Direto)",
@@ -977,28 +930,6 @@
       "categoria_geografica": "Caruaru + 60km (PE)",
       "curriculo_recomendado": "Curriculo_Denilson_Barbosa_Orcamentos_Planejamento_Caruaru_PE.pdf",
       "trilha": "Orçamentos & Planejamento (Cabeçalho Caruaru/PE)"
-    },
-    {
-      "id": "li_4492785883",
-      "raw_id": "4492785883",
-      "plataforma": "LinkedIn Vagas",
-      "tipo_fonte": "linkedin_vaga",
-      "titulo": "Analista de Orçamento",
-      "empresa": "Impermear Engenharia",
-      "local": "Belo Horizonte e Região",
-      "url": "https://br.linkedin.com/jobs/view/analista-de-or%C3%A7amento-at-impermear-engenharia-4492785883",
-      "data_publicacao": "2026-11-20",
-      "dias_atras": 2,
-      "modalidade": "Remoto",
-      "email_direto": "",
-      "score_afinidade": 77,
-      "termos_afinidade": [
-        "Orçamentos de Obras"
-      ],
-      "distancia_info": "26 km de Eusébio (BR-116/CE)",
-      "categoria_geografica": "Fortaleza + 60km (CE)",
-      "curriculo_recomendado": "Curriculo_Denilson_Barbosa_Orcamentos_Planejamento_Fortaleza_CE.pdf",
-      "trilha": "Orçamentos & Planejamento (Cabeçalho Eusébio/CE)"
     },
     {
       "id": "const_pe_colorado",
@@ -1024,48 +955,26 @@
       "trilha": "Obras & Projetos (Cabeçalho Caruaru/PE)"
     },
     {
-      "id": "li_4491878729",
-      "raw_id": "4491878729",
+      "id": "li_4492783092",
+      "raw_id": "4492783092",
       "plataforma": "LinkedIn Vagas",
       "tipo_fonte": "linkedin_vaga",
-      "titulo": "Engenheiro civil",
-      "empresa": "Grupo Portfolio",
+      "titulo": "Analista de Planejamento e Controle",
+      "empresa": "Jobbol",
       "local": "Fortaleza, CE",
-      "url": "https://br.linkedin.com/jobs/view/engenheiro-civil-at-grupo-portfolio-4491878729",
-      "data_publicacao": "2026-11-18",
-      "dias_atras": 4,
+      "url": "https://br.linkedin.com/jobs/view/analista-de-planejamento-e-controle-at-jobbol-4492783092",
+      "data_publicacao": "2026-11-20",
+      "dias_atras": 2,
       "modalidade": "Presencial / Híbrido",
       "email_direto": "",
       "score_afinidade": 75,
       "termos_afinidade": [
-        "Engenharia Civil"
+        "Planejamento Físico-Financeiro"
       ],
       "distancia_info": "18 km de Eusébio (Polo Fortaleza/CE)",
       "categoria_geografica": "Fortaleza + 60km (CE)",
-      "curriculo_recomendado": "Curriculo_Denilson_Barbosa_Gestao_Obras_Projetos_Fortaleza_CE.pdf",
-      "trilha": "Obras & Projetos (Cabeçalho Eusébio/CE)"
-    },
-    {
-      "id": "li_4476379628",
-      "raw_id": "4476379628",
-      "plataforma": "LinkedIn Vagas",
-      "tipo_fonte": "linkedin_vaga",
-      "titulo": "Engenheiro Civil Pleno - Hidrologia/Drenagem (Belo Horizonte)",
-      "empresa": "Egis",
-      "local": "Belo Horizonte e Região",
-      "url": "https://br.linkedin.com/jobs/view/engenheiro-civil-pleno-hidrologia-drenagem-belo-horizonte-at-egis-4476379628",
-      "data_publicacao": "2026-11-18",
-      "dias_atras": 4,
-      "modalidade": "Remoto",
-      "email_direto": "",
-      "score_afinidade": 75,
-      "termos_afinidade": [
-        "Engenharia Civil"
-      ],
-      "distancia_info": "26 km de Eusébio (BR-116/CE)",
-      "categoria_geografica": "Fortaleza + 60km (CE)",
-      "curriculo_recomendado": "Curriculo_Denilson_Barbosa_Gestao_Obras_Projetos_Fortaleza_CE.pdf",
-      "trilha": "Obras & Projetos (Cabeçalho Eusébio/CE)"
+      "curriculo_recomendado": "Curriculo_Denilson_Barbosa_Orcamentos_Planejamento_Fortaleza_CE.pdf",
+      "trilha": "Orçamentos & Planejamento (Cabeçalho Eusébio/CE)"
     },
     {
       "id": "const_gupy_12800568",
@@ -1116,52 +1025,6 @@
       "trilha": "Obras & Projetos (Cabeçalho Eusébio/CE)"
     },
     {
-      "id": "li_4484210223",
-      "raw_id": "4484210223",
-      "plataforma": "LinkedIn Vagas",
-      "tipo_fonte": "linkedin_vaga",
-      "titulo": "Engenheiro(a) de Projetos",
-      "empresa": "Mondelēz International",
-      "local": "Vitória de Santo Antão, PE",
-      "url": "https://br.linkedin.com/jobs/view/engenheiro-a-de-projetos-at-mondel%C4%93z-international-4484210223",
-      "data_publicacao": "2026-11-18",
-      "dias_atras": 4,
-      "modalidade": "Remoto",
-      "email_direto": "",
-      "descricao": "Job Description    Are You Ready to Make It Happen at Mondelēz International?    Join our Mission to Lead the Future of Snacking. Make It With Pride.   You plan, develop and execute capital projects by supporting technical developments, feasibility perspectives of engineering-related activities in supply chain and capital expense project execution to support growth, world-class manufacturing and productivity with the highest levels of quality, safety and environmental requirements. You will follow Mondelēz business and innovation processes in project management and ensure that Mondelēz standards are adhered to.   How You Will Contribute   To ensure that accurate budgets, plans and fit-for-purpose technical solutions are delivered, you will work with key stakeholders to define and deliver the capital and technical agendas during the development phases of capital investment projects. You will develop capital budgets according to the contract and forecast cash flow, ensure that engineering developments and standards are implemented, and support the development and implementation of state-of-the art processes and equipment strategies to optimize resources, harmonize assets and rollout best practices. In this role, you will support capital project execution and will be accountable for the quality and results of the capital projects per Mondelēz standards, and our business and innovation processes in project management.   What You Will Bring   A desire to drive your future and accelerate your career. You will bring experience and knowledge in:    Project management skills  Leading to work effectively across cross-functional teams and influencing stakeholders  Senior-level technical expertise across engineering disciplines      More About This Role   Sabemos do nosso papel como agentes de transformação para gerar uma mudança positiva, por isso, diversidade, equidade e inclusão são uma de nossas prioridades. Acreditamos na quebra de estereótipos e barreiras para garantir a representatividade da sociedade dentro da nossa empresa. E, para isso, temos um Comitê de Diversidade que atua em quatro frentes, Pessoas com deficiência (PCD), Étnico-Racial, Mulheres e LGBTQIAP+, além de fazer parte do MOVER - Movimento pela Equidade Racial.   Principais atividades:      Responsável pela gestão de projetos de engenharia, com foco em inovação e aumento de capacidade de linhas de produção;   Controlar financeiramente os projetos (CAPEX);   Gerenciar terceiros nas instalações, garantindo cumprimento de escopo, prazo e qualidade;   Fomentar inovações dentro da engenharia e propor projetos de melhoria;   Comunicar e reportar status dos projetos aos stakeholders de diferentes áreas e níveis;   Capturar dados e garantir rastreabilidade técnica dos projetos;   Seguir e aplicar metodologias de gestão de projetos (PMBOK).      Competências Técnicas:      Formação superior completa em Engenharia (preferencial: Mecânica e Elétrica);   Experiência em metodologias/gestão de projetos de engenharia em ambiente industrial (preferencialmente em indústrias de alimentos e/ou bebidas);   Conhecimento em Pacote Office e Autocad;   Inglês Avançado;   Disponibilidade para atuação em modelo híbrido de trabalho em Vitória de Santo Antão – PE em horário administrativo.      Competências Comportamentais:      Relacionamento Interpessoal; Comunicação; Flexibilidade; Perfil analítico; Organização; Proatividade; Dinamicidade; Resolução de Problemas.     A Mondelez International está atenta ao Futuro do Trabalho e valoriza o bem-estar de nossas pessoas, buscando proporcionar as melhores experiências. Sendo assim, algumas de nossas vagas administrativas são elegíveis ao modelo híbrido, possibilitando o trabalho remoto em alguns dias da semana.  No Relocation support available  Business Unit Summary  Mondelēz Brasil is Mondelēz International’s fourth largest operation in the world, with approximately 7,500 employees proudly producing, selling and distributing some of the most beloved brands of chewing gum, candies, powdered beverages, cream cheeses, chocolates, cookies and desserts in Brazil. We make the Brazilians’ favorite products such as Bis, Lacta, Oreo, Club Social, Sonho de Valsa, Trakinas, Trident, Halls, Royal, Tang and many others. We are truly part of the lives of Brazilians: You can find our mouth-watering products in more than 700,000 points of sale and we are present in more than 92% of Brazilian homes. Our factories are located in Vitória de Santo Antão, in the state of Pernambuco, and Curitiba, in the state of Paraná. We are also home to one of the company's 11 technology centers around the world, responsible for research and development, so we can continue to create new and innovative products, offering the right snack for the right time, done in the right way.  Mondelēz International is an equal opportunity employer and all qualified applicants will receive consideration for employment without regard to race, color, religion, gender, sexual orientation or preference, gender identity, national origin, disability status, protected veteran status, or any other characteristic protected by law.   Job Type   Regular  Project Engineering  Science &amp; Engineering",
-      "score_afinidade": 73,
-      "termos_afinidade": [
-        "AutoCAD",
-        "Projetos CAPEX"
-      ],
-      "distancia_info": "100% Remoto (Brasil)",
-      "categoria_geografica": "Remoto Brasil",
-      "curriculo_recomendado": "Curriculo_Denilson_Barbosa_Gestao_Obras_Projetos_Fortaleza_CE.pdf",
-      "trilha": "Obras & Projetos (Cabeçalho Eusébio/CE)"
-    },
-    {
-      "id": "li_4490176252",
-      "raw_id": "4490176252",
-      "plataforma": "LinkedIn Vagas",
-      "tipo_fonte": "linkedin_vaga",
-      "titulo": "Analista de Orçamento",
-      "empresa": "Construtora Hera Ltda",
-      "local": "Belo Horizonte e Região",
-      "url": "https://br.linkedin.com/jobs/view/analista-de-or%C3%A7amento-at-construtora-hera-ltda-4490176252",
-      "data_publicacao": "2026-11-17",
-      "dias_atras": 5,
-      "modalidade": "Remoto",
-      "email_direto": "",
-      "score_afinidade": 73,
-      "termos_afinidade": [
-        "Orçamentos de Obras"
-      ],
-      "distancia_info": "26 km de Eusébio (BR-116/CE)",
-      "categoria_geografica": "Fortaleza + 60km (CE)",
-      "curriculo_recomendado": "Curriculo_Denilson_Barbosa_Orcamentos_Planejamento_Fortaleza_CE.pdf",
-      "trilha": "Orçamentos & Planejamento (Cabeçalho Eusébio/CE)"
-    },
-    {
       "id": "li_4491133764",
       "raw_id": "4491133764",
       "plataforma": "LinkedIn Vagas",
@@ -1181,6 +1044,29 @@
         "Gestão/Execução de Obras"
       ],
       "distancia_info": "35 km de Fortaleza (Eixo Pecém/CE)",
+      "categoria_geografica": "Fortaleza + 60km (CE)",
+      "curriculo_recomendado": "Curriculo_Denilson_Barbosa_Gestao_Obras_Projetos_Fortaleza_CE.pdf",
+      "trilha": "Obras & Projetos (Cabeçalho Eusébio/CE)"
+    },
+    {
+      "id": "li_4490906309",
+      "raw_id": "4490906309",
+      "plataforma": "LinkedIn Vagas",
+      "tipo_fonte": "linkedin_vaga",
+      "titulo": "Coordenador(a) de Projetos | Engenharia Refino Óleo e Gás",
+      "empresa": "KEMPETRO Engenharia",
+      "local": "Fortaleza, CE",
+      "url": "https://br.linkedin.com/jobs/view/coordenador-a-de-projetos-engenharia-refino-%C3%B3leo-e-g%C3%A1s-at-kempetro-engenharia-4490906309",
+      "data_publicacao": "2026-11-16",
+      "dias_atras": 6,
+      "modalidade": "Presencial / Híbrido",
+      "email_direto": "",
+      "descricao": "Quem Somos:   A história da KEMPETRO reflete nossos valores e compromissos com as Políticas de Integridade,  Compliance  e Gestão do Capital Humano.  Somos uma empresa de destaque no desenvolvimento de projetos e soluções em engenharia. Classificada nos últimos anos no Ranking da Engenharia Brasileira da revista 'O Empreiteiro' entre as maiores empresas do Brasil e a maior do Norte e Nordeste.  Se você se identifica com a nossa história, essa é a sua oportunidade para atuar conosco!  #vocênakempetro   Responsabilidades e atribuições     Coordenar atividades multidisciplinares de engenharia, assegurando o cumprimento do escopo, prazo, custo e padrões de qualidade estabelecidos;  Promover a interface entre as equipes de produção, engenharia e clientes, garantindo alinhamento das demandas e adequada comunicação entre as partes;  Coordenar os fornecimentos de serviços de engenharia de projetos, buscando eficiência operacional, aplicação das melhores tecnologias e atendimento aos requisitos contratuais;  Desenvolver e avaliar soluções técnicas que atendam aos requisitos do projeto, às normas aplicáveis e às especificações dos clientes;  Atuar como principal referência técnica no relacionamento com os clientes, conduzindo tratativas, alinhamentos e demandas relacionadas aos serviços de engenharia de projetos;  Orientar e desenvolver a equipe de profissionais técnicos sob sua supervisão, promovendo o compartilhamento de conhecimento e o aprimoramento contínuo;  Elaborar propostas técnicas e apoiar a definição das soluções e estratégias de atendimento, em conjunto com o(a) Gerente de Contrato.      Requisitos e qualificações     Ensino superior completo em Engenharia com CREA ativo;  Disponibilidade para atuar em Fortaleza-CE;   Sólida experiência na área de Projetos na área refino de petróleo e gás;  Possuir conhecimento em ferramentas: COMOS, E3D, Primavera;  Habilidades analíticas para a resolução de problemas e a tomada de decisões;  Habilidade de Liderança;  Proatividade e Organização.      Diferenciais:     Especialização em gerenciamento de projetos.      Informações adicionais     Salário e benefícios compatíveis com o mercado.",
+      "score_afinidade": 63,
+      "termos_afinidade": [
+        "Propostas Técnicas/Comerciais"
+      ],
+      "distancia_info": "18 km de Eusébio (Polo Fortaleza/CE)",
       "categoria_geografica": "Fortaleza + 60km (CE)",
       "curriculo_recomendado": "Curriculo_Denilson_Barbosa_Gestao_Obras_Projetos_Fortaleza_CE.pdf",
       "trilha": "Obras & Projetos (Cabeçalho Eusébio/CE)"
