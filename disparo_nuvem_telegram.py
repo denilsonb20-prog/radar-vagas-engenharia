@@ -58,6 +58,8 @@ def salvar_vagas_enviadas(novos_ids, novas_urls, dados_existentes):
 
 
 def executar_e_enviar(forcar=False):
+    print("Função do Telegram desativada pelo usuário. Operação restrita exclusivamente ao Web App.")
+    return {"status": "desativado"}
     agora_br = obter_hora_brasilia()
     hora_atual = agora_br.hour
 
