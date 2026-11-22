@@ -48,7 +48,7 @@ for idx, v in enumerate(vagas_raw, 1):
     cat_geo = v.get("categoria_geografica", "Remoto Brasil")
     if "Fortaleza" in cat_geo:
         reg = "fortaleza"
-    elif "Caruaru" in cat_geo or "PE" in cat_geo:
+    elif "Caruaru" in cat_geo:
         reg = "caruaru"
     else:
         reg = "remoto"
@@ -131,7 +131,7 @@ HTML_CONTENT = f"""<!DOCTYPE html>
           </div>
           <h1 class="text-xl md:text-2xl font-bold text-[var(--foreground)]">Radar de Vagas de Engenharia Civil</h1>
           <p class="text-xs md:text-sm text-[var(--muted-foreground)] mt-1">
-            Polos: <strong>Fortaleza + 60 km (CE)</strong> • <strong>Caruaru + 80 km (PE)</strong> • <strong>Remoto Brasil</strong>
+            Polos: <strong>Fortaleza + 60 km (CE)</strong> • <strong>Caruaru + 60 km (PE)</strong> • <strong>Remoto Brasil</strong>
           </p>
         </div>
 
@@ -274,7 +274,7 @@ HTML_CONTENT = f"""<!DOCTYPE html>
           <a id="dl-for-obr" href="./pdf/Curriculo_Denilson_Barbosa_Gestao_Obras_Projetos_Fortaleza_CE.pdf" target="_blank" class="block font-mono truncate text-blue-400 hover:underline">⬇ Curriculo_Denilson_Barbosa_Gestao_Obras_Projetos_Fortaleza_CE.pdf</a>
         </div>
         <div class="bg-[var(--background)] border border-[var(--border)] rounded-lg p-3 space-y-1.5">
-          <div class="font-bold text-amber-400">📍 Caruaru + 80km e PE (Cabeçalho: Caruaru, PE)</div>
+          <div class="font-bold text-amber-400">📍 Caruaru + 60km (Cabeçalho: Caruaru, PE)</div>
           <a id="dl-car-orc" href="./pdf/Curriculo_Denilson_Barbosa_Orcamentos_Planejamento_Caruaru_PE.pdf" target="_blank" class="block font-mono truncate text-blue-400 hover:underline">⬇ Curriculo_Denilson_Barbosa_Orcamentos_Planejamento_Caruaru_PE.pdf</a>
           <a id="dl-car-obr" href="./pdf/Curriculo_Denilson_Barbosa_Gestao_Obras_Projetos_Caruaru_PE.pdf" target="_blank" class="block font-mono truncate text-blue-400 hover:underline">⬇ Curriculo_Denilson_Barbosa_Gestao_Obras_Projetos_Caruaru_PE.pdf</a>
         </div>
@@ -301,7 +301,7 @@ HTML_CONTENT = f"""<!DOCTYPE html>
           <div class="flex flex-wrap gap-1.5">
             <button onclick="setReg('todas')" id="reg-todas" class="px-3 py-1 rounded-lg text-xs font-semibold bg-emerald-600 text-white cursor-pointer">Todas as Regiões</button>
             <button onclick="setReg('fortaleza')" id="reg-fortaleza" class="px-3 py-1 rounded-lg text-xs font-semibold bg-[var(--background)] border border-[var(--border)] cursor-pointer">Fortaleza + 60km (CE)</button>
-            <button onclick="setReg('caruaru')" id="reg-caruaru" class="px-3 py-1 rounded-lg text-xs font-semibold bg-[var(--background)] border border-[var(--border)] cursor-pointer">Caruaru + 80km & PE</button>
+            <button onclick="setReg('caruaru')" id="reg-caruaru" class="px-3 py-1 rounded-lg text-xs font-semibold bg-[var(--background)] border border-[var(--border)] cursor-pointer">Caruaru + 60km (PE)</button>
             <button onclick="setReg('remoto')" id="reg-remoto" class="px-3 py-1 rounded-lg text-xs font-semibold bg-[var(--background)] border border-[var(--border)] cursor-pointer">Remoto Brasil</button>
           </div>
         </div>
