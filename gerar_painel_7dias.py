@@ -128,6 +128,9 @@ HTML_CONTENT = f"""<!DOCTYPE html>
             <button onclick="carregarDadosServidor()" title="Sincronizar descartes entre PC e Celular" class="px-2 py-0.5 rounded text-xs bg-slate-800 border border-slate-700 text-slate-300 hover:text-white cursor-pointer">
               🔄 Sincronizar
             </button>
+            <button id="btn-gmail-cfg" onclick="abrirModalGmail()" title="Configurar anexo automático de PDF no Gmail" class="px-2.5 py-0.5 rounded text-xs bg-slate-800 border border-slate-700 text-slate-300 hover:text-white cursor-pointer">
+              ✉️ Gmail Anexo
+            </button>
           </div>
           <h1 class="text-xl md:text-2xl font-bold text-[var(--foreground)]">Radar de Vagas de Engenharia Civil</h1>
           <p class="text-xs md:text-sm text-[var(--muted-foreground)] mt-1">
@@ -344,6 +347,39 @@ HTML_CONTENT = f"""<!DOCTYPE html>
     </div>
   </div>
 
+  <!-- Modal Configuração Gmail (Rascunho com PDF em Anexo) -->
+  <div id="modal-gmail-cfg" class="hidden fixed inset-0 z-50 bg-slate-950/80 backdrop-blur-sm flex items-center justify-center p-4">
+    <div class="bg-[var(--card)] border border-cyan-500/40 rounded-2xl max-w-md w-full p-5 shadow-2xl space-y-4">
+      <div class="flex items-center justify-between">
+        <h3 class="font-bold text-base text-cyan-300">✉️ Anexo Automático de PDF no Gmail</h3>
+        <button onclick="fecharModalGmail()" class="px-2 py-0.5 rounded bg-slate-800 text-slate-300 text-xs cursor-pointer">Fechar ✕</button>
+      </div>
+      <p class="text-xs text-slate-300 leading-relaxed">
+        Para criar rascunhos diretamente no seu Gmail já com o currículo em PDF anexado, informe seu e-mail e uma <strong>Senha de App do Google</strong> (16 dígitos).
+      </p>
+      <div class="bg-slate-900/90 border border-slate-700 rounded-lg p-3 text-[11px] text-slate-300 space-y-1">
+        <div>1. Acesse <a href="https://myaccount.google.com/apppasswords" target="_blank" class="text-cyan-400 underline font-semibold">myaccount.google.com/apppasswords ↗</a></div>
+        <div>2. Digite um nome (ex: <em>Radar Vagas</em>) e clique em <strong>Criar</strong>.</div>
+        <div>3. Copie a senha de 16 caracteres gerada e cole abaixo.</div>
+      </div>
+      <div class="space-y-2.5">
+        <div>
+          <label class="block text-xs font-semibold text-slate-300 mb-1">Seu Gmail</label>
+          <input id="inp-gmail-email" type="email" value="denilsonb20@gmail.com" class="w-full bg-[var(--background)] border border-[var(--border)] rounded-lg px-3 py-2 text-xs text-white" />
+        </div>
+        <div>
+          <label class="block text-xs font-semibold text-slate-300 mb-1">Senha de App (16 dígitos)</label>
+          <input id="inp-gmail-pass" type="password" placeholder="xxxx xxxx xxxx xxxx" class="w-full bg-[var(--background)] border border-[var(--border)] rounded-lg px-3 py-2 text-xs text-white font-mono" />
+        </div>
+      </div>
+      <div id="gmail-cfg-msg" class="hidden text-xs font-semibold rounded-lg p-2.5"></div>
+      <div class="flex justify-end gap-2 pt-1">
+        <button onclick="fecharModalGmail()" class="px-3.5 py-2 rounded-lg text-xs font-semibold bg-slate-800 text-slate-300 hover:text-white cursor-pointer">Cancelar</button>
+        <button id="btn-salvar-gmail" onclick="salvarConfigGmail()" class="px-4 py-2 rounded-lg text-xs font-bold bg-cyan-600 hover:bg-cyan-500 text-white cursor-pointer">Salvar e Testar</button>
+      </div>
+    </div>
+  </div>
+
   <script>
     const IS_GITHUB_PAGES = window.location.hostname.includes("github.io");
     const API_BASE = window.location.origin.includes("3456") ? window.location.origin : "http://" + window.location.hostname + ":3456";
@@ -514,9 +550,9 @@ HTML_CONTENT = f"""<!DOCTYPE html>
       renderVagas();
     }}
 
-    function obterMailtoLink(v) {{
+    function obterDadosEmail(v) {{
       const tituloVaga = v.titulo.replace(/\\[.*?\\]/g, "").trim();
-      const assunto = encodeURIComponent(`Candidatura: ${{tituloVaga}} - Denilson Barbosa (Engenheiro Civil)`);
+      const assunto = `Candidatura: ${{tituloVaga}} - Denilson Barbosa (Engenheiro Civil)`;
       
       let locMsg = "";
       if (v.reg === "fortaleza") {{
@@ -528,25 +564,145 @@ HTML_CONTENT = f"""<!DOCTYPE html>
         locMsg = "Conto com estrutura completa para atuação 100% remota imediata e disponibilidade para viagens técnicas sempre que necessário.";
       }}
 
-      const pdfUrl = `${{GITHUB_PAGES_BASE}}/pdf/${{encodeURIComponent(v.pdf)}}`;
-
-      const corpo = encodeURIComponent(
+      const corpo =
         `Prezada equipe de seleção e RH da ${{v.empresa}},\\n\\n` +
         `Apresento meu currículo para avaliação na oportunidade de ${{tituloVaga}}.\\n\\n` +
         `Sou Engenheiro Civil graduado pela UFERSA, com pós-graduação em Construção Civil e MBA em Projetos de Instalações Prediais pelo IPOG. Nos últimos 5 anos, atuei diretamente com engenharia de custos, orçamentos executivos (CPUs, SINAPI/SICRO), planejamento físico-financeiro e gestão de obras públicas e privadas.\\n\\n` +
         `Na SS&B Construtora, estruturei um banco próprio com mais de 250 composições de custos unitários e conduzi a revisão técnica e tributária do orçamento de um contrato de R$ 60 milhões, viabilizando uma redução real de R$ 1,2 milhão no fechamento. Antes disso, exerci o cargo de Diretor de Engenharia na Prefeitura de Mossoró, coordenando equipes multidisciplinares e fiscalização de obras hospitalares e educacionais, onde liderei uma revisão técnica que evitou perdas estimadas em 10% do custo da obra.\\n\\n` +
         `${{locMsg}}\\n\\n` +
-        `📄 Link direto para o meu currículo completo em PDF:\\n${{pdfUrl}}\\n\\n` +
-        `O currículo detalha minha experiência com AutoCAD, Revit (BIM), MS Project, Eberick e bases referenciais de preços. Fico à disposição para uma entrevista.\\n\\n` +
+        `Segue em anexo o meu currículo completo em PDF, detalhando minha experiência com AutoCAD, Revit (BIM), MS Project, Eberick e bases referenciais de preços. Fico à disposição para uma entrevista.\\n\\n` +
         `Atenciosamente,\\n` +
         `Marcos Denílson Barbosa dos Santos (Denilson Barbosa)\\n` +
         `Engenheiro Civil | CREA Ativo\\n` +
-        `Telefone/WhatsApp: (88) 9627-1246\\n` +
+        `Telefone/WhatsApp: (88) 99627-1246\\n` +
         `E-mail: denilsonb20@gmail.com\\n` +
-        `LinkedIn: https://linkedin.com/in/denilsonbarbosasantos`
-      );
+        `LinkedIn: https://linkedin.com/in/denilsonbarbosasantos`;
 
-      return `mailto:${{v.email}}?subject=${{assunto}}&body=${{corpo}}`;
+      return {{ assunto, corpo }};
+    }}
+
+    function obterMailtoLink(v) {{
+      const dados = obterDadosEmail(v);
+      return `mailto:${{v.email}}?subject=${{encodeURIComponent(dados.assunto)}}&body=${{encodeURIComponent(dados.corpo)}}`;
+    }}
+
+    let pendingGmailVagaId = null;
+
+    function obterApiEmailBase() {{
+      return IS_GITHUB_PAGES ? "http://127.0.0.1:3456" : API_BASE;
+    }}
+
+    function abrirModalGmail() {{
+      const m = document.getElementById("modal-gmail-cfg");
+      const msg = document.getElementById("gmail-cfg-msg");
+      if (msg) msg.classList.add("hidden");
+      if (m) m.classList.remove("hidden");
+    }}
+
+    function fecharModalGmail() {{
+      const m = document.getElementById("modal-gmail-cfg");
+      if (m) m.classList.add("hidden");
+      pendingGmailVagaId = null;
+    }}
+
+    async function verificarStatusGmail() {{
+      try {{
+        const r = await fetch(`${{obterApiEmailBase()}}/api/gmail_status`, {{ mode: "cors" }});
+        if (!r.ok) return;
+        const d = await r.json();
+        const btn = document.getElementById("btn-gmail-cfg");
+        if (btn && d.configured) {{
+          btn.textContent = "✉️ Gmail Anexo: Ativo";
+          btn.className = "px-2.5 py-0.5 rounded text-xs bg-emerald-500/20 border border-emerald-500/40 text-emerald-300 cursor-pointer";
+        }}
+        const inpEmail = document.getElementById("inp-gmail-email");
+        if (inpEmail && d.email) inpEmail.value = d.email;
+      }} catch (e) {{}}
+    }}
+
+    async function salvarConfigGmail() {{
+      const email = (document.getElementById("inp-gmail-email").value || "").trim();
+      const appPass = (document.getElementById("inp-gmail-pass").value || "").trim();
+      const msg = document.getElementById("gmail-cfg-msg");
+      const btn = document.getElementById("btn-salvar-gmail");
+      btn.disabled = true;
+      btn.textContent = "Testando...";
+      msg.classList.add("hidden");
+      try {{
+        const r = await fetch(`${{obterApiEmailBase()}}/api/gmail_config`, {{
+          method: "POST",
+          headers: {{ "Content-Type": "application/json" }},
+          body: JSON.stringify({{ email, app_password: appPass }})
+        }});
+        const d = await r.json();
+        if (!r.ok || !d.ok) {{
+          msg.textContent = d.error || "Não foi possível validar a senha.";
+          msg.className = "text-xs font-semibold rounded-lg p-2.5 bg-red-500/20 text-red-300 border border-red-500/30";
+          msg.classList.remove("hidden");
+          return;
+        }}
+        msg.textContent = "Gmail conectado com sucesso!";
+        msg.className = "text-xs font-semibold rounded-lg p-2.5 bg-emerald-500/20 text-emerald-300 border border-emerald-500/30";
+        msg.classList.remove("hidden");
+        verificarStatusGmail();
+        const vagaPendente = pendingGmailVagaId;
+        setTimeout(() => {{
+          fecharModalGmail();
+          if (vagaPendente) enviarParaRascunhoGmail(vagaPendente, null);
+        }}, 700);
+      }} catch (e) {{
+        msg.textContent = "Servidor local offline. Certifique-se de que o PC está ligado com o servidor rodando.";
+        msg.className = "text-xs font-semibold rounded-lg p-2.5 bg-amber-500/20 text-amber-300 border border-amber-500/30";
+        msg.classList.remove("hidden");
+      }} finally {{
+        btn.disabled = false;
+        btn.textContent = "Salvar e Testar";
+      }}
+    }}
+
+    async function enviarParaRascunhoGmail(vagaId, btnEl) {{
+      const v = VAGAS.find(x => String(x.id) === String(vagaId));
+      if (!v || !v.email) return;
+      const dados = obterDadosEmail(v);
+      const originalHtml = btnEl ? btnEl.innerHTML : "";
+      if (btnEl) {{
+        btnEl.disabled = true;
+        btnEl.innerHTML = "<span>⏳</span> Anexando PDF...";
+      }}
+      try {{
+        const r = await fetch(`${{obterApiEmailBase()}}/api/gmail_draft`, {{
+          method: "POST",
+          headers: {{ "Content-Type": "application/json" }},
+          body: JSON.stringify({{
+            to: v.email,
+            subject: dados.assunto,
+            body: dados.corpo,
+            pdf: v.pdf
+          }})
+        }});
+        const d = await r.json();
+        if (r.ok && d.ok) {{
+          registrarCliqueVaga(v.id, v.url);
+          window.open(d.draft_url || "https://mail.google.com/mail/u/0/#drafts", "_blank");
+          return;
+        }}
+        if (d.needs_config) {{
+          pendingGmailVagaId = v.id;
+          abrirModalGmail();
+          return;
+        }}
+        alert(d.error || "Erro ao criar rascunho no Gmail.");
+      }} catch (e) {{
+        if (confirm("Servidor local inacessível nesta rede para anexar o PDF automaticamente.\\n\\nDeseja abrir o e-mail padrão (sem anexo) mesmo assim?")) {{
+          registrarCliqueVaga(v.id, v.url);
+          window.location.href = obterMailtoLink(v);
+        }}
+      }} finally {{
+        if (btnEl) {{
+          btnEl.disabled = false;
+          btnEl.innerHTML = originalHtml;
+        }}
+      }}
     }}
 
     function renderVagas() {{
@@ -581,7 +737,7 @@ HTML_CONTENT = f"""<!DOCTYPE html>
         const safeUrl = String(v.url || "").replace(/'/g, "");
 
         const emailBtn = v.email
-          ? `<a href="${{obterMailtoLink(v)}}" onclick="registrarCliqueVaga('${{safeId}}', '${{safeUrl}}')" class="px-3.5 py-1.5 rounded-lg text-xs font-bold bg-cyan-600 hover:bg-cyan-500 text-white shadow-md flex items-center gap-1.5 transition-all"><span>✉️</span> E-mail do Recrutador (1 Toque)</a>`
+          ? `<button type="button" onclick="enviarParaRascunhoGmail('${{safeId}}', this)" class="px-3.5 py-1.5 rounded-lg text-xs font-bold bg-cyan-600 hover:bg-cyan-500 text-white shadow-md flex items-center gap-1.5 transition-all cursor-pointer"><span>✉️</span> E-mail com PDF Anexo (1 Toque)</button>`
           : "";
 
         const portalBtn = v.plat === "Banco de Talentos (Construtora)"
@@ -856,6 +1012,7 @@ HTML_CONTENT = f"""<!DOCTYPE html>
     atualizarPlacar();
     renderVagas();
     carregarDadosServidor();
+    verificarStatusGmail();
   </script>
 </body>
 </html>
