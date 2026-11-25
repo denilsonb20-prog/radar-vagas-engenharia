@@ -24,6 +24,7 @@
     "const_pe_duarte",
     "const_pe_rioave",
     "const_pe_vianaemoura",
+    "const_pe_vlconstrutora",
     "gupy_12869631",
     "gupy_12892785",
     "indeed_2ab210e9bf19d2b5",
@@ -121,6 +122,7 @@
     "https://idibra.com.br/",
     "https://rioave.com.br/trabalhe-conosco/",
     "https://vianaemoura.com.br/trabalhe-conosco",
+    "https://www.linkedin.com/company/vl-construtora/",
     "https://www.linkedin.com/feed/update/urn:li:activity:7523750203116498944/",
     "https://www.linkedin.com/feed/update/urn:li:activity:7525630570245046272/",
     "https://www.linkedin.com/feed/update/urn:li:activity:7525631035309486080/",
@@ -129,5 +131,6 @@
     "https://www.linkedin.com/feed/update/urn:li:activity:7530277123383767040/",
     "https://www.linkedin.com/feed/update/urn:li:activity:7530356506412748800/"
   ],
-  "total_enviadas": 64
+  "total_enviadas": 65,
+  "ultima_atualizacao": "25/11/2026 09:56:45"
 }
